@@ -19,7 +19,17 @@ class HopfieldNetwork:
         matrix = np.tril(matrix) + np.tril(matrix,-1).T
         np.fill_diagonal(matrix, 0, wrap=False)
         self.weights = matrix
-    
+
+        self.__updateenergy__()
+
+    def __updateenergy__(self):
+        energy = 0
+        for i in range(self.weights.shape[0]):
+            for j in range(self.weights.shape[1]):
+                if i != j:
+                    energy = energy + self.weights[i, j] * self.activity[i] * self.activity[j]
+        self.energy = energy * (-1/2)
+
     #async update, one neuron after the other, binary values only
     def update(self):
         for idx in range(self.activity.shape[0]):
@@ -28,6 +38,7 @@ class HopfieldNetwork:
                 self.activity[idx] = 1
             else:
                 self.activity[idx] = -1
+        self.__updateenergy__()
         return self.activity
 
     def learn(self, memories):
@@ -40,16 +51,21 @@ class HopfieldNetwork:
                     self.weights[idx, jdex] = result
                 
     def __str__(self):
-        return str(self.activity)
+        return "State: " + str(self.activity) + "\n energy in network: " + str(self.energy)
 
 def main():
     #capacity to store memories in Hopfield net is ~0.138 * neurons (n/2*log2())
     #For XOR / 4 memories with 3 features
-    xor = np.array([[-1,-1,-1],[-1,1,1],[1,-1,1],[1,1,-1]])
-    network = HopfieldNetwork(xor[0].shape[0])
+    x = np.array([[[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[1,1,1,1,1],[-1,-1,-1,-1,-1]], 
+    [[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]])
+    
+    #flattens all dimensions except memory dimension
+    x = x.reshape(x.shape[0], -1)
+
+    network = HopfieldNetwork(25)
     print(network)
+    network.learn(x)
     network.update()
-    network.learn(xor)
     print(network)
 
 if __name__ == "__main__":
