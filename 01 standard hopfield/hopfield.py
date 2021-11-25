@@ -31,7 +31,7 @@ class HopfieldNetwork:
         self.energy = energy * (-1/2)
 
     #async update, one neuron after the other, binary values only
-    def update(self):
+    def __update__(self):
         for idx in range(self.activity.shape[0]):
             activation = np.dot(self.weights[idx,:], self.activity)
             if activation >= 0:
@@ -47,9 +47,20 @@ class HopfieldNetwork:
                 if idx != jdex:
                     result = 0
                     for mem in range(memories.shape[0]):
-                        result += memories[mem,idx] * memories[mem,jdex]
-                    self.weights[idx, jdex] = result
-                
+                        result = result + memories[mem,idx] * memories[mem,jdex]
+                    self.weights[idx, jdex] = result / memories.shape[0]
+        self.__update__()
+
+    def predict(self, partialpattern):
+        result = np.zeros(partialpattern.shape[0])
+        for idx in range(partialpattern.shape[0]):
+            activation = np.dot(self.weights[idx,:], partialpattern)
+            if activation >= 0:
+                result[idx] = 1
+            else:
+                result[idx] = -1
+        return result 
+
     def __str__(self):
         return "State: " + str(self.activity) + "\n energy in network: " + str(self.energy)
 
@@ -57,16 +68,19 @@ def main():
     #capacity to store memories in Hopfield net is ~0.138 * neurons (n/2*log2())
     #For XOR / 4 memories with 3 features
     x = np.array([[[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[1,1,1,1,1],[-1,-1,-1,-1,-1]], 
-    [[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]])
+    [[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]])
     
-    #flattens all dimensions except memory dimension
+    #flattens all dimensions except first dimension
     x = x.reshape(x.shape[0], -1)
 
+    partialpattern = np.array([[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]).flatten()
+
     network = HopfieldNetwork(25)
-    print(network)
     network.learn(x)
-    network.update()
+    #sign blind
     print(network)
+
+    print(network.predict(partialpattern))
 
 if __name__ == "__main__":
     main()
