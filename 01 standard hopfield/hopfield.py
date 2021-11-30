@@ -67,6 +67,8 @@ class HopfieldNetwork:
 def main():
     #capacity to store memories in Hopfield net is ~0.138 * neurons (n/2*log2())
     #For XOR / 4 memories with 3 features
+    xor = np.array([[1,1,-1]])
+
     x = np.array([[[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1],[1,1,1,1,1],[-1,-1,-1,-1,-1]], 
     [[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]])
     
@@ -76,6 +78,7 @@ def main():
     partialpattern = np.array([[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[-1,-1,-1,-1,-1],[1,1,1,1,1]]).flatten()
 
     network = HopfieldNetwork(25)
+    print(network)
     network.learn(x)
     #sign blind
     print(network)
