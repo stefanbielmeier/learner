@@ -1,2 +1,2 @@
-# autolearner
+# learner
 Make unsupervised learning faster
