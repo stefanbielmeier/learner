@@ -36,6 +36,9 @@ class HopfieldNetwork:
             else:
                 self.excitation[idx] = -1
         self.__updateenergy__()
+    
+    def __str__(self):
+        return "Energy of Network:" + str(self.energy)
 
     def learn(self, memories):
         for idx in range(self.weights.shape[0]):
@@ -45,16 +48,6 @@ class HopfieldNetwork:
                     for mem in range(memories.shape[0]):
                         result = result + memories[mem,idx] * memories[mem,jdex]
                     self.weights[idx, jdex] = result / memories.shape[0]
-    
-    def predict(self, partialpattern):
-        result = np.zeros(partialpattern.shape[0])
-        for idx in range(partialpattern.shape[0]):
-            activation = np.dot(self.weights[idx,:], partialpattern)
-            if activation >= 0:
-                result[idx] = 1
-            else:
-                result[idx] = -1
-        return result 
 
     def plot(self):
         dims = int(math.sqrt(self.neurons))
@@ -96,16 +89,19 @@ def main():
     #network.plot()
     network.learn(x)
     network.update(x[0].flatten())
+    print(network)
+
 
     plot_img(noisy_t, 5)
     network.update(noisy_t.flatten())
     network.plot()
+    print(network)
 
     #sort of doesn't work yet – probably because it updates excitation
     plot_img(noisy_h, 5)
     network.update(noisy_h.flatten())
     network.plot()
-
+    print(network)
 
 if __name__ == "__main__":
     main()
