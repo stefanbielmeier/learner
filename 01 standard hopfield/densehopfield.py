@@ -22,6 +22,7 @@ class HopfieldNetwork:
         print("Capacity of network (#memories): {}".format(self.neurons*0.138))
 
 
+    #using 
     def __updateenergy(self):
         energy = 0
         for i in range(self.weights.shape[0]):
@@ -66,45 +67,47 @@ class HopfieldNetwork:
 def main():    
     T = np.array([[1,1,1,1,1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1]])
     H = np.array([[1,-1,-1,-1,1],[1,-1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,-1,-1,-1,1]])
-    E = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1]])
+    E = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1,], [1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1]])
 
-    x = np.stack([T,H,E], axis=0)
-    
-    #flattens all dimensions except first dimension
-    x = x.reshape(x.shape[0], -1)
-
-    #Can restore ten noise bits (absurdely corrupted image) if only two memories are present
-    #Can restore only nine bits if we add the E into the learning process as well
+    #ten noisy bits
     noisy_t = np.array([[-1,-1,1,1,1],[-1,-1,-1,-1,1],[-1,1,1,-1,-1],[-1,1,1,-1,1],[1,-1,1,1,1]])
 
     #three noise bits can be restored with two or three memories – no problem
     noisy_h = np.array([[-1,-1,-1,-1,1],[1,1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,1,1,-1,1]])
 
     #six noise bits and little overlap => Corrupted H
-    # five => restores the H!
-    # four => E
-
-    #Restores corrupted H if too much overlap of noise bits with H, and restores E if more noise than corruption!
     noisy_e = np.array([[1,1,-1,1,1], [-1,1,-1,1,-1], [1,1,1,1,1], [-1,-1,-1,-1,-1], [1,1,-1,1,1]])
 
-    network = HopfieldNetwork(25)
-    #network.plot()
-    network.learn(x)
+    #adding a fourth memory makes the network fail and get really random / noisy results!
+    X = np.array([[1,-1,-1,-1,1], [-1,1,-1,1,-1], [-1,-1,1,-1,-1], [-1,1,-1,1,-1], [1,-1,-1,-1,1]])
+    #six noise bits
+    noisy_x = np.array([[-1,-1,-1,-1,1], [-1,-1,-1,1,-1], [1,1,1,-1,1], [1,1,-1,1,-1], [1,-1,-1,1,-1]])
+
+    fourmems = np.stack([T,H,E,X], axis=0)
+    fourmems = fourmems.reshape(fourmems.shape[0],-1) #flattens all except first dim, => 2D matrix
+    
+    newnet = HopfieldNetwork(25)
+    newnet.learn(fourmems)
 
     print('T')
     plot_img(noisy_t, 5)
-    network.update(noisy_t.flatten())
-    network.plot()
+    newnet.update(noisy_t.flatten())
+    newnet.plot()
 
     print('H')
     plot_img(noisy_h, 5)
-    network.update(noisy_h.flatten())
-    network.plot()
+    newnet.update(noisy_h.flatten())
+    newnet.plot()
 
     print('E')
     plot_img(noisy_e, 5)
-    network.update(noisy_e.flatten())
-    network.plot()
+    newnet.update(noisy_e.flatten())
+    newnet.plot()
+
+    print('X')
+    plot_img(noisy_x, 5)
+    newnet.update(noisy_x.flatten())
+    newnet.plot()
 
 if __name__ == "__main__":
     main()
