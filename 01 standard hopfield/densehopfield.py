@@ -11,53 +11,41 @@ class HopfieldNetwork:
         #initialize excitation of neurons as 0
         self.excitation = np.zeros(self.neurons) 
         
-        #initialize symmetric matrix with 0 weights
-        self.weights = np.zeros((self.neurons,self.neurons))
+        #store memories
+        self.memories = 0
 
         self.energy = 0
 
-        self.__updateenergy()
-
-        #capacity to store memories in binary Hopfield net is ~0.138 * neurons (n/2*log2()), assuming completely random memories
-        print("Capacity of network (#memories): {}".format(self.neurons*0.138))
-
-
-    #using 
-    def __updateenergy(self):
-        energy = 0
-        for i in range(self.weights.shape[0]):
-            for j in range(self.weights.shape[1]):
-                if i != j:
-                    energy = energy + self.weights[i, j] * self.excitation[i] * self.excitation[j]
-        self.energy = energy * (-1/2)
+    def __smooth_function(self, x):
+        
+        return math.exp(x)
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
+        
         self.excitation = state
-        self.__updateenergy()
-        
-        idxs = np.random.permutation(state.shape[0])
-        
-        for idx in idxs:
-            print(self)
-            activation = np.dot(self.weights[idx,:], state)
-            if activation >= 0:
-                self.excitation[idx] = 1
+
+        for i in range(self.neurons):
+            result = 0
+            for memory in self.memories:    
+                
+                jsum = 0
+                for j in range(self.neurons):
+                    if i != j:
+                        jsum = jsum + self.excitation[j] * memory[j]
+
+                result = result + (self.__smooth_function(1 * memory[i] + jsum) - self.__smooth_function(-1 * memory[i] + jsum))
+
+            if result >= 0:
+                self.excitation[i] = 1 #i
             else:
-                self.excitation[idx] = -1
-            self.__updateenergy()
-    
+                self.excitation[i] = -1
+        
     def __str__(self):
         return "Energy of Network:" + str(self.energy)
 
     def learn(self, memories):
-        for idx in range(self.weights.shape[0]):
-            for jdex in range(self.weights.shape[1]):
-                if idx != jdex:
-                    result = 0
-                    for mem in range(memories.shape[0]):
-                        result = result + memories[mem,idx] * memories[mem,jdex]
-                    self.weights[idx, jdex] = result / memories.shape[0]
+        self.memories = memories
 
     def plot(self):
         dims = int(math.sqrt(self.neurons))
@@ -68,6 +56,8 @@ def main():
     T = np.array([[1,1,1,1,1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1]])
     H = np.array([[1,-1,-1,-1,1],[1,-1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,-1,-1,-1,1]])
     E = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1,], [1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1]])
+
+    S = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1,], [1,1,1,1,1], [-1,-1,-1,-1,1], [1,1,1,1,1]])
 
     #ten noisy bits
     noisy_t = np.array([[-1,-1,1,1,1],[-1,-1,-1,-1,1],[-1,1,1,-1,-1],[-1,1,1,-1,1],[1,-1,1,1,1]])
@@ -83,11 +73,14 @@ def main():
     #six noise bits
     noisy_x = np.array([[-1,-1,-1,-1,1], [-1,-1,-1,1,-1], [1,1,1,-1,1], [1,1,-1,1,-1], [1,-1,-1,1,-1]])
 
-    fourmems = np.stack([T,H,E,X], axis=0)
+    fourmems = np.stack([T,H,E,X, S], axis=0)
     fourmems = fourmems.reshape(fourmems.shape[0],-1) #flattens all except first dim, => 2D matrix
     
     newnet = HopfieldNetwork(25)
     newnet.learn(fourmems)
+
+    noisy_s = np.array([[1,1,1,-1,1], [-1,1,-1,-1,-1], [1,1,1,1,1], [-1,-1,1,-1,1], [1,1,1,1,1]])
+
 
     print('T')
     plot_img(noisy_t, 5)
@@ -107,6 +100,11 @@ def main():
     print('X')
     plot_img(noisy_x, 5)
     newnet.update(noisy_x.flatten())
+    newnet.plot()
+
+    print('S')
+    plot_img(noisy_s, 5)
+    newnet.update(noisy_s.flatten())
     newnet.plot()
 
 if __name__ == "__main__":

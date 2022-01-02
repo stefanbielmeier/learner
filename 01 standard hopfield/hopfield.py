@@ -68,7 +68,10 @@ def main():
     H = np.array([[1,-1,-1,-1,1],[1,-1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,-1,-1,-1,1]])
     E = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1]])
 
-    x = np.stack([T,H,E], axis=0)
+    X = np.array([[1,-1,-1,-1,1], [-1,1,-1,1,-1], [-1,-1,1,-1,-1], [-1,1,-1,1,-1], [1,-1,-1,-1,1]])
+    #six noise bits
+
+    x = np.stack([T,H,E,X], axis=0)
     
     #flattens all dimensions except first dimension
     x = x.reshape(x.shape[0], -1)
@@ -87,6 +90,9 @@ def main():
     #Restores corrupted H if too much overlap of noise bits with H, and restores E if more noise than corruption!
     noisy_e = np.array([[1,1,-1,1,1], [-1,1,-1,1,-1], [1,1,1,1,1], [-1,-1,-1,-1,-1], [1,1,-1,1,1]])
 
+    noisy_x = np.array([[-1,-1,-1,-1,1], [-1,-1,-1,1,-1], [1,1,1,-1,1], [1,1,-1,1,-1], [1,-1,-1,1,-1]])
+
+
     network = HopfieldNetwork(25)
     #network.plot()
     network.learn(x)
@@ -104,6 +110,11 @@ def main():
     print('E')
     plot_img(noisy_e, 5)
     network.update(noisy_e.flatten())
+    network.plot()
+
+    print('X')
+    plot_img(noisy_x, 5)
+    network.update(noisy_x.flatten())
     network.plot()
 
 if __name__ == "__main__":
