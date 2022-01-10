@@ -18,7 +18,7 @@ class HopfieldNetwork:
 
     def __smooth_function(self, x):
         
-        return math.exp(x)
+        return x*x*x*x
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
@@ -60,7 +60,7 @@ def main():
     S = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1,], [1,1,1,1,1], [-1,-1,-1,-1,1], [1,1,1,1,1]])
 
     #ten noisy bits
-    noisy_t = np.array([[-1,-1,1,1,1],[-1,-1,-1,-1,1],[-1,1,1,-1,-1],[-1,1,1,-1,1],[1,-1,1,1,1]])
+    noisy_t = np.array([[-1,-1,1,1,1],[-1,-1,1,-1,1],[-1,1,1,-1,-1],[-1,1,1,-1,1],[1,-1,1,1,1]])
 
     #three noise bits can be restored with two or three memories – no problem
     noisy_h = np.array([[-1,-1,-1,-1,1],[1,1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,1,1,-1,1]])
@@ -102,10 +102,12 @@ def main():
     newnet.update(noisy_x.flatten())
     newnet.plot()
 
+    
     print('S')
     plot_img(noisy_s, 5)
     newnet.update(noisy_s.flatten())
     newnet.plot()
+    
 
 if __name__ == "__main__":
     main()
