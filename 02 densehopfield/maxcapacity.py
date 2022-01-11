@@ -32,6 +32,11 @@ def plot_graph(start_neurons, end_neurons):
         plt.plot(degrees, y_values)
     plt.show()
 
+print(calc_k(25,2))
+print(calc_k(25,3))
+print(calc_k(25,4))
+print(calc_k(25,5))
 
-plot_graph(40,45)
+plot_graph(25,25)
+
 
