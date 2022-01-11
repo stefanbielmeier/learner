@@ -2,25 +2,15 @@ import math
 
 import numpy as np
 
-T = np.array([[1,1,1,1,1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1]])
-H = np.array([[1,-1,-1,-1,1],[1,-1,-1,-1,1],[1,1,1,1,1],[1,-1,-1,-1,1],[1,-1,-1,-1,1]])
-E = np.array([[1,1,1,1,1], [1,-1,-1,-1,-1,], [1,1,1,1,1], [1,-1,-1,-1,-1], [1,1,1,1,1]])
-X = np.array([[1,-1,-1,-1,1], [-1,1,-1,1,-1], [-1,-1,1,-1,-1], [-1,1,-1,1,-1], [1,-1,-1,-1,1]])
+#create some random data
+random = np.random.randint(0,2,100)
+randomarray = np.where(random == 0, -1, random)
+randomdata = np.reshape(randomarray,(4,25))
 
-letters = np.stack([T,H,E, X], axis=0)
-    
-#flattens all dimensions except first dimension
-letters = letters.reshape(letters.shape[0], -1)
 
-random1 = np.array([[1,-1,1,-1,1], [-1,1,-1,1,-1], [1,-1,1,-1,1], [-1,1,-1,1,-1], [1,-1,1,-1,1]])
-random2 = np.array([[-1,1,-1,1,-1], [1,-1,1,-1,1], [-1,1,-1,1,-1], [1,-1,1,-1,1], [-1,1,-1,1,-1]])
+#bunch of ones
+constant_data = np.reshape(np.random.randint(1,2,100), (4,25))
 
-randomdata = np.stack([random1, random2, random1], axis=0)
-
-minentropy1 = np.array([[1,1,1,1,1], [1,1,1,1,1], [1,1,1,1,1], [1,1,1,1,1], [1,1,1,1,1]])
-minentropy2 = np.array([[-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1], [-1,-1,-1,-1,-1]])
-
-minentropy = np.stack([minentropy1, minentropy2, minentropy1])
 
 def estimate_n(table):
     """
@@ -55,5 +45,4 @@ def estimate_n(table):
     }
 
 print("random: ", estimate_n(randomdata))
-print("min_entropy: ", estimate_n(minentropy))
-print("letters: ", estimate_n(letters))
+print("contant: ", estimate_n(constant_data))
