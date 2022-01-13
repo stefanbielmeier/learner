@@ -18,7 +18,7 @@ class HopfieldNetwork:
 
     def __smooth_function(self, x):
         
-        return x*x*x*x
+        return x**11
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
