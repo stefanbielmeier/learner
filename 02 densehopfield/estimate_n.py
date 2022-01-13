@@ -7,7 +7,6 @@ random = np.random.randint(0,2,100)
 randomarray = np.where(random == 0, -1, random)
 randomdata = np.reshape(randomarray,(4,25))
 
-
 #bunch of ones
 constant_data = np.reshape(np.random.randint(1,2,100), (4,25))
 
