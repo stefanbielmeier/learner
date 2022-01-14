@@ -9,13 +9,17 @@ from densehopfield import HopfieldNetwork
 
 #1 create memories: 100 random binary patterns with size 25
 
-num_memories = 30000
+num_memories = 15_000
 num_neurons = 25
 dims = int(math.sqrt(num_neurons))
 
 random = np.random.randint(0,2,num_memories*num_neurons)
 randomarray = np.where(random == 0, -1, random)
-memories = np.reshape(randomarray,(num_memories,num_neurons))
+
+#constant memories
+constantarray = np.random.randint(1,2,num_memories*num_neurons)
+
+memories = np.reshape(constantarray,(num_memories,num_neurons))
 
 #for plot
 polydegrees = np.arange(1,50) #x
