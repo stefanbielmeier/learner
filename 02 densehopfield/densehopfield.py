@@ -5,7 +5,7 @@ import numpy as np
 from utils import plot_img
 
 class HopfieldNetwork:
-    def __init__(self, neurons):
+    def __init__(self, neurons, polydegree):
         self.neurons = neurons
         
         #initialize excitation of neurons as 0
@@ -16,13 +16,14 @@ class HopfieldNetwork:
 
         self.energy = 0
 
+        self.polydegree = polydegree
+
     def __smooth_function(self, x):
         
-        return x**8
+        return x**self.polydegree
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
-        
         self.excitation = state
 
         for i in range(self.neurons):
@@ -51,6 +52,9 @@ class HopfieldNetwork:
         dims = int(math.sqrt(self.neurons))
         state = self.excitation.reshape(dims,dims)
         plot_img(state, dims)
+
+    def get_state(self):
+        return self.excitation
 
 def main():    
     T = np.array([[1,1,1,1,1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1],[-1,-1,1,-1,-1]])
@@ -112,5 +116,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
