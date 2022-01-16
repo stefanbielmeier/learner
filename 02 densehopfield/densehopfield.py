@@ -80,11 +80,10 @@ def main():
     fourmems = np.stack([T,H,E,X], axis=0)
     fourmems = fourmems.reshape(fourmems.shape[0],-1) #flattens all except first dim, => 2D matrix
     
-    newnet = HopfieldNetwork(25)
+    newnet = HopfieldNetwork(25, 3)
     newnet.learn(fourmems)
 
     noisy_s = np.array([[1,1,1,-1,1], [-1,1,-1,-1,-1], [1,1,1,1,1], [-1,-1,1,-1,1], [1,1,1,1,1]])
-
 
     print('T')
     plot_img(noisy_t, 5)
