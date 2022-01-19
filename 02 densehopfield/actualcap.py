@@ -13,13 +13,20 @@ num_memories = 15_000
 num_neurons = 25
 dims = int(math.sqrt(num_neurons))
 
+
+#random
 random = np.random.randint(0,2,num_memories*num_neurons)
 randomarray = np.where(random == 0, -1, random)
+
+#double random
+doublerandom = np.concatenate((randomarray, randomarray))
+print(doublerandom.shape)
 
 #constant memories
 constantarray = np.random.randint(1,2,num_memories*num_neurons)
 
-memories = np.reshape(constantarray,(num_memories,num_neurons))
+memories = np.reshape(doublerandom,(2*num_memories,num_neurons))
+print(memories.shape)
 
 #for plot
 polydegrees = np.arange(1,50) #x
@@ -27,7 +34,7 @@ recall_qualities = [] #y
 
 for n in polydegrees:
     #2 train dense hopfield network with 25 Neurons on desired memories
-    network = HopfieldNetwork(num_neurons, n)
+    network = HopfieldNetwork(num_neurons, n, max_cap = False)
     network.learn(memories)
 
     #3 do prediction for random one memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 

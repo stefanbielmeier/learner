@@ -5,7 +5,7 @@ import numpy as np
 from utils import plot_img
 
 class HopfieldNetwork:
-    def __init__(self, neurons, polydegree):
+    def __init__(self, neurons, polydegree, max_cap = False):
         self.neurons = neurons
         
         #initialize excitation of neurons as 0
@@ -15,12 +15,17 @@ class HopfieldNetwork:
         self.memories = 0
 
         self.energy = 0
-
+        
         self.polydegree = polydegree
+
+        self.max_cap = max_cap
 
     def __smooth_function(self, x):
         
-        return x**self.polydegree
+        if self.max_cap:
+            return math.exp(x)
+        else:
+            return x**self.polydegree
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
