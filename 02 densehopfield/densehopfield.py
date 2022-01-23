@@ -21,6 +21,7 @@ class HopfieldNetwork:
         self.max_cap = max_cap
 
     def __smooth_function(self, x):
+        #rectified polynomial function Hopfield & Krotov 2016
         if x < 0:
            return 0 
         if self.max_cap:
