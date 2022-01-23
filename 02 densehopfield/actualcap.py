@@ -11,6 +11,7 @@ from densehopfield import HopfieldNetwork
 
 num_memories = 15_000
 num_neurons = 25
+num_examples = 3
 dims = int(math.sqrt(num_neurons))
 
 
@@ -18,14 +19,16 @@ dims = int(math.sqrt(num_neurons))
 random = np.random.randint(0,2,num_memories*num_neurons)
 randomarray = np.where(random == 0, -1, random)
 
-#double random
-doublerandom = np.concatenate((randomarray, randomarray))
-print(doublerandom.shape)
+#duplicate the dataset given #examples
+random_int = []
+for i in range(num_examples):
+    random_int = np.concatenate((random_int, randomarray)) 
+print(type(random_int))
 
 #constant memories
 constantarray = np.random.randint(1,2,num_memories*num_neurons)
 
-memories = np.reshape(doublerandom,(2*num_memories,num_neurons))
+memories = np.reshape(random_int,(num_examples*num_memories,num_neurons))
 print(memories.shape)
 
 #for plot
@@ -40,11 +43,11 @@ for n in polydegrees:
     #3 do prediction for random one memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
     randomidx = np.random.randint(0,len(memories),1)[0]
 
-    original = memories[randomidx].reshape(5,5)
+    original = memories[randomidx].reshape(dims,dims)
 
     network.update(original.flatten())
 
-    restored = network.get_state().reshape(5,5)
+    restored = network.get_state().reshape(dims,dims)
     
     num_equal_bits = np.sum(original.flatten() == restored.flatten())
     
