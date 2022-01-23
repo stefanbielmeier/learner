@@ -21,7 +21,8 @@ class HopfieldNetwork:
         self.max_cap = max_cap
 
     def __smooth_function(self, x):
-        
+        if x < 0:
+           return 0 
         if self.max_cap:
             return math.exp(x)
         else:

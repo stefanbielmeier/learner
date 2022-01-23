@@ -9,7 +9,7 @@ from densehopfield import HopfieldNetwork
 
 #1 create memories: 100 random binary patterns with size 25
 
-num_memories = 15_000
+num_memories = 150
 num_neurons = 25
 num_examples = 3
 dims = int(math.sqrt(num_neurons))
