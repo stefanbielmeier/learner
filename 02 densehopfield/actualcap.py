@@ -15,6 +15,34 @@ dims = int(math.sqrt(num_neurons))
 #2 setup
 max_polynomial = 20
 
+def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False):
+    recall_qualities = []
+
+    for n in polydegrees:
+        #2 train dense hopfield network with 25 Neurons on desired memories
+        network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap)
+        network.learn(memories)
+
+        #3 do prediction for 5 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
+        num_experiments = 10
+        randomidxs = np.random.randint(0,len(memories),num_experiments)
+
+        avg_recall_quality = 0
+            
+        for idx in randomidxs:
+            original = memories[idx].reshape(dims,dims)
+            network.update(original.flatten())
+            restored = network.get_state().reshape(dims,dims)
+            num_equal_bits = np.sum(original.flatten() == restored.flatten())
+            recall_quality = (num_equal_bits/num_neurons-0.5)*2
+            avg_recall_quality = avg_recall_quality + recall_quality
+            
+        avg_recall_quality = avg_recall_quality/len(randomidxs)
+
+        recall_qualities.append(avg_recall_quality)
+
+    return recall_qualities
+
 for examples_per_class in num_examples:
 #3 create random memories
     num_classes = int(total_memories/examples_per_class)
@@ -42,34 +70,6 @@ for examples_per_class in num_examples:
 
     #for plot
     polydegrees = np.arange(1,max_polynomial) #x
-
-    def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False):
-        recall_qualities = []
-
-        for n in polydegrees:
-            #2 train dense hopfield network with 25 Neurons on desired memories
-            network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap)
-            network.learn(memories)
-
-            #3 do prediction for 5 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
-            num_experiments = 10
-            randomidxs = np.random.randint(0,len(memories),num_experiments)
-
-            avg_recall_quality = 0
-            
-            for idx in randomidxs:
-                original = memories[idx].reshape(dims,dims)
-                network.update(original.flatten())
-                restored = network.get_state().reshape(dims,dims)
-                num_equal_bits = np.sum(original.flatten() == restored.flatten())
-                recall_quality = (num_equal_bits/num_neurons-0.5)*2
-                avg_recall_quality = avg_recall_quality + recall_quality
-            
-            avg_recall_quality = avg_recall_quality/len(randomidxs)
-
-            recall_qualities.append(avg_recall_quality)
-
-        return recall_qualities
 
     #ints_recall_qualities = get_recall_qualities(int_memories, polydegrees, num_neurons)
     float_recall_qualities = get_recall_qualities(float_memories, polydegrees, num_neurons)
