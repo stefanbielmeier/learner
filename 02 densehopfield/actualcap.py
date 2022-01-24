@@ -7,44 +7,50 @@ import matplotlib.pyplot as plt
 from utils import plot_img
 from densehopfield import HopfieldNetwork
 
-#1 create memories: 100 random binary patterns with size 25
-
-num_memories = 4
-num_neurons = 3
-num_examples = 1
+#1 Memories
+num_memories = 200
+num_neurons = 16
+num_examples = 2
 dims = int(math.sqrt(num_neurons))
 
-
-#random
+#2 create random memories
 random = np.random.randint(0,2,num_memories*num_neurons)
 randomarray = np.where(random == 0, -1, random)
 
-#duplicate the dataset given #integer array
-random_int = []
-for i in range(num_examples):
-    random_int = np.concatenate((random_int, randomarray)) 
+#extend the random data #num_examples of times
+random_ints = np.tile(randomarray, num_examples)
 
-random_float = np.concatenate((randomarray, randomarray))
+#store as float, as well
+random_floats = np.array(random_ints, dtype=np.float64)
 
 #constant memories
 constantarray = np.random.randint(1,2,num_memories*num_neurons)
 
-memories = np.reshape(random_int,(num_examples*num_memories,num_neurons))
-print(memories.shape)
+int_memories = np.reshape(random_ints,(num_examples*num_memories,num_neurons))
+float_memories = np.reshape(random_floats,(num_examples*num_memories,num_neurons))
+constant_memories = np.reshape(constantarray, (num_memories, num_neurons))
+
+print("float", int_memories)
+print("int", float_memories)
+print("const", constant_memories)
 
 #for plot
 polydegrees = np.arange(1,50) #x
-recall_qualities = [] #y
+ints_recall_qualities = [] 
+float_recall_qualities = []
 
 for n in polydegrees:
     #2 train dense hopfield network with 25 Neurons on desired memories
     network = HopfieldNetwork(num_neurons, n, max_cap = False)
-    network.learn(memories)
+    network.learn(int_memories)
+
+    float_net = HopfieldNetwork(num_neurons, n, max_cap = False)
+    float_net.learn(float_memories)
 
     #3 do prediction for random one memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
-    randomidx = np.random.randint(0,len(memories),1)[0]
+    randomidx = np.random.randint(0,len(int_memories),1)[0]
 
-    original = memories[randomidx].reshape(dims,dims)
+    original = int_memories[randomidx].reshape(dims,dims)
 
     network.update(original.flatten())
 
@@ -54,7 +60,22 @@ for n in polydegrees:
     
     recall_quality = (num_equal_bits/num_neurons-0.5)*2
 
-    recall_qualities.append(recall_quality)
+    ints_recall_qualities.append(recall_quality)
 
-plt.plot(polydegrees, recall_qualities)
+    #forfloats
+    randomidx = np.random.randint(0,len(float_memories),1)[0]
+
+    original = float_memories[randomidx].reshape(dims,dims)
+
+    float_net.update(original.flatten())
+
+    restored = float_net.get_state().reshape(dims,dims)
+    
+    num_equal_bits = np.sum(original.flatten() == restored.flatten())
+    
+    recall_quality = (num_equal_bits/num_neurons-0.5)*2
+
+    float_recall_qualities.append(recall_quality)
+
+plt.plot(polydegrees, ints_recall_qualities, float_recall_qualities)
 plt.show()
