@@ -9,9 +9,9 @@ from densehopfield import HopfieldNetwork
 
 #1 create memories: 100 random binary patterns with size 25
 
-num_memories = 150
-num_neurons = 25
-num_examples = 3
+num_memories = 4
+num_neurons = 3
+num_examples = 1
 dims = int(math.sqrt(num_neurons))
 
 
@@ -19,11 +19,12 @@ dims = int(math.sqrt(num_neurons))
 random = np.random.randint(0,2,num_memories*num_neurons)
 randomarray = np.where(random == 0, -1, random)
 
-#duplicate the dataset given #examples
+#duplicate the dataset given #integer array
 random_int = []
 for i in range(num_examples):
     random_int = np.concatenate((random_int, randomarray)) 
-print(type(random_int))
+
+random_float = np.concatenate((randomarray, randomarray))
 
 #constant memories
 constantarray = np.random.randint(1,2,num_memories*num_neurons)
