@@ -10,13 +10,13 @@ from densehopfield import HopfieldNetwork
 total_memories = 4_000
 num_neurons = 16
 num_examples = [1,2,4,5,10,20,50,100]
-dims = int(math.sqrt(num_neurons))
 
 #2 setup
 max_polynomial = 20
 
 def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False):
     recall_qualities = []
+    dims = int(math.sqrt(num_neurons))
 
     for n in polydegrees:
         #2 train dense hopfield network with 25 Neurons on desired memories
