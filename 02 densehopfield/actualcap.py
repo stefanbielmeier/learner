@@ -14,13 +14,13 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False):
+def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False, continous_data = False):
     recall_qualities = []
     dims = int(math.sqrt(num_neurons))
 
     for n in polydegrees:
         #2 train dense hopfield network with 25 Neurons on desired memories
-        network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap)
+        network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap, continous=continous_data)
         network.learn(memories)
 
         #3 do prediction for 5 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 

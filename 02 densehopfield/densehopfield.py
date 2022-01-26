@@ -1,11 +1,13 @@
+from cmath import tanh
 import math
+from re import I
 
 import numpy as np
 
 from utils import plot_img
 
 class HopfieldNetwork:
-    def __init__(self, neurons, polydegree, max_cap = False):
+    def __init__(self, neurons, polydegree, max_cap = False, continous = False):
         self.neurons = neurons
         
         #initialize excitation of neurons as 0
@@ -19,6 +21,8 @@ class HopfieldNetwork:
         self.polydegree = polydegree
 
         self.max_cap = max_cap
+
+        self.continuous = True
 
     def __smooth_function(self, x):
         #polynomial energy function (not rectified polynomial!) Hopfield & Krotov 2016
@@ -42,10 +46,21 @@ class HopfieldNetwork:
 
                 result = result + (self.__smooth_function(1 * memory[i] + jsum) - self.__smooth_function(-1 * memory[i] + jsum))
 
+            self.__activation_function(result, i)
+
+    def __activation_function(self, result, i):
+        beta = 1/(self.polydegree)
+
+        if self.continuous == False:
             if result >= 0:
                 self.excitation[i] = 1 #i
             else:
                 self.excitation[i] = -1
+        
+        if self.continuous == True:
+            #use tanh as activation function :-)
+            self.excitation[i] = np.tanh(beta*result)
+            print(result)
         
     def __str__(self):
         return "Energy of Network:" + str(self.energy)
