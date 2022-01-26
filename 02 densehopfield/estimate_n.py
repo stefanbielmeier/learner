@@ -1,15 +1,7 @@
-import math
+import math 
+import matplotlib.pyplot as plt
 
 import numpy as np
-
-#create some random data
-random = np.random.randint(0,2,100)
-randomarray = np.where(random == 0, -1, random)
-randomdata = np.reshape(randomarray,(4,25))
-
-#bunch of ones
-constant_data = np.reshape(np.random.randint(1,2,100), (4,25))
-
 
 def estimate_n(table):
     """
@@ -22,26 +14,59 @@ def estimate_n(table):
 
     More thresholds => more complexity in the set => higher n required
     """
-    sums = []
-    curr_threshold = 0
-    num_thresholds = 1 #at least one!
+    row_sums = []
+    column_sums = []
 
     for row in table:
-        sums.append(np.sum(row))
+        row_sums.append(np.sum(row))
+    row_sums.sort(reverse=True)
     
-    sums.sort(reverse=True)
-    curr_threshold = sums[0]
-    print(sums)
+    for column in np.transpose(table):
+        column_sums.append(np.sum(column))
 
-    for sum in sums[1:]:
-        if sum != curr_threshold:
-            num_thresholds = num_thresholds + 1
-            curr_threshold = sum
+    column_sums.sort(reverse=True)
 
-    return {
-        "thresholds": num_thresholds,
-        "average" : math.floor(np.average(sums)),
-    }
+    #count thresholds in both
+    row_thresholds = 1
+    col_thresholds = 1
+    
+    curr_threshold = row_sums[0]
+    for num in row_sums:
+        if num != curr_threshold:
+            curr_threshold = num
+            row_thresholds = row_thresholds + 1
+    
+    curr_threshold = column_sums[0]
+    for num in row_sums:
+        if num != curr_threshold:
+            curr_threshold = num
+            col_thresholds = col_thresholds + 1
 
-print("random: ", estimate_n(randomdata))
-print("contant: ", estimate_n(constant_data))
+    return np.log(row_thresholds)/np.log(2), np.log(col_thresholds)/np.log(2)
+
+
+row_thresholds = []
+column_thresholds = []
+datapoints = range(1_000,30_000,1_000)
+
+for datapoint in datapoints:
+    
+    random = np.random.randint(0,2,datapoint) 
+    randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
+
+    
+    arr = np.array([0.] * int(datapoint*0.8*3) + [1.] * int(datapoint*0.1*3) + [-1.] * int(datapoint*0.1*3)) # creates 1000 bits of noise for 48000 bits of data
+    np.random.shuffle(arr) #shuffle noisy bitss
+    d3_000 = np.tile(randomarray, 3)
+    noisydata = np.where(arr == 0, d3_000, arr)
+
+    noisyduplicateddata = np.reshape(np.concatenate((randomarray, noisydata)), (int(datapoint/25)*4,25))
+        
+    row, col = estimate_n(noisyduplicateddata)
+    row_thresholds.append(row)
+    column_thresholds.append(col)
+    
+plt.plot(datapoints, row_thresholds, label="row")
+plt.plot(datapoints, column_thresholds, label="col")
+plt.legend()
+plt.show()
