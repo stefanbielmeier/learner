@@ -2,31 +2,44 @@
 
 import numpy as np
 from actualcap import get_recall_qualities
+from estimate_n import estimate_n
 import matplotlib.pyplot as plt
 
 
 num_neurons = 16
 num_memories = 100
 
-random = np.random.randint(0,2,num_memories) 
+random = np.random.randint(0,2,num_memories*num_neurons) 
 randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
 
+noise_percentages = [0,0.01,0.05,0.1, 0.5]
+#noise_percentages = [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1, 0.5]
+
 #in-class noise percentage 
-for noise_percentage in [0,0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08,0.09,0.1]:
+for noise_percentage in noise_percentages:
+
     mems_900 = np.tile(randomarray, 9)
     
     # creates noise_percentage bits of noise in the copied data
-    noise = np.array([0.] * num_neurons*900*(1-noise_percentage) + [1.] * num_neurons*900*(1-0.5*noise_percentage) + [-1.] *num_neurons*900*(1-0.5*noise_percentage)) 
+    noise = np.array([0.] * int(num_neurons*900*(1-noise_percentage)) + [1.] *int(num_neurons*900*(0.5*noise_percentage)) + [-1.] *int(num_neurons*900*(0.5*noise_percentage)))
     np.random.shuffle(noise) #shuffle noisy bits
     noisydata = np.where(noise == 0, mems_900, noise)
 
-    mems_1000 = np.concat(randomarray, mems_900)
-    data = np.reshape(randomarray, (1_000,16)) 
-
+    mems_1000 = np.concatenate((randomarray, noisydata))
+    data = np.reshape(mems_1000, (1000,16)) 
 
     polydegrees = np.arange(1,30) #m
     recall_qualities = get_recall_qualities(data, polydegrees, num_neurons)
-    plt.plot(polydegrees, recall_qualities, label="noise percentage in copies: {}".format(noise_percentage))
+    
+    estimated_n = estimate_n(data)
+
+    plt.axvline(estimated_n, label="noise % {}, estm n: {}".format(noise_percentage, estimated_n))
+    plt.plot(polydegrees, recall_qualities, label="noise % {}".format(noise_percentage))
 
 plt.legend(loc="best")
 plt.show()
+
+
+
+
+
