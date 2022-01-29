@@ -22,7 +22,7 @@ class HopfieldNetwork:
 
         self.max_cap = max_cap
 
-        self.continuous = True
+        self.continuous = continous
 
     def __smooth_function(self, x):
         #polynomial energy function (not rectified polynomial!) Hopfield & Krotov 2016
@@ -60,7 +60,6 @@ class HopfieldNetwork:
         if self.continuous == True:
             #use tanh as activation function :-)
             self.excitation[i] = np.tanh(beta*result)
-            print(result)
         
     def __str__(self):
         return "Energy of Network:" + str(self.energy)
