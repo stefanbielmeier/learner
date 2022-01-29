@@ -1,5 +1,5 @@
+import math
 import matplotlib.pyplot as plt
-
 import numpy as np
 
 
@@ -31,7 +31,7 @@ def estimate_n(table):
             curr_threshold = num
             row_thresholds = row_thresholds + 1
 
-    return {"number of thresholds: ": row_thresholds, "row_sums": row_sums}
+    return {"number of thresholds: ": math.log2(row_thresholds), "row_sums": row_sums}
 
 
 def main():
