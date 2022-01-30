@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 num_neurons = 16
-num_memories = 100
+num_memories = 2
 
 random = np.random.randint(0,2,num_memories*num_neurons) 
 randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
@@ -18,15 +18,15 @@ noise_percentages = [0,0.01,0.05,0.1, 0.5]
 #in-class noise percentage 
 for noise_percentage in noise_percentages:
 
-    mems_900 = np.tile(randomarray, 9)
+    mems_900 = np.tile(randomarray, 500)
     
     # creates noise_percentage bits of noise in the copied data
-    noise = np.array([0.] * int(num_neurons*900*(1-noise_percentage)) + [1.] *int(num_neurons*900*(0.5*noise_percentage)) + [-1.] *int(num_neurons*900*(0.5*noise_percentage)))
+    noise = np.array([0.] * int(num_neurons*1000*(1-noise_percentage)) + [1.] *int(num_neurons*1000*(0.5*noise_percentage)) + [-1.] *int(num_neurons*1000*(0.5*noise_percentage)))
     np.random.shuffle(noise) #shuffle noisy bits
     noisydata = np.where(noise == 0, mems_900, noise)
 
     mems_1000 = np.concatenate((randomarray, noisydata))
-    data = np.reshape(mems_1000, (1000,16)) 
+    data = np.reshape(mems_1000, (1002,16)) 
 
     polydegrees = np.arange(1,30) #m
     recall_qualities = get_recall_qualities(data, polydegrees, num_neurons)

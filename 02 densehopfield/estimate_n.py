@@ -31,7 +31,7 @@ def estimate_n(table):
             curr_threshold = num
             row_thresholds = row_thresholds + 1
 
-    return math.log(row_thresholds)/math.log(1.5)
+    return math.log(row_thresholds)/math.log(2)
 
 
 def main():
