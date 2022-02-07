@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def estimate_n(table):
+def estimate_cap(table):
     """
     Takes: 2D numpy array representing an unlabeled dataset with rows as data points and columns as features.
 
-    Returns: the approximated n for the dataset assuming 0% retrieval error
+    Returns: the approximated capacity in bits required from a Hopfield network to memorize the whole set with close to 0% retrieval error
 
     Intuition: if the dataset contains less overlapping / complicated memories (orthogonal memories), n should be smaller because the hopfield net doesn't have to remember as many memories 
     but can extract features instead
@@ -31,31 +31,12 @@ def estimate_n(table):
             curr_threshold = num
             row_thresholds = row_thresholds + 1
 
-    return math.log(row_thresholds)/math.log(2)
+    return math.log(row_thresholds)/math.log(2)*table.shape[1]
 
 
 def main():
     #driver code
-
-    random = np.random.randint(0, 2, 1000)
-    randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
-    data = np.reshape(randomarray, (10,100))
-    
-    duplicateddata = np.tile(data, (2,1))
-
-    #10% noise to duplicates
-    noise_percentage = 0.2
-
-    noise_1000 = np.array([0.] * int(1000 * (1-noise_percentage)) + [1.] * int(1000*noise_percentage/2) + [-1.] * int(1000*noise_percentage/2)) 
-
-    np.random.shuffle(noise_1000) #shuffle noisy bits
-    noisydata = np.where(noise_1000 == 0, randomarray, noise_1000)
-
-    noisy_duplicated = np.reshape(np.concatenate((randomarray,noisydata)), (20,100))
-
-    print(estimate_n(data))
-    print(estimate_n(duplicateddata))
-    print(estimate_n(noisy_duplicated))
+    print("it works by calling it from other programs!")
 
 if __name__ == "__main__":
     main()
