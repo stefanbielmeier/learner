@@ -1,19 +1,20 @@
 import numpy as np
 
 from estimate_cap import estimate_cap
+from actualcap import get_recall_qualities
 
 ## Approach Feb 22nd:
 
 ## 1) have a 2-class resembling dataset
 ## 2) Estimate capacity in bits
 ## 3) Calculate the capacity in bits (0.24 bits / weight – MacKay) for a Hopfield network
-## 4) Build a Hopfield Network with n = 2 and see what it does in terms of recall_qualities
+## 4) Build a Hopfield Network with n = 2 and see what it does in terms of memorization (recall_quality)
 
 
 #1) Create 2-class resembling dataset without labels.
 
 #create 2 uniuqe datapoints, one in each class
-num_datapoints = 80
+num_datapoints = 20
 dimensionality = 100
 random = np.random.randint(0, 2, num_datapoints*dimensionality)
 
@@ -35,4 +36,7 @@ network_capacity = capacity_per_weight * num_weights
 
 print(network_capacity)
 
-#4) Compare the two results...
+#4) The capacity of the network at predicted quality
+recallquality = get_recall_qualities(uniquepoints, polydegrees=[2], num_neurons=dimensionality)
+
+print(recallquality[0])
