@@ -11,14 +11,13 @@ from actualcap import get_recall_qualities
 ## 3) Calculate the capacity in bits (0.24 bits / weight – MacKay) for a Hopfield network
 ## 4) Build a Hopfield Network with n = 2 and see what it does in terms of memorization (recall_quality)
 
-
 dimensionality = 100
 
 estimated = []
 mackay = []
 performance = []  
 
-num_datapoint_range = range(10,100,5)
+num_datapoint_range = range(1,200,2)
 
 for num_datapoints in num_datapoint_range:
     #1) Create 2-class resembling dataset without labels.
@@ -51,14 +50,26 @@ for num_datapoints in num_datapoint_range:
 
 #5) plot all
 
-plt.plot(num_datapoint_range, estimated, label="estimate")
-plt.plot(num_datapoint_range, mackay, label="mackay")
-plt.plot(num_datapoint_range, performance, label="performance")
 
-plt.legend(loc='best')
+figure, ax1 = plt.subplots()
+
+color = 'tab:red'
+
+ax1.set_xlabel('num unique datapoints')
+ax1.set_ylabel('memorization performance', color=color)  # we already handled the x-label with ax1
+ax1.plot(num_datapoint_range, performance, color=color, label ='performance')
+ax1.tick_params(axis='y', labelcolor=color)
+
+ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+color = 'tab:blue'
+
+ax2.set_ylabel('capacity in bits', color=color)
+ax2.plot(num_datapoint_range, estimated, color=color, label="estimate")
+ax2.plot(num_datapoint_range, mackay, color="tab:green", label="mackay")
+ax2.tick_params(axis='y', labelcolor=color)
+
+figure.tight_layout()  # otherwise the right y-label is slightly clipped
 plt.show()
 
 #6) do it for increasing # of datapoints to see when network starts failing
-
-#TODO 
-#CHANGE AXIS
