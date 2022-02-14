@@ -41,6 +41,21 @@ plt.imshow(train_binary[0,:-1].reshape(28,28))
 plt.gray()
 plt.show()
 
-#pick 1-200 random images from MNIST two-class dataset and use it to predict performance
+#Pick 1-200 random images from MNIST two-class dataset:
+num_datapoint_range = range(1,200,2)
+
+print(train_binary.shape[0])
+
+for num_images in num_datapoint_range:
+    randomindeces = np.random.randint(0, train_binary.shape[0]-1, num_images)
+
+    selectedimages = np.take(train_binary[:,:-1], randomindeces, axis=0)
+    print(selectedimages.shape)
+
+    if num_images > 1:
+        break
+
+
+
 
 
