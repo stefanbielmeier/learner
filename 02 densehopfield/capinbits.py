@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from estimate_cap import estimate_cap
 from actualcap import get_recall_qualities
 
-## Approach Feb 22nd:
+## Approach Feb 2nd:
 
 ## 1) have a 2-class resembling dataset
 ## 2) Estimate capacity in bits
