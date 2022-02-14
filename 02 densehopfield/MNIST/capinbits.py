@@ -11,7 +11,7 @@ from actualcap import get_recall_qualities
 ## 3) Calculate the capacity in bits (0.24 bits / weight – MacKay) for a Hopfield network
 ## 4) Build a Hopfield Network with n = 2 and see what it does in terms of memorization (recall_quality)
 
-dimensionality = 100
+dimensionality = 784
 
 estimated = []
 mackay = []
@@ -27,7 +27,7 @@ for num_datapoints in num_datapoint_range:
 
     #make binary and reshape
     randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
-    uniquepoints = np.reshape(randomarray, (num_datapoints,100))
+    uniquepoints = np.reshape(randomarray, (num_datapoints,dimensionality))
         
 
     # 2) Estimate capacity in bits like with the supervised machine learner
