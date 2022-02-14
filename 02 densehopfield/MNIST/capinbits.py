@@ -17,7 +17,7 @@ estimated = []
 mackay = []
 performance = []  
 
-num_datapoint_range = range(1,200,2)
+num_datapoint_range = range(2,150,10)
 
 for num_datapoints in num_datapoint_range:
     #1) Create 2-class resembling dataset without labels.

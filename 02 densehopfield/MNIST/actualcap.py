@@ -23,8 +23,8 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = F
         network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap, continous=continous_data)
         network.learn(memories)
 
-        #3 do prediction for 5 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
-        num_experiments = 10
+        #3 do prediction for 10 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
+        num_experiments = max(len(memories), 10)
         randomidxs = np.random.randint(0,len(memories),num_experiments)
 
         avg_recall_quality = 0
