@@ -45,7 +45,7 @@ print(train_binary_subset.shape, train_subset_labels.shape) #12000 x 784 dims, #
 #IMAGES ALSO OK, RESHAPED (in 28 / 28) SHOWN AS CORRECT
 
 #Pick 1-200 random images from MNIST two-class dataset:
-num_datapoint_range = range(2, 5, 2)
+num_datapoint_range = range(2, 50, 2)
 
 dimensionality = train_binary_subset.shape[1]
 class_cutoff = int(train_binary_subset.shape[0]/2)
@@ -83,7 +83,7 @@ for num_images in num_datapoint_range:
 
     #4) The capacity of the network at predicted quality
     recallquality = get_recall_qualities(selected_images, polydegrees=[
-                                         3], num_neurons=dimensionality, plot_updated_images=True)
+                                         1], num_neurons=dimensionality, plot_updated_images=False)
 
     performance.append(recallquality[0])
 
