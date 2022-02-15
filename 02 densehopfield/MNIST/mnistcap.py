@@ -19,12 +19,13 @@ test_set_array = mnist_test.data.numpy()
 test_set_labels = mnist_test.targets.numpy()
 
 
-#concat data with labels
-train_set = train_set_array.reshape(train_set_array.shape[0], -1)
+#add labels to data
+train_set = train_set_array.reshape(train_set_array.shape[0], -1) #flatten array
 train_labels = train_set_labels
 
-print(train_set.shape, train_labels.shape)
 train = np.vstack((train_set.T, train_labels)).T
+
+#TRANSFORMING is NOT THE PROBLEM (images stay the same)
 
 print(train.shape)  # (60000 images, by 785 (784 pixels, and 1 label))
 
@@ -32,39 +33,42 @@ print(train.shape)  # (60000 images, by 785 (784 pixels, and 1 label))
 train = train[train[:, -1].argsort()]
 
 #create subset of two distinct classes, e.g. 0 and 1
-train_subset = train[0:12000, :]  # 6000 in each class
-print(np.unique(train_subset[:, -1]))  # returns [0, 1]
+train_subset = train[0:12000, :-1]  # 6000 in each class
+train_subset_labels = np.array(train[0:12000, -1], dtype=np.float64)
+
+print(np.unique(train_subset_labels)) # returns [0, 1]
 
 #convert data into binary data (white: 1, black: -1)
-train_binary = np.array(np.where(train_subset >= 128, 1, -1), dtype=np.float64)
+train_binary_subset = np.array(np.where(train_subset >= 128, 1, -1), dtype=np.float64)
+print(train_binary_subset.shape, train_subset_labels.shape) #12000 x 784 dims, #12000 1-D array of labels
 
-print(train_binary.shape[0])
-
-class_cutoff = int(train_binary.shape[0]/2)
-print(class_cutoff)
+#IMAGES ALSO OK, RESHAPED (in 28 / 28) SHOWN AS CORRECT
 
 #Pick 1-200 random images from MNIST two-class dataset:
-num_datapoint_range = range(2, 20, 4)
+num_datapoint_range = range(2, 5, 2)
 
-dimensionality = train_binary[:,:-1].shape[1]
+dimensionality = train_binary_subset.shape[1]
+class_cutoff = int(train_binary_subset.shape[0]/2)
 
 estimated = []
 mackay = []
-performance = []  
+performance = []
 
 for num_images in num_datapoint_range:
 
     #randomly select 0s and 1s from dataset in equal proportions
     random_0_indeces = np.random.randint(0, class_cutoff, int(num_images/2))
-    random_1_indeces = np.random.randint(0, class_cutoff, int(num_images/2))
+    random_1_indeces = np.random.randint(class_cutoff, class_cutoff*2, int(num_images/2))
+    #this works.
 
-    selected_0s = np.take(train_binary[:class_cutoff, :-1], random_0_indeces, axis=0)
-    selected_1s = np.take(train_binary[class_cutoff:, :-1], random_1_indeces, axis=0)
+    selected_0s = np.take(train_binary_subset, random_0_indeces, axis=0)
+    selected_1s = np.take(train_binary_subset, random_1_indeces, axis=0)
+    #also OK
 
     selected_images = np.concatenate((selected_0s, selected_1s))
+    #also works
 
     # 2) Estimate capacity in bits like with the supervised machine learner
-
     dataset_cap = estimate_cap(selected_images)
     estimated.append(dataset_cap)
 
