@@ -14,30 +14,47 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_qualities(memories, polydegrees, num_neurons, network_max_cap = False, continous_data = False):
+def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False):
+    """
+    @param: memories. 2-D numpy float array First dimension: example, Second dimension: features (if image, flattened)
+    @param: polydegrees, array, of polydegrees for which the recall quality should be performed
+    @param: num_neurons, integer. number of neurons in the Hopfield network used for testing. Equivalent to memory_dimension
+
+
+    @return: recall_qualities, Array of floats. 
+    """
+    
+    
     recall_qualities = []
     dims = int(math.sqrt(num_neurons))
 
-    for n in polydegrees:
-        #2 train dense hopfield network with 25 Neurons on desired memories
-        network = HopfieldNetwork(num_neurons, n, max_cap = network_max_cap, continous=continous_data)
+    for polydegree in polydegrees:
+        #train Hopfield net
+        network = HopfieldNetwork(num_neurons, polydegree, max_cap = network_at_maxcap, continous=is_continous)
         network.learn(memories)
+        #fine
 
-        #3 do prediction for 10 memories in dataset memory, see how many bits are the same (1 is 100%, 0 is 50% of bits are flipped => random) 
-        num_experiments = max(len(memories), 10)
-        randomidxs = np.random.randint(0,len(memories),num_experiments)
+        num_memories = memories.shape[0] #works as expected
 
         avg_recall_quality = 0
             
-        for idx in randomidxs:
-            original = memories[idx].reshape(dims,dims)
-            network.update(original.flatten())
+        for idx in range(0,num_memories):
+
+            image = memories[idx, :].reshape(dims,dims) #correct image if printed
+            #plt.imshow(image)
+            #plt.show()
+
+            network.update(image.flatten()) #should also be correct as flattening works as expected
+
             restored = network.get_state().reshape(dims,dims)
-            num_equal_bits = np.sum(original.flatten() == restored.flatten())
+            #plt.imshow(restored)
+            #plt.show()
+
+            num_equal_bits = np.sum(image.flatten() == restored.flatten())
             recall_quality = (num_equal_bits/num_neurons-0.5)*2
             avg_recall_quality = avg_recall_quality + recall_quality
-            
-        avg_recall_quality = avg_recall_quality/len(randomidxs)
+        
+        avg_recall_quality = avg_recall_quality/num_memories
 
         recall_qualities.append(avg_recall_quality)
 
