@@ -83,7 +83,7 @@ for num_images in num_datapoint_range:
 
     #4) The capacity of the network at predicted quality
     recallquality = get_recall_qualities(selected_images, polydegrees=[
-                                         2], num_neurons=dimensionality)
+                                         3], num_neurons=dimensionality, plot_updated_images=True)
 
     performance.append(recallquality[0])
 

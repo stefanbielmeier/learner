@@ -14,12 +14,12 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False):
+def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False):
     """
     @param: memories. 2-D numpy float array First dimension: example, Second dimension: features (if image, flattened)
     @param: polydegrees, array, of polydegrees for which the recall quality should be performed
     @param: num_neurons, integer. number of neurons in the Hopfield network used for testing. Equivalent to memory_dimension
-
+    @param: plot_updated_images, Boolean
 
     @return: recall_qualities, Array of floats. 
     """
@@ -37,18 +37,22 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
         num_memories = memories.shape[0] #works as expected
 
         avg_recall_quality = 0
+        
             
+
         for idx in range(0,num_memories):
 
             image = memories[idx, :].reshape(dims,dims) #correct image if printed
-            #plt.imshow(image)
-            #plt.show()
+            if plot_updated_images:
+                plt.imshow(image)
+                plt.show()
 
             network.update(image.flatten()) #should also be correct as flattening works as expected
 
             restored = network.get_state().reshape(dims,dims)
-            #plt.imshow(restored)
-            #plt.show()
+            if plot_updated_images:
+                plt.imshow(restored)
+                plt.show()
 
             num_equal_bits = np.sum(image.flatten() == restored.flatten())
             recall_quality = (num_equal_bits/num_neurons-0.5)*2
