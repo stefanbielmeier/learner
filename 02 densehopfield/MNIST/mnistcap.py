@@ -38,8 +38,8 @@ train_subset_labels = np.array(train[0:12000, -1], dtype=np.float64)
 
 print(np.unique(train_subset_labels)) # returns [0, 1]
 
-#convert data into binary data (white: 1, black: -1)
-train_binary_subset = np.array(np.where(train_subset >= 128, 1, -1), dtype=np.float64)
+#convert data into binary data (white: 1 (all values bigger than 128), black: -1)
+train_binary_subset = np.array(np.where(train_subset >= 128, 1, 0), dtype=np.float64)
 print(train_binary_subset.shape, train_subset_labels.shape) #12000 x 784 dims, #12000 1-D array of labels
 
 #IMAGES ALSO OK, RESHAPED (in 28 / 28) SHOWN AS CORRECT
