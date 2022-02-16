@@ -24,7 +24,6 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
     @return: recall_qualities, Array of floats. 
     """
     
-    
     recall_qualities = []
     dims = int(math.sqrt(num_neurons))
 
