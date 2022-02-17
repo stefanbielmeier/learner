@@ -1,4 +1,5 @@
 import math
+from random import randint
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -34,12 +35,13 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
         #fine
 
         num_memories = memories.shape[0] #works as expected
+        zero_idxs = np.random.randint(0,int(num_memories/2),5)
+        one_idxs = np.random.randint(int(num_memories/2),num_memories,5)
+        idxs = np.concatenate((zero_idxs,one_idxs))
 
         avg_recall_quality = 0
-        
-            
 
-        for idx in range(0,num_memories):
+        for idx in idxs:
 
             image = memories[idx, :].reshape(dims,dims) #correct image if printed
             if plot_updated_images:
@@ -58,10 +60,11 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
                 plt.show()
 
             num_equal_bits = np.sum(image.flatten() == restored.flatten())
-            recall_quality = (num_equal_bits/num_neurons-0.5)*2
+            #old_recall_quality = (num_equal_bits/num_neurons-0.5)/2
+            recall_quality = num_equal_bits/num_neurons #why is this again like this? 50% accuracy is chance?
             avg_recall_quality = avg_recall_quality + recall_quality
         
-        avg_recall_quality = avg_recall_quality/num_memories
+        avg_recall_quality = avg_recall_quality/idxs.shape[0]
 
         recall_qualities.append(avg_recall_quality)
 
