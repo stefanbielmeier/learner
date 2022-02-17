@@ -14,7 +14,7 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False):
+def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1):
     """
     @param: memories. 2-D numpy float array First dimension: example, Second dimension: features (if image, flattened)
     @param: polydegrees, array, of polydegrees for which the recall quality should be performed
@@ -46,7 +46,11 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
                 plt.imshow(image)
                 plt.show()
 
-            network.update(image.flatten()) #should also be correct as flattening works as expected
+            for i in range(num_updates):
+                if i == 0:
+                    network.update(image.flatten()) #should also be correct as flattening works as expected
+                else: 
+                    network.update(network.excitation)
 
             restored = network.get_state().reshape(dims,dims)
             if plot_updated_images:
