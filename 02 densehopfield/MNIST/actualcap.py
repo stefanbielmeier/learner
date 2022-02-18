@@ -35,6 +35,7 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     idxs = np.concatenate((zero_idxs,one_idxs))
 
 
+
     for idx in idxs:
 
         image = memories[idx, :].reshape(dims,dims) #correct image if printed
