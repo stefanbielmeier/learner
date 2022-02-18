@@ -53,6 +53,10 @@ class_cutoff = int(train_binary_subset.shape[0]/2)
 performance_one_update = []
 performance_two_updates = []
 performance_three_updates = []
+performance_four_updates = []
+performance_five_updates = []
+performance_six_updates = []
+
 
 for num_images in num_datapoint_range:
 
@@ -84,12 +88,30 @@ for num_images in num_datapoint_range:
 
     performance_three_updates.append(recallquality[0])
 
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=3)
+
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=4)
+    performance_four_updates.append(recallquality[0])
+
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=5)
+    performance_five_updates.append(recallquality[0])
+
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=6)
+    performance_six_updates.append(recallquality[0])
+
 
 #5) plot all
 
 plt.plot(num_datapoint_range, performance_one_update, label='one update iteration')
 plt.plot(num_datapoint_range, performance_two_updates, label='two update iterations')
 plt.plot(num_datapoint_range, performance_three_updates, label='three two update iterations')
+plt.plot(num_datapoint_range, performance_four_updates, label='four two update iterations')
+plt.plot(num_datapoint_range, performance_five_updates, label='five two update iterations')
+plt.plot(num_datapoint_range, performance_six_updates, label='six two update iterations')
 
 plt.legend(loc='best')
 plt.show()
