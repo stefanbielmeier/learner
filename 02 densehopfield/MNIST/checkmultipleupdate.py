@@ -50,9 +50,9 @@ num_datapoint_range = range(2, 20, 2)
 dimensionality = train_binary_subset.shape[1]
 class_cutoff = int(train_binary_subset.shape[0]/2)
 
-estimated = []
-mackay = []
-performance = []
+performance_one_update = []
+performance_two_updates = []
+performance_three_updates = []
 
 for num_images in num_datapoint_range:
 
@@ -68,49 +68,29 @@ for num_images in num_datapoint_range:
     selected_images = np.concatenate((selected_0s, selected_1s))
     #also works
 
-    # 2) Estimate capacity in bits like with the supervised machine learner
-    dataset_cap = estimate_cap(selected_images)
-    estimated.append(dataset_cap)
-
-    # 3) Calculate capacity of Hopfield Net in bits
     
-    capacity_per_weight = 0.24
-    num_weights = (dimensionality**2)/2
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=1)
 
-    network_capacity = capacity_per_weight * num_weights
+    performance_one_update.append(recallquality[0])
 
-    mackay.append(network_capacity)
-
-    #4) The capacity of the network at predicted quality
     recallquality = get_recall_qualities(selected_images, polydegrees=[
                                          2], num_neurons=dimensionality, plot_updated_images=False, num_updates=2)
 
-    performance.append(recallquality[0])
+    performance_two_updates.append(recallquality[0])
+
+    recallquality = get_recall_qualities(selected_images, polydegrees=[
+                                         2], num_neurons=dimensionality, plot_updated_images=False, num_updates=3)
+
+    performance_three_updates.append(recallquality[0])
 
 
 #5) plot all
 
+plt.plot(num_datapoint_range, performance_one_update, label='one update iteration')
+plt.plot(num_datapoint_range, performance_two_updates, label='two update iterations')
+plt.plot(num_datapoint_range, performance_three_updates, label='three two update iterations')
 
-figure, ax1 = plt.subplots()
-
-color = 'tab:red'
-
-ax1.set_xlabel('num unique datapoints')
-# we already handled the x-label with ax1
-ax1.set_ylabel('memorization performance', color=color)
-ax1.plot(num_datapoint_range, performance, color=color, label='performance')
-ax1.tick_params(axis='y', labelcolor=color)
-
-ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
-
-color = 'tab:blue'
-
-ax2.set_ylabel('capacity in bits', color=color)
-ax2.plot(num_datapoint_range, estimated, color=color, label="estimate")
-ax2.plot(num_datapoint_range, mackay, color="tab:green", label="mackay")
-ax2.tick_params(axis='y', labelcolor=color)
-
-figure.tight_layout()  # otherwise the right y-label is slightly clipped
+plt.legend(loc='best')
 plt.show()
 
-#6) do it for increasing # of datapoints to see when network starts failing
