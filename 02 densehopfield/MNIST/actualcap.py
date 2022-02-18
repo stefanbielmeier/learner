@@ -59,9 +59,11 @@ def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap =
                 plt.imshow(restored)
                 plt.show()
 
-            num_equal_bits = np.sum(image.flatten() == restored.flatten())
-            #old_recall_quality = (num_equal_bits/num_neurons-0.5)/2
-            recall_quality = num_equal_bits/num_neurons #why is this again like this? 50% accuracy is chance?
+
+            #MacKay: if restored version (stable state) has 50% of bits flipped (compared to the original image), the recall performance is 0 (not recognizable)
+            #scaled inner product of memory & restored memory by num_neurons
+            recall_quality = np.inner(image.flatten(), restored.flatten()) / num_neurons 
+
             avg_recall_quality = avg_recall_quality + recall_quality
         
         avg_recall_quality = avg_recall_quality/idxs.shape[0]
