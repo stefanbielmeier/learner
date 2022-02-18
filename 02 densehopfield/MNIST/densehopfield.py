@@ -49,7 +49,6 @@ class HopfieldNetwork:
             self.__activation_function(result, i)
 
     def __activation_function(self, result, i):
-        beta = 1/(self.polydegree)
 
         if self.continuous == False:
             if result >= 0:
@@ -58,6 +57,7 @@ class HopfieldNetwork:
                 self.excitation[i] = -1
         
         if self.continuous == True:
+            beta = 1/(self.polydegree)
             #use tanh as activation function :-)
             self.excitation[i] = np.tanh(beta*result)
         
