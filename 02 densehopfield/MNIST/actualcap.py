@@ -3,6 +3,7 @@ from random import randint
 
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn import discriminant_analysis
 
 from utils import plot_img
 from densehopfield import HopfieldNetwork
@@ -14,6 +15,58 @@ num_examples = [1,2,4,5,10,20,50,100]
 
 #2 setup
 max_polynomial = 20
+
+def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1):
+
+    recall_quality = 0
+    dims = int(math.sqrt(num_neurons))
+
+    #train Hopfield net
+    network = HopfieldNetwork(num_neurons, polydegree, max_cap = network_at_maxcap, continous=is_continous)
+    network.learn(memories)
+
+    num_memories = memories.shape[0] 
+    num_images_per_class = int(num_memories/2)
+
+    num_test_images_per_class = min(5, num_images_per_class)
+    
+    zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
+    one_idxs = np.random.randint(num_images_per_class,num_memories,5)
+    idxs = np.concatenate((zero_idxs,one_idxs))
+
+
+    for idx in idxs:
+
+        image = memories[idx, :].reshape(dims,dims) #correct image if printed
+
+        if plot_updated_images:
+            plt.imshow(image)
+            plt.show()
+
+        for i in range(num_updates):
+            if i == 0:
+                network.update(image.flatten()) #should also be correct as flattening works as expected
+            else: 
+                network.update(network.excitation)
+
+        restored = network.get_state().reshape(dims,dims)
+        if plot_updated_images:
+            plt.imshow(restored)
+            plt.show()
+
+        #MacKay: if restored version (stable state) has 50% of bits flipped (compared to the original image), the recall performance is 0 (not recognizable)
+        #scaled inner product of memory & restored memory by num_neurons
+        recall_quality = np.inner(image.flatten(), restored.flatten()) / num_neurons 
+
+        recall_quality = recall_quality + recall_quality
+    
+    recall_quality = recall_quality/idxs.shape[0]
+    
+    return recall_quality
+
+
+
+
 
 def get_recall_qualities(memories, polydegrees, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1):
     """
