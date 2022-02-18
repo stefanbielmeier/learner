@@ -2,7 +2,6 @@ import torchvision
 import numpy as np
 import matplotlib.pyplot as plt
 
-from estimate_cap import estimate_cap
 from actualcap import get_recall_qualities
 
 
@@ -58,12 +57,14 @@ dataset = np.concatenate((selected_0s, selected_1s))
 #also works
 
 #x and y
-polydegrees = np.array(range(1,2,1))
+polydegrees = np.array(range(1,3,1))
 print(polydegrees)
 accuracies = get_recall_qualities(dataset, polydegrees=polydegrees, num_neurons=dimensionality, plot_updated_images=False)
 
 #plot
 plt.plot(polydegrees, accuracies, label="accuracy progression for capacity")
+plt.xlabel("number of memories")
+plt.ylabel("accuracy")
 
 plt.legend(loc='best')
 plt.show()
