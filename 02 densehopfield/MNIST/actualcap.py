@@ -31,10 +31,9 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     num_test_images_per_class = min(5, num_images_per_class)
     
     zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
-    one_idxs = np.random.randint(num_images_per_class,num_memories,5)
+    one_idxs = np.random.randint(num_images_per_class,num_memories,num_test_images_per_class)
     idxs = np.concatenate((zero_idxs,one_idxs))
-
-
+    print(idxs)
 
     for idx in idxs:
 
@@ -57,13 +56,14 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
 
         #MacKay: if restored version (stable state) has 50% of bits flipped (compared to the original image), the recall performance is 0 (not recognizable)
         #scaled inner product of memory & restored memory by num_neurons
-        recall_quality = np.inner(image.flatten(), restored.flatten()) / num_neurons 
+        performance = np.inner(image.flatten(), restored.flatten()) / num_neurons 
+        print(performance)
 
-        recall_quality = recall_quality + recall_quality
+        recall_quality = recall_quality + performance
     
-    recall_quality = recall_quality/idxs.shape[0]
+    average_recall_quality = recall_quality/idxs.shape[0]
     
-    return recall_quality
+    return average_recall_quality
 
 
 
