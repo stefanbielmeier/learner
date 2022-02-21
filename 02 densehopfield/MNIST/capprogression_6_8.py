@@ -44,9 +44,6 @@ print(np.unique(train_subset_labels)) # returns [6, 8]
 
 #convert data into binary data (white: 1 (all values bigger than 128), black: -1)
 train_binary_subset = np.array(np.where(train_subset >= 128, 1, -1), dtype=np.float64)
-print(train_binary_subset.shape, train_subset_labels.shape) #12000 x 784 dims, #12000 1-D array of labels
-
-#IMAGES ALSO OK, RESHAPED (in 28 / 28) SHOWN AS CORRECT
 
 #Select the first 50 images from the dataset (zeros and ones respective)
 
@@ -55,8 +52,11 @@ num_6s = train_subset_labels_6.shape[0]
 selected_6s = np.take(train_binary_subset, range(0,50), axis=0)
 selected_8s = np.take(train_binary_subset, range(num_6s+1,num_6s+1+50), axis=0)
 
-print(selected_6s.shape)
-print(selected_8s.shape)
+selected_labels_6 = np.take(train_subset_labels_6, range(0,50), axis=0)
+selected_labels_8 = np.take(train_subset_labels_8, range(num_6s+1, num_6s+51), axis = 0)
+
+print(np.unique(selected_labels_6))
+print(np.unique(selected_labels_8))
 
 #x percentage of the dataset analyzed
 dataset_share = np.array([0.02, 0.04, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]) #0.04 is 2 images in each "class"
