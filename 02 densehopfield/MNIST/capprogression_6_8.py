@@ -53,7 +53,7 @@ selected_6s = np.take(train_binary_subset, range(0,50), axis=0)
 selected_8s = np.take(train_binary_subset, range(num_6s+1,num_6s+1+50), axis=0)
 
 selected_labels_6 = np.take(train_subset_labels_6, range(0,50), axis=0)
-selected_labels_8 = np.take(train_subset_labels_8, range(num_6s+1, num_6s+51), axis = 0)
+selected_labels_8 = np.take(train_subset_labels_8, range(0,50), axis = 0)
 
 print(np.unique(selected_labels_6))
 print(np.unique(selected_labels_8))
@@ -77,10 +77,13 @@ for share in dataset_share:
 
 #plot
 x_axis = dataset_share * 100
+y2 = [2,4,10,20,30,40,50,60,70,80,90,100]
 
-plt.plot(x_axis, min_memorization_polydegrees, label="accuracy progression for capacity")
-plt.xlabel("number of memories")
-plt.ylabel("accuracy")
+plt.plot(x_axis, min_memorization_polydegrees, label="capacity progression for % of dataset")
+plt.plot(x_axis, y2, label="linear")
+
+plt.xlabel("Percent of 100 images used as memories")
+plt.ylabel("Capacity required to memorize (in terms of n)")
 
 plt.legend(loc='best')
 plt.show()
