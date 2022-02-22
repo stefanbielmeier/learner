@@ -15,13 +15,19 @@ def estimate_cap(table):
     More thresholds => more complexity in the set => higher n required
     """
     row_sums = []
+    col_sums = []
 
     for row in table:
         row_sums.append(np.sum(row))
     row_sums.sort(reverse=True)
 
+    for col in table.T:
+        col_sums.append(np.sum(col))
+    col_sums.sort(reverse=True)
+
     #count thresholds in both
     row_thresholds = 1
+    col_thresholds = 1
 
     curr_threshold = row_sums[0]
     for num in row_sums:
@@ -31,7 +37,15 @@ def estimate_cap(table):
             curr_threshold = num
             row_thresholds = row_thresholds + 1
 
-    return row_thresholds
+    curr_threshold = col_sums[0]
+    for num in col_sums:
+        #what if we vary the threshold equality to an inequalty?
+        #if curr_threshold
+        if num != curr_threshold:
+            curr_threshold = num
+            col_thresholds = col_thresholds + 1
+
+    return row_thresholds, col_thresholds
 
 
 def main():
