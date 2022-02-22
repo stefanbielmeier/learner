@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from minmemorypoly import get_memorization_capacity
+from estimate_cap import estimate_cap
 
 num_memories = 100
 num_neurons = 784
@@ -16,6 +17,8 @@ print(memories.shape)
 dataset_share = np.array([0.02, 0.04, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]) #0.04 is 2 images in each "class"
 
 min_memorization_polydegrees = []
+
+print("Num thresholds in 100 memories: ", estimate_cap(memories))
 
 for share in dataset_share:
     

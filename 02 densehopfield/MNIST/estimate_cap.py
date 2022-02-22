@@ -31,7 +31,7 @@ def estimate_cap(table):
             curr_threshold = num
             row_thresholds = row_thresholds + 1
 
-    return math.log(row_thresholds)/math.log(2)*table.shape[1]
+    return row_thresholds
 
 
 def main():
