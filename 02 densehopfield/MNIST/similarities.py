@@ -92,30 +92,46 @@ print("6s and 8s vs. uniform binary random", np.around(entropy(p_68s, p_long_uni
 print("0s and 1s vs. uniform binary random", np.around(entropy(p_01s, p_long_uniform_random, base=2), decimals=3), "bits")
 
 ##PLOT KL divergences
-x = np.arange(0,784)
+x = np.arange(0,98)
 
 scaled_01s = np.divide(p_01s, np.sum(p_01s))
 scaled_68s = np.divide(p_68s, np.sum(p_68s))
 
-fig, ax = plt.subplots()
-width = 0.25
+reduced_scaled_01s = np.sum(np.reshape(scaled_01s, (-1,8)), axis=1)
+reduced_scaled_68s = np.sum(np.reshape(scaled_68s, (-1,8)), axis=1)
+reduced_scaled_long_uniform_random = np.sum(np.reshape(scaled_long_uniform_random, (-1,8)), axis=1)
 
-ax.bar(x, scaled_01s, width , align='edge',label='0s and 1s')
-ax.bar(x+width, scaled_68s, width, align='edge', label='6s and 8s')
-ax.bar(x+2*width, scaled_long_uniform_random, width, align='edge', label='Uniform random')
+fig, ax = plt.subplots()
+width = 0.5
+
+ax.bar(x-width/2, reduced_scaled_01s, width , align='center',label='0s and 1s')
+ax.bar(x+width/2, reduced_scaled_68s, width, align='center', label='6s and 8s')
+ax.plot(x, reduced_scaled_long_uniform_random, label='Uniform random', color='green')
 
 ax.set_title('Probability distributions')
 ax.legend(loc='best')
 
 plt.show()
 
+x2 = range(0, 784)
+
 fig2, ax2 = plt.subplots()
-zeros = ax2.bar(x, np.divide(p_0s, np.sum(p_0s)), width =3, label='0s')
-ones = ax2.bar(x, np.divide(p_1s, np.sum(p_1s)), width =3, label='1s')
-sixes = ax2.bar(x, np.divide(p_6s, np.sum(p_6s)), width =3, label='6s')
-eights = ax2.bar(x, np.divide(p_8s, np.sum(p_8s)), width =3, label='8s')
+fig3, ax3 = plt.subplots()
+fig4, ax4 = plt.subplots()
+fig5, ax5 = plt.subplots()
+
+zeros = ax2.bar(x2, np.divide(p_0s, np.sum(p_0s)), width =1, label='0s')
+ones = ax3.bar(x2, np.divide(p_1s, np.sum(p_1s)), width =1, label='1s')
+sixes = ax4.bar(x2, np.divide(p_6s, np.sum(p_6s)), width =1, label='6s')
+eights = ax5.bar(x2, np.divide(p_8s, np.sum(p_8s)), width =1, label='8s')
 
 ax2.set_title('Probability distributions')
 ax2.legend(loc='best')
+ax3.set_title('Probability distributions')
+ax3.legend(loc='best')
+ax4.set_title('Probability distributions')
+ax4.legend(loc='best')
+ax5.set_title('Probability distributions')
+ax5.legend(loc='best')
 
 plt.show()
