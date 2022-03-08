@@ -8,47 +8,27 @@ from minmemorypoly import get_memorization_capacity
 from estimate_cap import estimate_cap
 
 num_memories = 100
-num_neurons = 16
-
+num_neurons = 784
 
 rng = np.random.default_rng()
-vals = rng.standard_normal(num_neurons)
+gaussian_vals = rng.standard_normal(num_neurons)
 
-gaussian_probabilities = np.empty(num_neurons)
-for i in range(len(gaussian_probabilities)):
-    gaussian_probabilities[i] = norm(0,1).pdf(vals[i])
+standard_norm = norm(392,162)
 
-print(gaussian_probabilities)
-gaussian_probabilities.sort()
-#plt.hist(gaussian_probabilities) #looks like data of 1s (furthest away from uniform random)
-#plt.show()
+fig, ax = plt.subplots()
 
-binary_gaussian = np.zeros((100,16))
+x = np.linspace(standard_norm.ppf(0.01),
+                standard_norm.ppf(0.99), 784)
 
-for col in range(len(gaussian_probabilities)):
-    probability = gaussian_probabilities[col]
-    number_1s = int(probability*binary_gaussian.shape[0])
-    
-    for one in range(number_1s):
-        binary_gaussian[one, col] = 1
+y = standard_norm.pdf(x)
 
-print(binary_gaussian)
 uniform_random = np.reshape(np.random.randint(0, 2, num_memories*num_neurons), (num_memories, num_neurons))
-
-p_binary_gaussian = np.sum(binary_gaussian, axis=0)
 p_uniform_random = np.sum(uniform_random, axis=0)
 
-x = np.arange(0,num_neurons)
-fig, ax = plt.subplots()
-scaled_p_binary_gaussian = np.divide(p_binary_gaussian, np.sum(p_binary_gaussian))
-print(scaled_p_binary_gaussian)
-print(gaussian_probabilities)
 
 scaled_p_uniform_random = np.divide(p_uniform_random, np.sum(p_uniform_random))
 
-print(scaled_p_binary_gaussian)
-
-ax.bar(x+0.5, scaled_p_binary_gaussian, label='gaussian')
+ax.bar(x+0.5, y, label='gaussian')
 ax.bar(x, scaled_p_uniform_random, label='uniform random')
 
 ax.legend(loc='best')
@@ -56,7 +36,7 @@ ax.set_title('Probability dist')
 
 plt.show()
 
-print("entropy", entropy(p_binary_gaussian, p_uniform_random))
+print("entropy", entropy(y, p_uniform_random))
 
 #x percentage of the dataset analyzed
 dataset_share = np.array([0.02, 0.04, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]) #0.04 is 2 images in each "class"
