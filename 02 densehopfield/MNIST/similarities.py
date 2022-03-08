@@ -2,11 +2,9 @@ import numpy as np
 import torchvision
 from matplotlib import pyplot as plt
 from scipy.stats import entropy
+from sklearn.preprocessing import StandardScaler
 
 ##GET MNIST
-
-def kl_divergence(p, q):
-    return np.sum(np.where(p == 0, p*np.log2(p/q), 0))
 
 mnist_train = torchvision.datasets.MNIST(
     'dataset/', train=True, download=False)
@@ -22,7 +20,8 @@ test_set_labels = mnist_test.targets.numpy()
 
 
 #add labels to data
-train_set = train_set_array.reshape(train_set_array.shape[0], -1) #flatten array
+train_set = train_set_array.reshape(
+    train_set_array.shape[0], -1)  # flatten array
 train_labels = train_set_labels
 
 train = np.vstack((train_set.T, train_labels)).T
@@ -33,10 +32,11 @@ train = train[train[:, -1].argsort()]
 #create subset of 0s and 1s
 train_subset = train[0:12000, :-1]  # 6000 in each class
 #make binary
-train_binary_subset = np.array(np.where(train_subset >= 128, 1, 0), dtype=np.int32)
+train_binary_subset = np.array(
+    np.where(train_subset >= 128, 1, 0), dtype=np.float64)
 #select 0s and 1s
-selected_0s = np.take(train_binary_subset, range(0,50), axis=0)
-selected_1s = np.take(train_binary_subset, range(6000,6050), axis=0)
+selected_0s = np.take(train_binary_subset, range(0, 50), axis=0)
+selected_1s = np.take(train_binary_subset, range(6000, 6050), axis=0)
 
 train_0s_1s = np.concatenate((selected_0s, selected_0s))
 
@@ -45,18 +45,17 @@ train_subset_6 = train[36017:41935, :-1]
 train_subset_8 = train[48200:54030, :-1]
 
 train_subset = np.concatenate((train_subset_6, train_subset_8))
-train_binary_subset = np.array(np.where(train_subset >= 128, 1, 0), dtype=np.int32)
+train_binary_subset = np.array(
+    np.where(train_subset >= 128, 1, 0), dtype=np.float64)
 
 num_6s = train_subset_6.shape[0]
 
-selected_6s = np.take(train_binary_subset, range(0,50), axis=0)
-selected_8s = np.take(train_binary_subset, range(num_6s+1,num_6s+1+50), axis=0)
+selected_6s = np.take(train_binary_subset, range(0, 50), axis=0)
+selected_8s = np.take(train_binary_subset, range(num_6s+1, num_6s+1+50), axis=0)
 
 train_6s_8s = np.concatenate((selected_6s, selected_8s))
 
 #get probability distributions
-
-#problem: KL-divergence is not defined for probability of 
 p_6s = np.sum(selected_6s, axis=0)
 p_8s = np.sum(selected_8s, axis=0)
 p_0s = np.sum(selected_0s, axis=0)
@@ -65,16 +64,58 @@ p_1s = np.sum(selected_1s, axis=0)
 num_neurons = 784
 num_memories = 50
 
-uniform_random = np.reshape(np.random.randint(0,2,num_memories*num_neurons), (num_memories,num_neurons))
-p_uniform_random = np.sum(uniform_random, axis = 0)
+uniform_random = np.reshape(np.random.randint(
+    0, 2, num_memories*num_neurons), (num_memories, num_neurons))
+p_uniform_random = np.sum(uniform_random, axis=0)
 
 #show random data :)
-x = np.arange(0,784)
-plt.bar(x, p_uniform_random)
-plt.show()
+x = np.arange(0, 784)
+#plt.bar(x, p_uniform_random)
+#plt.show()
 
 ## get KL for 6s, 8s, 1s, 0s.
-print("6s vs. uniform binary random", entropy(p_6s, p_uniform_random, base=2))
-print("8s vs. uniform binary random", entropy(p_8s, p_uniform_random, base=2))
-print("0s vs. uniform binary random", entropy(p_0s, p_uniform_random, base=2))
-print("1s vs. uniform binary random", entropy(p_1s, p_uniform_random, base=2))
+print("6s vs. uniform binary random", np.around(entropy(p_6s, p_uniform_random, base=2), decimals=3), "bits")
+print("8s vs. uniform binary random", np.around(entropy(p_8s, p_uniform_random, base=2), decimals=3), "bits")
+print("0s vs. uniform binary random", np.around(entropy(p_0s, p_uniform_random, base=2), decimals=3), "bits")
+print("1s vs. uniform binary random", np.around(entropy(p_1s, p_uniform_random, base=2), decimals=3), "bits")
+
+## get KL for 6s+8s, 1s + 0s
+p_68s = np.sum(np.stack((p_6s, p_8s), axis=0), axis=0)
+p_01s = np.sum(np.stack((p_0s, p_1s), axis=0), axis=0)
+
+long_uniform_random = np.reshape(np.random.randint(
+    0, 2, num_neurons*100), (100, num_neurons))  # 50 memories per dataset, 2 datasets
+p_long_uniform_random = np.sum(long_uniform_random, axis=0)
+scaled_long_uniform_random = np.divide(p_long_uniform_random, np.sum(p_long_uniform_random))
+
+print("6s and 8s vs. uniform binary random", np.around(entropy(p_68s, p_long_uniform_random, base=2), decimals=3), "bits")
+print("0s and 1s vs. uniform binary random", np.around(entropy(p_01s, p_long_uniform_random, base=2), decimals=3), "bits")
+
+##PLOT KL divergences
+x = np.arange(0,784)
+
+scaled_01s = np.divide(p_01s, np.sum(p_01s))
+scaled_68s = np.divide(p_68s, np.sum(p_68s))
+
+fig, ax = plt.subplots()
+width = 0.25
+
+ax.bar(x, scaled_01s, width , align='edge',label='0s and 1s')
+ax.bar(x+width, scaled_68s, width, align='edge', label='6s and 8s')
+ax.bar(x+2*width, scaled_long_uniform_random, width, align='edge', label='Uniform random')
+
+ax.set_title('Probability distributions')
+ax.legend(loc='best')
+
+plt.show()
+
+fig2, ax2 = plt.subplots()
+zeros = ax2.bar(x, np.divide(p_0s, np.sum(p_0s)), width =3, label='0s')
+ones = ax2.bar(x, np.divide(p_1s, np.sum(p_1s)), width =3, label='1s')
+sixes = ax2.bar(x, np.divide(p_6s, np.sum(p_6s)), width =3, label='6s')
+eights = ax2.bar(x, np.divide(p_8s, np.sum(p_8s)), width =3, label='8s')
+
+ax2.set_title('Probability distributions')
+ax2.legend(loc='best')
+
+plt.show()
