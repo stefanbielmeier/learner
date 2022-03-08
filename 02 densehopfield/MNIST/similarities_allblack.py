@@ -15,9 +15,9 @@ p_uniform_random = np.sum(uniform_random, axis=0)
 
 white = np.full(num_neurons,1, dtype=np.float64)
 black = np.full(num_neurons, 0, dtype=np.float64)
-set = white
+set = np.stack((white, black))
 
-black_and_white = np.tile(set, (100,1))
+black_and_white = np.tile(set, (50,1))
 p_black_and_white = np.sum(black_and_white, axis=0)
 scaled_p_black_and_white = np.divide(p_black_and_white, np.sum(p_black_and_white))
 
