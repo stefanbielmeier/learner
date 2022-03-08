@@ -55,22 +55,26 @@ selected_8s = np.take(train_binary_subset, range(num_6s+1,num_6s+1+50), axis=0)
 train_6s_8s = np.concatenate((selected_6s, selected_8s))
 
 #get probability distributions
-#probability of 1 in 6s
-#probability of 1 in 8s
 
-#problem: KL-divergence is not defined for probability of 1 = 0%
-
+#problem: KL-divergence is not defined for probability of 
 p_6s = np.sum(selected_6s, axis=0)
 p_8s = np.sum(selected_8s, axis=0)
 p_0s = np.sum(selected_0s, axis=0)
 p_1s = np.sum(selected_1s, axis=0)
 
-## get KL for 6s+8s vs. 0s+1s.
-print("6s vs. 8s", kl_divergence(p_6s, p_8s))
+num_neurons = 784
+num_memories = 50
 
-#print KL for first 0 vs. second 0
+uniform_random = np.reshape(np.random.randint(0,2,num_memories*num_neurons), (num_memories,num_neurons))
+p_uniform_random = np.sum(uniform_random, axis = 0)
 
-##get KL for 6s vs. 8s
+#show random data :)
+x = np.arange(0,784)
+plt.bar(x, p_uniform_random)
+plt.show()
 
-##get KL for 0s vs. 1s
-
+## get KL for 6s, 8s, 1s, 0s.
+print("6s vs. uniform binary random", entropy(p_6s, p_uniform_random, base=2))
+print("8s vs. uniform binary random", entropy(p_8s, p_uniform_random, base=2))
+print("0s vs. uniform binary random", entropy(p_0s, p_uniform_random, base=2))
+print("1s vs. uniform binary random", entropy(p_1s, p_uniform_random, base=2))
