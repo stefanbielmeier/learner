@@ -10,25 +10,23 @@ from estimate_cap import estimate_cap
 num_memories = 100
 num_neurons = 784
 
-rng = np.random.default_rng()
-gaussian_vals = rng.standard_normal(num_neurons)
-
-standard_norm = norm(392,162)
-
-fig, ax = plt.subplots()
-
-x = np.linspace(standard_norm.ppf(0.01),
-                standard_norm.ppf(0.99), 784)
-
-y = standard_norm.pdf(x)
-
 uniform_random = np.reshape(np.random.randint(0, 2, num_memories*num_neurons), (num_memories, num_neurons))
 p_uniform_random = np.sum(uniform_random, axis=0)
 
+white = np.full(num_neurons,1, dtype=np.float64)
+black = np.full(num_neurons, 0, dtype=np.float64)
+set = white
+
+black_and_white = np.tile(set, (100,1))
+p_black_and_white = np.sum(black_and_white, axis=0)
+scaled_p_black_and_white = np.divide(p_black_and_white, np.sum(p_black_and_white))
 
 scaled_p_uniform_random = np.divide(p_uniform_random, np.sum(p_uniform_random))
 
-ax.bar(x+0.5, y, label='gaussian')
+fig, ax = plt.subplots()
+x = np.arange(0,num_neurons)
+
+ax.bar(x+0.5, scaled_p_black_and_white, label='black and white')
 ax.bar(x, scaled_p_uniform_random, label='uniform random')
 
 ax.legend(loc='best')
@@ -36,7 +34,7 @@ ax.set_title('Probability dist')
 
 plt.show()
 
-print("entropy", entropy(y, p_uniform_random, base=2))
+print("entropy", entropy(p_black_and_white, p_uniform_random, base=2))
 
 #x percentage of the dataset analyzed
 dataset_share = np.array([0.02, 0.04, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]) #0.04 is 2 images in each "class"
