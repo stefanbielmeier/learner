@@ -45,7 +45,7 @@ def estimate_cap(table):
             curr_threshold = num
             col_thresholds = col_thresholds + 1
 
-    return row_thresholds, col_thresholds
+    return np.log2(row_thresholds), np.log2(col_thresholds)
 
 
 def main():
