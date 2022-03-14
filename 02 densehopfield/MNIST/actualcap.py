@@ -33,7 +33,6 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
     one_idxs = np.random.randint(num_images_per_class,num_memories,num_test_images_per_class)
     idxs = np.concatenate((zero_idxs,one_idxs))
-    print(idxs)
 
     for idx in idxs:
 
