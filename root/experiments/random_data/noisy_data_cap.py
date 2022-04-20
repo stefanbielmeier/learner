@@ -2,6 +2,7 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
+from root.infocapacity.estimate_cap import estimate_cap
 
 def estimate_n(table):
     """
@@ -35,7 +36,6 @@ def estimate_n(table):
 
 
 def main():
-    #driver code
 
     random = np.random.randint(0, 2, 1000)
     randomarray = np.array(np.where(random == 0, -1, random), dtype=np.float64)
@@ -53,9 +53,13 @@ def main():
 
     noisy_duplicated = np.reshape(np.concatenate((randomarray,noisydata)), (20,100))
 
-    print(estimate_n(data))
-    print(estimate_n(duplicateddata))
-    print(estimate_n(noisy_duplicated))
+    cap_data, _ = estimate_cap(data)
+    cap_duplicated, _ = estimate_cap(duplicateddata)
+    cap_noisy, _ = estimate_cap(noisy_duplicated)
+
+    print(cap_data)
+    print(cap_duplicated)
+    print(cap_noisy)
 
 if __name__ == "__main__":
     main()

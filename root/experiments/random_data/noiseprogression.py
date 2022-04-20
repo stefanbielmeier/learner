@@ -1,8 +1,7 @@
 #todo :-D
 
 import numpy as np
-from actualcap import get_recall_qualities
-from estimate_n import estimate_n
+from root.infocapacity.estimate_cap import estimate_cap
 import matplotlib.pyplot as plt
 
 
@@ -31,7 +30,7 @@ for noise_percentage in noise_percentages:
     polydegrees = np.arange(1,30) #m
     recall_qualities = get_recall_qualities(data, polydegrees, num_neurons)
     
-    estimated_n = estimate_n(data)
+    estimated_n, _ = estimate_cap(data)
 
     plt.axvline(estimated_n, label="noise % {}, estm n: {}".format(noise_percentage, estimated_n))
     plt.plot(polydegrees, recall_qualities, label="noise % {}".format(noise_percentage))
