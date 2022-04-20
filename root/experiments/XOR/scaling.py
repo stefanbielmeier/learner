@@ -9,7 +9,7 @@ import numpy as np
 def calc_c(num_memories, num_neurons, poly_degree):
     log = np.log(num_memories)/np.log(num_neurons)
     exponent = log-poly_degree+1
-    c = num_memories**exponent
+    c = (num_neurons**exponent)
     return c
 
 
