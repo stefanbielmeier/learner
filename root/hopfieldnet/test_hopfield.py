@@ -1,7 +1,7 @@
 import numpy as np
 from densehopfield import HopfieldNetwork
 
-from utils import plot_img
+from root.utils import plot_img
 
 def main():
 

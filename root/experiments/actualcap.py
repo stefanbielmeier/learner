@@ -3,8 +3,8 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-from utils import plot_img
-from densehopfield import HopfieldNetwork
+from root.utils import plot_img
+from root.hopfieldnet.densehopfield import HopfieldNetwork
 
 #1 Memories
 total_memories = 4_000

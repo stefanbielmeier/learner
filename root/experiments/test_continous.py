@@ -1,17 +1,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from densehopfield import HopfieldNetwork
+from root.hopfieldnet.densehopfield import HopfieldNetwork
+from root.utils import plot_img
+
 from actualcap import get_recall_qualities
-from utils import plot_img
 
 num_classes = 2
 num_neurons = 25
 
 random = np.random.normal(0,0.25,16_000)
 data = np.reshape(random,(int(16_000/num_neurons),num_neurons))
-
-
 
 network = HopfieldNetwork(num_neurons, 5, continous=True)
 network.learn(data)

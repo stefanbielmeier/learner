@@ -3,7 +3,7 @@ import math
 
 import numpy as np
 
-from utils import plot_img
+from root.utils import plot_img
 
 class HopfieldNetwork:
     def __init__(self, neurons, polydegree, max_cap = False, continous = False):
