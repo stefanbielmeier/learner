@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def estimate_cap(table, return_times_dims=False):
+def estimate_cap(table, return_times_dims=False, return_rowthresholdcount = False):
     """
     Takes: 2D numpy array representing an unlabeled dataset with rows as data points and columns as features.
 
@@ -45,6 +45,9 @@ def estimate_cap(table, return_times_dims=False):
             curr_threshold = num
             col_thresholds = col_thresholds + 1
 
+    if return_rowthresholdcount:
+        return row_thresholds
+    
     row_cap = np.log2(row_thresholds)
     col_cap = np.log2(col_thresholds)
 

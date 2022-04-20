@@ -4,9 +4,6 @@ import matplotlib.pyplot as plt
 
 from scipy.stats import entropy, norm
 
-from minmemorypoly import get_memorization_capacity
-from estimate_cap import estimate_cap
-
 num_memories = 100
 num_neurons = 784
 

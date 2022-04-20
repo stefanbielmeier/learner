@@ -2,7 +2,6 @@ import torchvision
 import numpy as np
 import matplotlib.pyplot as plt
 
-from estimate_cap import estimate_cap
 from actualcap import get_recall_qualities
 
 

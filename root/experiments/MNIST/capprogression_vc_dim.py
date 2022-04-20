@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import entropy
 
 from minmemorypoly import get_memorization_capacity
-from estimate_cap import estimate_cap
+from root.infocapacity.estimate_cap import estimate_cap
 
 num_neurons = 784
 num_memories = 100
@@ -73,7 +73,6 @@ for share in dataset_share:
     partial_uniform_random_binary = uniform_random_binary[0:int(share*num_memories),:] #2, 4, 10, 20 etc. memories
     partial_uniform_random_unary = uniform_random_unary[0:int(share*num_memories),:] #2, 4, 10, 20 etc. memories
 
-    
     #threshold estimation of -1 and 1 data
     zero_one_cap, _ = estimate_cap(partial_zero_ones_unary)
     zero_one_thresholds.append(zero_one_cap)

@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import discriminant_analysis
 
-from utils import plot_img
+from root.utils import plot_img
 from densehopfield import HopfieldNetwork
 
 #1 Memories

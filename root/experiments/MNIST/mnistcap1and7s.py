@@ -2,7 +2,7 @@ import torchvision
 import numpy as np
 import matplotlib.pyplot as plt
 
-from estimate_cap import estimate_cap
+from root.infocapacity.estimate_cap import estimate_cap
 from actualcap import get_recall_qualities
 
 
@@ -69,7 +69,7 @@ for num_images in num_datapoint_range:
     #also works
 
     # 2) Estimate capacity in bits like with the supervised machine learner
-    dataset_cap = estimate_cap(selected_images)
+    dataset_cap, _ = estimate_cap(selected_images)
     estimated.append(dataset_cap)
 
     # 3) Calculate capacity of Hopfield Net in bits
