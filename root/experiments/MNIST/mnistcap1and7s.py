@@ -69,7 +69,7 @@ for num_images in num_datapoint_range:
     #also works
 
     # 2) Estimate capacity in bits like with the supervised machine learner
-    dataset_cap, _ = estimate_cap(selected_images)
+    dataset_cap, _ = estimate_cap(selected_images, return_times_dims=True)
     estimated.append(dataset_cap)
 
     # 3) Calculate capacity of Hopfield Net in bits

@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from estimate_cap import estimate_cap
+from root.infocapacity.estimate_cap import estimate_cap
 from actualcap import get_recall_qualities
 
 ## Approach Feb 2nd:
@@ -32,7 +32,7 @@ for num_datapoints in num_datapoint_range:
 
     # 2) Estimate capacity in bits like with the supervised machine learner
 
-    dataset_cap = estimate_cap(uniquepoints)
+    dataset_cap, _ = estimate_cap(uniquepoints, return_times_dims=True)
     estimated.append(dataset_cap)
 
     # 3) Calculate capacity of Hopfield Net in bits

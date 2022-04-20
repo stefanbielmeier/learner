@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 from root.hopfieldnet.densehopfield import HopfieldNetwork
 from root.utils import plot_img
 
-from actualcap import get_recall_qualities
-
 num_classes = 2
 num_neurons = 25
 
