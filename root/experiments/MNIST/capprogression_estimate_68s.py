@@ -79,13 +79,13 @@ for share in dataset_share:
 mem_cap_6and8 = np.array([2,4,7,9,11,12,13,13,14,14,13,15])
 mem_cap_0and1 = np.array([2, 4, 8, 12, 16, 20, 21, 25, 24, 26, 29, 27])
 
-arbitrary_scaling_factor = 4
+arbitrary_scaling_factor = 1
 
 random_thresholds = arbitrary_scaling_factor * np.array([1.0, 2.0, 2.807354922057604, 3.584962500721156, 4.169925001442312, 4.754887502163468, 5.0, 5.129283016944966, 5.247927513443585, 5.357552004618084, 5.491853096329675, 5.614709844115208])
 zero_one_thresholds = arbitrary_scaling_factor * np.array([1.0, 2.0, 3.321928094887362, 4.247927513443585, 4.754887502163468, 5.129283016944966, 5.459431618637297, 5.700439718141092, 5.857980995127572, 6.0, 6.129283016944966, 6.266786540694901])
 print(six_eight_thresholds)
 
-six_eight_thresholds = 2.5 * np.array(six_eight_thresholds)
+six_eight_thresholds = np.array(six_eight_thresholds)
 
 fig, ax = plt.subplots()
 
