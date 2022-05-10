@@ -1,8 +1,11 @@
 from enum import Enum
+import os
 
 import matplotlib.pyplot as plt
 import numpy as np
 import torchvision
+
+from root.definitions import ROOT_DIR
 
 zero_start_index = 0
 zero_end_index = 5999
@@ -14,6 +17,7 @@ six_end_index = 41935
 eight_start_index = 48200
 eight_end_index = 54030
 
+DATASET_PATH = os.path.join(ROOT_DIR, "experiments", "MNIST", "dataset")
 
 #subroutine
 def get_training_data(path):
@@ -50,12 +54,11 @@ def make_binary(data):
     @param: numpy 2d array of training data, last column is labels
     @return: numpy 2d array of training data, last column is labels
     """
-    set = data[:, :-1]
     labels = data[:, -1]
-    binary = np.array(np.where(data >= 128, 1, -1), dtype=np.float64)
+    set = data[:,:-1]
+    binary = np.array(np.where(set >= 128, 1, -1), dtype=np.float64)
     
     return np.vstack((binary.T, labels)).T
-
 
 #subroutine
 def get_subsets(all_digits):
@@ -73,7 +76,8 @@ def get_subsets(all_digits):
 
 #highest order routine
 def get_first_fifty_images(inBinary = True):
-    training_data = get_training_data("../dataset/")
+
+    training_data = get_training_data(DATASET_PATH)
     if inBinary:
         training_data = make_binary(training_data)
     zeros_data, ones_data, sixes_data, eights_data = get_subsets(training_data)
