@@ -37,8 +37,6 @@ train_subset_labels = np.array(train[0:12000, -1], dtype=np.float64)
 #convert data into binary data (white: 1 (all values bigger than 128), black: -1)
 train_binary_subset = np.array(np.where(train_subset >= 128, 1, -1), dtype=np.float64)
 
-#IMAGES ALSO OK, RESHAPED (in 28 / 28) SHOWN AS CORRECT
-
 #Select the first 50 images from the dataset (zeros and ones respective)
 selected_0s = np.take(train_binary_subset, range(0,50), axis=0)
 selected_1s = np.take(train_binary_subset, range(6000,6050), axis=0)
