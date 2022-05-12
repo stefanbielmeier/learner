@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from root.experiments.MNIST.capacity.calc_recovery_acc import get_recall_qualities
+from root.experiments.MNIST.capacity.calcrecoveryacc import get_recall_qualities
 from root.experiments.MNIST.digits.subsets import get_fifty_random_images
 
 zeros, ones, _, _  = get_fifty_random_images(inBinary = True)

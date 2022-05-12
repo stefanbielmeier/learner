@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from root.infocapacity.estimate_cap import estimate_cap
-from root.experiments.MNIST.capacity.calc_recovery_acc import get_recall_qualities
+from root.experiments.MNIST.capacity.calcrecoveryacc import get_recall_qualities
 
 ## Approach Feb 2nd:
 

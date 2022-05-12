@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 from root.experiments.MNIST.capacity.definitions import DATASET_SHARE
-from root.experiments.MNIST.capacity.calc_recovery_acc import get_recall_quality
+from root.experiments.MNIST.capacity.calcrecoveryacc import get_recall_quality
 
 def get_memorization_capacity(dataset):
     """
