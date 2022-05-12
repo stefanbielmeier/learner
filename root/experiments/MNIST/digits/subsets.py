@@ -82,3 +82,21 @@ def get_first_fifty_images(inBinary = True):
         training_data = make_binary(training_data)
     zeros_data, ones_data, sixes_data, eights_data = get_subsets(training_data)
     return zeros_data[:50, :], ones_data[:50, :], sixes_data[:50, :], eights_data[:50, :]
+
+
+#highest order routine
+def get_fifty_random_images(inBinary = True):
+
+    training_data = get_training_data(DATASET_PATH)
+    if inBinary:
+        training_data = make_binary(training_data)
+    zeros, ones, sixes, eights = get_subsets(training_data)
+
+    random_indexes = np.random.randint(0, len(zeros), 200)
+
+    selected_zeros = np.take(zeros, random_indexes[0:50], axis=0)
+    selected_ones = np.take(ones, random_indexes[50:100], axis=0)
+    selected_sixes = np.take(sixes, random_indexes[100:150], axis=0)
+    selected_eights = np.take(eights, random_indexes[150:200], axis=0)
+
+    return selected_zeros, selected_ones, selected_sixes, selected_eights
