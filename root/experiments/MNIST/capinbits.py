@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from root.infocapacity.estimate_cap import estimate_cap
-from actualcap import get_recall_qualities
+from root.experiments.MNIST.capacity.calc_recovery_acc import get_recall_qualities
 
 ## Approach Feb 2nd:
 
@@ -17,7 +17,7 @@ estimated = []
 mackay = []
 performance = []  
 
-num_datapoint_range = range(2,10,2)
+num_datapoint_range = range(2,6,2)
 
 for num_datapoints in num_datapoint_range:
     #1) Create 2-class resembling dataset without labels.

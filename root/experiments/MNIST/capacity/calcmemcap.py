@@ -3,13 +3,13 @@ import matplotlib.pyplot as plt
 
 from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 from root.experiments.MNIST.capacity.definitions import DATASET_SHARE
-from root.experiments.MNIST.recall_quality import get_recall_quality
+from root.experiments.MNIST.capacity.calc_recovery_acc import get_recall_quality
 
 def get_memorization_capacity(dataset):
-    #Function that returns the minimum required capacity (polydegree) for memorization of a dataset of images
-    #input is a 2D numpy array with #images x #pixels
-    #output is the minimum required capacity (polydegree) for memorization of the dataset as an integer number
-    
+    """
+    Function that returns the minimum required capacity (polydegree) for memorization of a dataset of images
+    Output is the minimum required capacity (polydegree) for memorization of the dataset as an integer number
+    """
     #Steps to solve:
     #1. Calculate the recall qualities for (1 to 20) polydegrees for the dataset via get_recall_qualities
     #2. Stop calculating 
