@@ -1,9 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from root.experiments.MNIST.capacity.calcmemcap import calc_memorization_capacities, get_memorization_capacity
+from root.experiments.MNIST.capacity.calcmemcap import calc_memorization_capacities
 from root.experiments.MNIST.capacity.definitions import X_AXIS
-from root.infocapacity.estimate_cap import estimate_cap
 
 num_memories = 100
 num_neurons = 16
