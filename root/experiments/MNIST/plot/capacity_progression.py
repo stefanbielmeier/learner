@@ -9,9 +9,8 @@ def plot_progression(title, x_data, y_data, x_label):
     fig, ax = plt.subplots()
     ax.set_xlabel(x_label)
     
-    for y_axis in y_data:
-        print(y_axis)
-        ax.plot(x_data, y_axis, label='mem cap')
+    for i in range(len(y_data)):
+        ax.plot(x_data, y_data[i], label='mem cap' + str(i))
 
     ax.set_ylim(0, 30)
     ax.legend(loc='upper left')
