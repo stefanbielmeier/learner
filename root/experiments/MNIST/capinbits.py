@@ -50,7 +50,6 @@ for num_datapoints in num_datapoint_range:
 
 #5) plot all
 
-
 figure, ax1 = plt.subplots()
 
 color = 'tab:red'
