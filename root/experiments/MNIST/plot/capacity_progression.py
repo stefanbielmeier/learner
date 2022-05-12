@@ -18,4 +18,5 @@ def plot_progression(title, x_data, y_data, x_label):
 
     plt.show()
 
-plot_progression("Memorization capacity and number of thresholds", X_AXIS, [MEM_CAPS_0and1, MEM_CAPS_6and8, LOG2_THRESHOLDS_ZERO_ONE, LOG2_THRESHOLDS_SIX_EIGHT, RANDOM_DATA_LOG2_TRESHOLDS], "Memorization Capacity and Number of Thresholds")
+if __name__ == "__main__":
+    plot_progression("Memorization capacity and number of thresholds", X_AXIS, [MEM_CAPS_0and1, MEM_CAPS_6and8, LOG2_THRESHOLDS_ZERO_ONE, LOG2_THRESHOLDS_SIX_EIGHT, RANDOM_DATA_LOG2_TRESHOLDS], "Memorization Capacity and Number of Thresholds")
