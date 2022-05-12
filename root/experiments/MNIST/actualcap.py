@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sklearn import discriminant_analysis
 
 from root.utils import plot_img
-from densehopfield import HopfieldNetwork
+from root.hopfieldnet.densehopfield import HopfieldNetwork
 
 #1 Memories
 total_memories = 4_000
@@ -63,8 +63,6 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     average_recall_quality = recall_quality/idxs.shape[0]
     
     return average_recall_quality
-
-
 
 
 

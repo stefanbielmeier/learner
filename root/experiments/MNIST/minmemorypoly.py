@@ -1,5 +1,5 @@
 import numpy as np
-from actualcap import get_recall_quality
+from root.experiments.MNIST.actualcap import get_recall_quality
 
 def get_memorization_capacity(dataset):
     #Function that returns the minimum required capacity (polydegree) for memorization of a dataset of images
