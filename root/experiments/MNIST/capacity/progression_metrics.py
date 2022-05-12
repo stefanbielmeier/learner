@@ -45,6 +45,7 @@ def main():
     zeros, ones, sixes, eights = get_first_fifty_images(inBinary = True)
     print(calc_thresholds(sixes, eights))
 
+    #random images is a bit of legacy code – it's not deterministic
     zeros, ones, sixes, eigths = get_fifty_random_images(inBinary = True)
     print(calc_thresholds(zeros, ones))
 
