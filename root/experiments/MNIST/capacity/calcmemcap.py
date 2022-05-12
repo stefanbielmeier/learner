@@ -32,10 +32,13 @@ def calc_memorization_capacities(first_set, second_set = None):
     min_memorization_polydegrees = []
 
     for share in DATASET_SHARE:
-        zero_subset = first_set[0:int(share*50), :]
-        one_subset = second_set[0:int(share*50), :]
 
-        partial_set = np.concatenate((zero_subset, one_subset))
+        if second_set is not None:
+            zero_subset = first_set[0:int(share*50), :]
+            one_subset = second_set[0:int(share*50), :]
+            partial_set = np.concatenate((zero_subset, one_subset))
+        else:
+            partial_set = first_set[0:int(share*100), :]
 
         memorization_polydegree = get_memorization_capacity(partial_set)
 
