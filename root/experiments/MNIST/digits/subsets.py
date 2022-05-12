@@ -92,11 +92,14 @@ def get_fifty_random_images(inBinary = True):
         training_data = make_binary(training_data)
     zeros, ones, sixes, eights = get_subsets(training_data)
 
-    random_indexes = np.random.randint(0, len(zeros), 200)
+    zero_idxs = np.random.randint(0, len(zeros), 200)
+    one_idxs = np.random.randint(0, len(ones), 200)
+    six_idxs = np.random.randint(0, len(sixes), 200)
+    eight_idxs = np.random.randint(0, len(eights), 200)
 
-    selected_zeros = np.take(zeros, random_indexes[0:50], axis=0)
-    selected_ones = np.take(ones, random_indexes[50:100], axis=0)
-    selected_sixes = np.take(sixes, random_indexes[100:150], axis=0)
-    selected_eights = np.take(eights, random_indexes[150:200], axis=0)
+    selected_zeros = np.take(zeros, zero_idxs[0:50], axis=0)
+    selected_ones = np.take(ones, one_idxs[50:100], axis=0)
+    selected_sixes = np.take(sixes, six_idxs[100:150], axis=0)
+    selected_eights = np.take(eights, eight_idxs[150:200], axis=0)
 
     return selected_zeros, selected_ones, selected_sixes, selected_eights

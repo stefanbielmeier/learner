@@ -3,7 +3,7 @@ import numpy as np
 
 from root.infocapacity.estimate_cap import estimate_cap
 
-from root.experiments.MNIST.digits.subsets import get_first_fifty_images
+from root.experiments.MNIST.digits.subsets import get_fifty_random_images, get_first_fifty_images
 
 from root.experiments.MNIST.capacity.definitions import DATASET_SHARE
 
@@ -40,9 +40,13 @@ def calc_prob_density():
     #p_six_eights = np.sum(binary_set, axis=0)
     pass
 
+#test code
 def main():
     zeros, ones, sixes, eights = get_first_fifty_images(inBinary = True)
-    calc_thresholds(sixes, eights)
+    print(calc_thresholds(sixes, eights))
+
+    zeros, ones, sixes, eigths = get_fifty_random_images(inBinary = True)
+    print(calc_thresholds(zeros, ones))
 
 if __name__ == "__main__":
     main()
