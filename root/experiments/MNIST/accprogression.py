@@ -17,7 +17,6 @@ train_set_labels = mnist_train.targets.numpy()
 test_set_array = mnist_test.data.numpy()
 test_set_labels = mnist_test.targets.numpy()
 
-
 #add labels to data
 train_set = train_set_array.reshape(train_set_array.shape[0], -1) #flatten array
 train_labels = train_set_labels
