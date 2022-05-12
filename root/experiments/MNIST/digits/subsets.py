@@ -75,18 +75,21 @@ def get_subsets(all_digits):
     return zeros_data, ones_data, sixes_data, eights_data
 
 #highest order routine
-def get_first_fifty_images(inBinary = True):
+def get_first_fifty_images(inBinary = True, with_labels = False):
 
     training_data = get_training_data(DATASET_PATH)
     if inBinary:
         training_data = make_binary(training_data)
     zeros_data, ones_data, sixes_data, eights_data = get_subsets(training_data)
-    return zeros_data[:50, :], ones_data[:50, :], sixes_data[:50, :], eights_data[:50, :]
-
+    
+    if with_labels:
+        return zeros_data[:50, :], ones_data[:50, :], sixes_data[:50, :], eights_data[:50, :]
+    else:
+        return zeros_data[:50, :-1], ones_data[:50, :-1], sixes_data[:50, :-1], eights_data[:50, :-1]
 
 #highest order routine
-def get_fifty_random_images(inBinary = True):
-
+def get_fifty_random_images(inBinary = True, with_labels = False):
+    
     training_data = get_training_data(DATASET_PATH)
     if inBinary:
         training_data = make_binary(training_data)
@@ -101,5 +104,8 @@ def get_fifty_random_images(inBinary = True):
     selected_ones = np.take(ones, one_idxs[50:100], axis=0)
     selected_sixes = np.take(sixes, six_idxs[100:150], axis=0)
     selected_eights = np.take(eights, eight_idxs[150:200], axis=0)
-
-    return selected_zeros, selected_ones, selected_sixes, selected_eights
+    
+    if with_labels:
+        return selected_zeros, selected_ones, selected_sixes, selected_eights
+    else: 
+        return selected_zeros[:, :-1], selected_zeros[:, :-1], selected_sixes[:, :-1], selected_eights[:, :-1]
