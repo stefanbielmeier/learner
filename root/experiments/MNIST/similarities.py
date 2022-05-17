@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from scipy.stats import entropy
 from sklearn.preprocessing import StandardScaler
 
-##GET MNIST
+#GET MNIST
 
 mnist_train = torchvision.datasets.MNIST(
     'dataset/', train=True, download=False)
