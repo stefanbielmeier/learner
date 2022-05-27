@@ -1,7 +1,7 @@
 import numpy as np
 from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 
-from scipy.spatial.distance import jensenshannon
+from scipy.spatial import distance
 
 zeros, ones, sixes, eights = get_first_fifty_images(inBinary=False)
 
