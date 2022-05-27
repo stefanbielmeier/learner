@@ -49,15 +49,18 @@ def get_training_data(path):
     return np.array(train, dtype=np.float64)
 
 #subroutine
-def make_binary(data):
+def make_binary(data, zeroOnes = False):
     """
     @param: numpy 2d array of training data, last column is labels
     @return: numpy 2d array of training data, last column is labels
     """
     labels = data[:, -1]
     set = data[:,:-1]
-    binary = np.array(np.where(set >= 128, 1, -1), dtype=np.float64)
     
+    binary = np.array(np.where(set >= 128, 1, -1), dtype=np.float64)
+    if zeroOnes:
+        binary = np.where(binary == -1, 0, 1)
+
     return np.vstack((binary.T, labels)).T
 
 #subroutine
@@ -75,11 +78,11 @@ def get_subsets(all_digits):
     return zeros_data, ones_data, sixes_data, eights_data
 
 #highest order routine
-def get_first_fifty_images(inBinary = True, with_labels = False):
+def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = False):
 
     training_data = get_training_data(DATASET_PATH)
     if inBinary:
-        training_data = make_binary(training_data)
+        training_data = make_binary(training_data, zeroOnes)
     zeros_data, ones_data, sixes_data, eights_data = get_subsets(training_data)
     
     if with_labels:
