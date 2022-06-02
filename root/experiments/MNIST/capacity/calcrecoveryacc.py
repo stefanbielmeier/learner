@@ -15,8 +15,24 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False):
+def get_random_idxs(num_memories):
+    """
+    @param: num_memories, num_images_per_class
+    @returns a list of lists of indexes of the memories
+    """
+    num_images_per_class = int(num_memories/2)
 
+    num_test_images_per_class = min(5, num_images_per_class)
+    
+    zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
+    one_idxs = np.random.randint(num_images_per_class,num_memories,num_test_images_per_class)
+    idxs = np.concatenate((zero_idxs,one_idxs))
+    return idxs
+
+def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False):
+    """
+    Takes a minimum of 2 patterns
+    """
     recall_quality = 0
     
     isImage = True if math.sqrt(num_neurons) % 2 == 0 else False
@@ -25,14 +41,7 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     network = HopfieldNetwork(num_neurons, polydegree, max_cap = network_at_maxcap, continous=is_continous)
     network.learn(memories)
 
-    num_memories = memories.shape[0] 
-    num_images_per_class = int(num_memories/2)
-
-    num_test_images_per_class = min(5, num_images_per_class)
-    
-    zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
-    one_idxs = np.random.randint(num_images_per_class,num_memories,num_test_images_per_class)
-    idxs = np.concatenate((zero_idxs,one_idxs))
+    idxs = get_random_idxs(memories.shape[0])
 
     for idx in idxs:
         memory = memories[idx,:]
