@@ -63,8 +63,8 @@ print(distance_01)
 print(distance_68)
 print(distance_uni)
 
-xor = np.array([[0,0,0],[0,1,1],[1,0,1],[1,1,0]])
-xand = np.array([[0,0,1],[0,1,0],[1,0,0],[1,1,1]])
+xor = np.array([[-1,-1,-1],[-1,1,1],[1,-1,1],[1,1,-1]], dtype=np.float32)
+xand = np.array([[-1,-1,1],[-1,1,-1],[1,-1,-1],[1,1,1]], dtype=np.float32)
 
 xand_distance = calculate_bits(xand)
 xor_distance = calculate_bits(xor)
