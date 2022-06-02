@@ -7,6 +7,6 @@ from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 
 
 zeros, ones, sixes, eights = get_first_fifty_images(inBinary = True)
-memdegree = get_memorization_capacity(ones, startAt = 20)
+memdegree = get_memorization_capacity(ones, startAt = 2)
 
 print(memdegree)
