@@ -32,7 +32,7 @@ class HopfieldNetwork:
 
     #async update, one neuron after the other, selected randomly, binary values only
     def update(self, state):
-        self.excitation = state
+        self.excitation = state.copy()
 
         for i in range(self.neurons):
             result = 0

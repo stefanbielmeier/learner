@@ -15,11 +15,12 @@ num_examples = [1,2,4,5,10,20,50,100]
 #2 setup
 max_polynomial = 20
 
-def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1):
+def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False):
 
     recall_quality = 0
-    dims = int(math.sqrt(num_neurons))
-
+    
+    isImage = True if math.sqrt(num_neurons) % 2 == 0 else False
+    
     #train Hopfield net
     network = HopfieldNetwork(num_neurons, polydegree, max_cap = network_at_maxcap, continous=is_continous)
     network.learn(memories)
@@ -34,31 +35,41 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     idxs = np.concatenate((zero_idxs,one_idxs))
 
     for idx in idxs:
-
-        image = memories[idx, :].reshape(dims,dims) #correct image if printed
+        memory = memories[idx,:]
 
         if plot_updated_images:
-            plt.imshow(image)
+            if isImage:
+                dims = int(math.sqrt(num_neurons))
+                image = memory.reshape(dims,dims) #correct image if printed
+                plt.imshow(image)
+            else:
+                print(memory)
             plt.show()
 
         for i in range(num_updates):
             if i == 0:
-                network.update(image.flatten()) #should also be correct as flattening works as expected
+                network.update(memory) #should also be correct as flattening works as expected
             else: 
                 network.update(network.excitation)
 
-        restored = network.get_state().reshape(dims,dims)
+        restored = network.get_state()
         if plot_updated_images:
-            plt.imshow(restored)
+            if isImage:
+                dims = int(math.sqrt(num_neurons))
+                image = restored.reshape(dims,dims) #correct image if printed
+                plt.imshow(restored)
+            else:
+                print(memory)
             plt.show()
 
         #MacKay: if restored version (stable state) has 50% of bits flipped (compared to the original image), the recall performance is 0 (not recognizable)
         #scaled inner product of memory & restored memory by num_neurons
-        performance = np.inner(image.flatten(), restored.flatten()) / num_neurons 
-        print(performance)
+        performance = np.dot(memory, restored) / num_neurons 
+        if verbose:
+            print("restore performance", performance)
 
         recall_quality = recall_quality + performance
-    
+
     average_recall_quality = recall_quality/idxs.shape[0]
     
     return average_recall_quality

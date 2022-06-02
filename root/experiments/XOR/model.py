@@ -1,10 +1,8 @@
 import numpy as np
 from root.experiments.MNIST.capacity.calcmemcap import get_memorization_capacity
 
-from root.hopfieldnet.densehopfield import HopfieldNetwork
-
-xor = np.array([[-1,-1,-1],[-1,1,1],[1,-1,1],[1,1,-1]])
-xand = np.array([[0,0,1],[0,1,0],[1,0,0],[1,1,1]])
+xor = np.array([[-1,-1,-1],[-1,1,1],[1,-1,1],[1,1,-1]], dtype=np.float32)
+xand = np.array([[-1,-1,1],[-1,1,-1],[1,-1,-1],[1,1,1]], dtype=np.float32)
 
 rows = xor.shape[0]
 cols = xor.shape[1]
@@ -14,3 +12,5 @@ print(xorcap)
 
 xandcap = get_memorization_capacity(xand)
 print(xandcap)
+
+#It's the same!

@@ -5,7 +5,7 @@ from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 from root.experiments.MNIST.capacity.definitions import DATASET_SHARE
 from root.experiments.MNIST.capacity.calcrecoveryacc import get_recall_quality
 
-def get_memorization_capacity(dataset):
+def get_memorization_capacity(dataset, verbose=False):
     """
     Function that returns the minimum required capacity (polydegree) for memorization of a dataset of images
     Output is the minimum required capacity (polydegree) for memorization of the dataset as an integer number
@@ -16,14 +16,14 @@ def get_memorization_capacity(dataset):
     #3. Find the polydegree in the recall quality array that has a value of 1
     #4. Return the polydegree
     
-    estimated_polydegree = 1
+    estimated_polydegree = 0
     recall_quality = 0
 
     while recall_quality <= 0.99:
         estimated_polydegree = estimated_polydegree + 1
-        recall_quality = get_recall_quality(dataset, estimated_polydegree, num_neurons=dataset.shape[1], plot_updated_images=False)
-        print(recall_quality)
-        print("increasing capacity")
+        print("current capacity: ", estimated_polydegree)
+        recall_quality = get_recall_quality(dataset, estimated_polydegree, num_neurons=dataset.shape[1], plot_updated_images=False, verbose = False)
+        print("average restore performance", recall_quality)
 
     return estimated_polydegree
 
