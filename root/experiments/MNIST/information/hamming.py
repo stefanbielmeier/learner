@@ -30,8 +30,9 @@ def hamming_distance(string1, string2):
     return dist_counter
 
 
-def calculate_bits(dataset):
+def hamming_distance(code):
     # O(N^2) runtime with N is number of patterns in the data
+    dataset = code
     bit_divs = []
     for i in range(dataset.shape[0]):
         for j in range(dataset.shape[0]):
@@ -41,17 +42,27 @@ def calculate_bits(dataset):
     bit_divs = np.array(bit_divs, dtype=np.float64)
     return np.min(bit_divs)
 
+def mean_hamming_distance_in(code):
+    dataset = code
+    bit_divs = []
+    for i in range(dataset.shape[0]):
+        for j in range(dataset.shape[0]):
+            if i != j:
+                bit_divs.append(hamming_distance(dataset[i, :], dataset[j, :]))
+
+    bit_divs = np.array(bit_divs, dtype=np.float64)
+    return np.mean(bit_divs)
+
 def calculate_error_correction(dataset):
-    return error_correction(calculate_bits(dataset))
+    return error_correction(hamming_distance(dataset))
 
 def error_correction(hamming_distance):
     return (hamming_distance-1)/2
 
-
-distance0 = calculate_bits(zeros)
-distance1 = calculate_bits(ones)
-distance6 = calculate_bits(sixes)
-distance8 = calculate_bits(eights)
+distance0 = hamming_distance(zeros)
+distance1 = hamming_distance(ones)
+distance6 = hamming_distance(sixes)
+distance8 = hamming_distance(eights)
 
 print(distance0)
 print(distance1)
@@ -61,9 +72,9 @@ print(distance8)
 zero_ones = np.vstack((zeros, ones))
 six_eights = np.vstack((sixes, eights))
 
-distance_01 = calculate_bits(zero_ones)
-distance_68 = calculate_bits(six_eights)
-distance_uni = calculate_bits(uniform_random)
+distance_01 = hamming_distance(zero_ones)
+distance_68 = hamming_distance(six_eights)
+distance_uni = hamming_distance(uniform_random)
 
 print(distance_01)
 print(distance_68)
@@ -72,8 +83,8 @@ print(distance_uni)
 xor = np.array([[-1,-1,-1],[-1,1,1],[1,-1,1],[1,1,-1]], dtype=np.float32)
 xand = np.array([[-1,-1,1],[-1,1,-1],[1,-1,-1],[1,1,1]], dtype=np.float32)
 
-xand_distance = calculate_bits(xand)
-xor_distance = calculate_bits(xor)
+xand_distance = hamming_distance(xand)
+xor_distance = hamming_distance(xor)
 
 print("XOR distance", xand_distance)
 print("XAND distance", xand_distance)
