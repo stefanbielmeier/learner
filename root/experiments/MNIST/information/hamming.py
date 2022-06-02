@@ -41,6 +41,12 @@ def calculate_bits(dataset):
     bit_divs = np.array(bit_divs, dtype=np.float64)
     return np.min(bit_divs)
 
+def calculate_error_correction(dataset):
+    return error_correction(calculate_bits(dataset))
+
+def error_correction(hamming_distance):
+    return (hamming_distance-1)/2
+
 
 distance0 = calculate_bits(zeros)
 distance1 = calculate_bits(ones)
