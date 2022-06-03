@@ -1,0 +1,36 @@
+current capacity:  40
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  17
+restore performance 0.9948979591836735
+restore performance 1.0
+restore performance 1.0
+restore performance 0.9948979591836735
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+average restore performance 0.9989795918367348
+current capacity:  18
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0

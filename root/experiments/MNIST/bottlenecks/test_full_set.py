@@ -1,4 +1,4 @@
-import os
+import contextlib
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -14,13 +14,9 @@ six_eights = np.vstack((sixes, eights))
 
 bottleneck01 = get_bottleneck_idxs(zero_ones)
 bottleneck68 = get_bottleneck_idxs(six_eights)
-
-mem_zero_ones = get_memorization_capacity(zero_ones, recall_quality = 1.0, startAt = 35, test_idxs = bottleneck01[0])
-mem_six_eights = get_memorization_capacity(six_eights, recall_quality = 1.0, startAt = 35, test_idxs = bottleneck68[0])
-
-print(mem_zero_ones)
-print(mem_six_eights)
-
-with os.open("mem_zero_ones.txt", "w") as f:
-    f.write(str(mem_zero_ones))
-    f.write(str(mem_six_eights))
+ 
+file_path = 'test_others_now2.txt'
+with open(file_path, "w") as o:
+    with contextlib.redirect_stdout(o):
+        mem_zero_ones = get_memorization_capacity(zero_ones, recall_quality = 1.0, startAt = 40, test_idxs = []) #test random data.
+        mem_six_eights = get_memorization_capacity(six_eights, recall_quality = 1.0, startAt = 17, test_idxs = []) #test random data.

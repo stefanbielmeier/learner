@@ -1,0 +1,8 @@
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
