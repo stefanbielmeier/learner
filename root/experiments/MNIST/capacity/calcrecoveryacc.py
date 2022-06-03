@@ -22,7 +22,7 @@ def get_random_idxs(num_memories):
     """
     num_images_per_class = int(num_memories/2)
 
-    num_test_images_per_class = min(5, num_images_per_class)
+    num_test_images_per_class = min(10, num_images_per_class)
     
     zero_idxs = np.random.randint(0,num_images_per_class,num_test_images_per_class)
     one_idxs = np.random.randint(num_images_per_class,num_memories,num_test_images_per_class)
