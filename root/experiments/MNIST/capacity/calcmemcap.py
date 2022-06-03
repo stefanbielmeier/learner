@@ -19,10 +19,10 @@ def get_memorization_capacity(dataset, recall_quality = 0.99, verbose=False, sta
     estimated_polydegree = startAt - 1
     curr = 0
 
-    while curr <= recall_quality:
+    while curr < recall_quality:
         estimated_polydegree = estimated_polydegree + 1
         print("current capacity: ", estimated_polydegree)
-        curr = get_recall_quality(dataset, estimated_polydegree, num_neurons=dataset.shape[1], plot_updated_images=True, verbose = False, test_idxs=test_idxs)
+        curr = get_recall_quality(dataset, estimated_polydegree, num_neurons=dataset.shape[1], plot_updated_images=False, verbose = True, test_idxs=test_idxs)
         print("average restore performance", curr)
 
     return estimated_polydegree
