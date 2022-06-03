@@ -48,7 +48,7 @@ def min_hamming_distance(code):
 def mean_hamming_distance(code):
     return np.mean(hamming_distances(code))
 
-def get_bottleneck_pairs(code):
+def get_bottleneck_pair(code):
     # Get the index of the first and second string pair in the dataset that are most similar according to Hamming distance (smallest)
     distances = hamming_distances(code)
     min_dist = min_hamming_distance(code)
@@ -63,7 +63,7 @@ def get_bottleneck_pairs(code):
 def error_correction_capability(code):
     return (min_hamming_distance(code)-1)/2
 
-bottleneck = get_bottleneck_pairs(zero_ones)
+bottleneck = get_bottleneck_pair(zero_ones)
 print(bottleneck)
 print(hamming_distance(zero_ones[bottleneck[0], :], zero_ones[bottleneck[1], :]))
 print(min_hamming_distance(zero_ones))
