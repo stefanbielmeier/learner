@@ -62,7 +62,7 @@ def get_bottleneck_idxs(code):
     idxs = []
     for pair in pairs:
         idxs.append(get_2d_index(pair, code.shape[0]))
-    return idxs
+    return np.array(idxs)
 
 def check_index_equality(idx1, idx2):
     return idx1[0] == idx2[0] and idx1[1] == idx2[1]
