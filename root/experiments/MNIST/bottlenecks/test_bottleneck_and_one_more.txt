@@ -1,0 +1,52 @@
+hamming dist code 1:  87.0
+hamming dist code 8:  30.0
+current capacity:  2
+restore performance 0.9285714285714286
+restore performance 0.8341836734693877
+restore performance 0.9158163265306123
+average restore performance 0.8928571428571429
+current capacity:  3
+restore performance 0.9285714285714286
+restore performance 0.8341836734693877
+restore performance 0.9158163265306123
+average restore performance 0.8928571428571429
+current capacity:  4
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9540816326530612
+restore performance 0.9693877551020408
+restore performance 0.8698979591836735
+average restore performance 0.9311224489795918
+current capacity:  3
+restore performance 0.9540816326530612
+restore performance 0.9693877551020408
+restore performance 0.8852040816326531
+average restore performance 0.9362244897959183
+current capacity:  4
+restore performance 0.9948979591836735
+restore performance 0.9693877551020408
+restore performance 0.8877551020408163
+average restore performance 0.9506802721088435
+current capacity:  5
+restore performance 0.9948979591836735
+restore performance 0.9693877551020408
+restore performance 0.8903061224489796
+average restore performance 0.951530612244898
+current capacity:  6
+restore performance 0.9948979591836735
+restore performance 0.9693877551020408
+restore performance 1.0
+average restore performance 0.9880952380952381
+current capacity:  7
+restore performance 0.9948979591836735
+restore performance 0.9693877551020408
+restore performance 1.0
+average restore performance 0.9880952380952381
+current capacity:  8
+restore performance 1.0
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0

@@ -1,0 +1,73 @@
+bottleneck indexes 1s 37
+bottleneck indexes 8s 4
+Testing ones...
+current capacity:  31
+restore performance 0.9795918367346939
+restore performance 0.9872448979591837
+average restore performance 0.9834183673469388
+current capacity:  32
+restore performance 0.9795918367346939
+restore performance 0.9897959183673469
+average restore performance 0.9846938775510203
+current capacity:  33
+restore performance 0.9795918367346939
+restore performance 0.9897959183673469
+average restore performance 0.9846938775510203
+current capacity:  34
+restore performance 0.9795918367346939
+restore performance 0.9897959183673469
+average restore performance 0.9846938775510203
+current capacity:  35
+restore performance 0.9795918367346939
+restore performance 0.9897959183673469
+average restore performance 0.9846938775510203
+current capacity:  36
+restore performance 0.9795918367346939
+restore performance 1.0
+average restore performance 0.9897959183673469
+current capacity:  37
+restore performance 0.9872448979591837
+restore performance 1.0
+average restore performance 0.9936224489795918
+current capacity:  38
+restore performance 0.9872448979591837
+restore performance 1.0
+average restore performance 0.9936224489795918
+current capacity:  39
+restore performance 0.9897959183673469
+restore performance 1.0
+average restore performance 0.9948979591836735
+current capacity:  40
+restore performance 0.9974489795918368
+restore performance 1.0
+average restore performance 0.9987244897959184
+current capacity:  41
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+
+Testing eights...
+current capacity:  11
+restore performance 0.9566326530612245
+restore performance 0.9464285714285714
+average restore performance 0.9515306122448979
+current capacity:  12
+restore performance 0.9821428571428571
+restore performance 0.9591836734693877
+average restore performance 0.9706632653061225
+current capacity:  13
+restore performance 0.9948979591836735
+restore performance 0.9719387755102041
+average restore performance 0.9834183673469388
+current capacity:  14
+restore performance 0.9948979591836735
+restore performance 0.9744897959183674
+average restore performance 0.9846938775510204
+current capacity:  15
+restore performance 0.9974489795918368
+restore performance 0.9846938775510204
+average restore performance 0.9910714285714286
+current capacity:  16
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
