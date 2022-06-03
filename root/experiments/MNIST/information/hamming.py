@@ -116,3 +116,7 @@ print("XAND distance", xand_distance)
 #19 bits is the distance difference between the two bottlenecks of the datasets 
 #the 2 most similar patterns from the dataset are the bottleneck (if we want 100% accuracy)
 """
+
+
+if __name__ == "__main__":
+    pass
