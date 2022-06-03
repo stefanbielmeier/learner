@@ -69,6 +69,7 @@ print(hamming_distance(zero_ones[bottleneck[0], :], zero_ones[bottleneck[1], :])
 print(min_hamming_distance(zero_ones))
 plot_img(zero_ones[bottleneck[0],:].reshape(28,28), 5)
 plot_img(zero_ones[bottleneck[1],:].reshape(28,28), 5)
+
 """
 
 distance0 = min_hamming_distance(zeros)
