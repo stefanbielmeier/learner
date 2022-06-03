@@ -48,27 +48,41 @@ def min_hamming_distance(code):
 def mean_hamming_distance(code):
     return np.mean(hamming_distances(code))
 
-def get_bottleneck_pair(code):
-    # Get the index of the first and second string pair in the dataset that are most similar according to Hamming distance (smallest)
+def get_2d_index(index, rows):
+    i = math.floor(index / rows)
+    j = index % rows
+    return [i,j]
+
+def get_bottleneck_idxs(code):
+    """
+    @param: code as 2D numpy array
+    @return: list of index pairs of bottlenecks. Includes duplications.
+    """
+    pairs = get_bottleneck_pairs(code)
+    idxs = []
+    for pair in pairs:
+        idxs.append(get_2d_index(pair, code.shape[0]))
+    return idxs
+
+def check_index_equality(idx1, idx2):
+    return idx1[0] == idx2[0] and idx1[1] == idx2[1]
+
+def get_bottleneck_pairs(code):
     distances = hamming_distances(code)
     min_dist = min_hamming_distance(code)
-    pair_idx = 0
-    for idx in range(distances.shape[0]):
-        if distances[idx] == min_dist:
-            pair_idx = idx        
-    i = math.floor(pair_idx / code.shape[0])
-    j = pair_idx % code.shape[0]
-    return [i,j]
+    pos = np.where(distances == min_dist)
+    return pos[0]
 
 def error_correction_capability(code):
     return (min_hamming_distance(code)-1)/2
 
-bottleneck = get_bottleneck_pair(zero_ones)
-print(bottleneck)
-print(hamming_distance(zero_ones[bottleneck[0], :], zero_ones[bottleneck[1], :]))
-print(min_hamming_distance(zero_ones))
-plot_img(zero_ones[bottleneck[0],:].reshape(28,28), 5)
-plot_img(zero_ones[bottleneck[1],:].reshape(28,28), 5)
+bottlenecks = get_bottleneck_idxs(eights)
+print(bottlenecks)
+print(hamming_distance(eights[bottlenecks[0][0], :], eights[bottlenecks[0][1], :]))
+print(min_hamming_distance(eights))
+plot_img(eights[bottlenecks[0][0],:].reshape(28,28), 5)
+plot_img(eights[bottlenecks[0][1],:].reshape(28,28), 5)
+get_bottleneck_pairs(eights)
 
 """
 
