@@ -29,7 +29,7 @@ def get_random_idxs(num_memories):
     idxs = np.concatenate((zero_idxs,one_idxs))
     return idxs
 
-def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False):
+def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False, test_idxs = []):
     """
     Takes a minimum of 2 patterns
     """
@@ -41,7 +41,11 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     network = HopfieldNetwork(num_neurons, polydegree, max_cap = network_at_maxcap, continous=is_continous)
     network.learn(memories)
 
-    idxs = get_random_idxs(memories.shape[0])
+    idxs = []
+    if len(test_idxs) == 0:
+        idxs = get_random_idxs(memories.shape[0])
+    else:
+        idxs = test_idxs
 
     for idx in idxs:
         memory = memories[idx,:]
@@ -66,7 +70,7 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
             if isImage:
                 dims = int(math.sqrt(num_neurons))
                 image = restored.reshape(dims,dims) #correct image if printed
-                plt.imshow(restored)
+                plt.imshow(image)
             else:
                 print(memory)
             plt.show()

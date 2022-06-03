@@ -76,14 +76,6 @@ def get_bottleneck_pairs(code):
 def error_correction_capability(code):
     return (min_hamming_distance(code)-1)/2
 
-bottlenecks = get_bottleneck_idxs(eights)
-print(bottlenecks)
-print(hamming_distance(eights[bottlenecks[0][0], :], eights[bottlenecks[0][1], :]))
-print(min_hamming_distance(eights))
-plot_img(eights[bottlenecks[0][0],:].reshape(28,28), 5)
-plot_img(eights[bottlenecks[0][1],:].reshape(28,28), 5)
-get_bottleneck_pairs(eights)
-
 """
 
 distance0 = min_hamming_distance(zeros)
@@ -119,4 +111,10 @@ print("XAND distance", xand_distance)
 
 
 if __name__ == "__main__":
-    pass
+    bottlenecks = get_bottleneck_idxs(eights)
+    print(bottlenecks)
+    print(hamming_distance(eights[bottlenecks[0][0], :], eights[bottlenecks[0][1], :]))
+    print(min_hamming_distance(eights))
+    plot_img(eights[bottlenecks[0][0],:].reshape(28,28), 5)
+    plot_img(eights[bottlenecks[0][1],:].reshape(28,28), 5)
+    get_bottleneck_pairs(eights)
