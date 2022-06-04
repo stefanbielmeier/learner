@@ -6,6 +6,7 @@ from root.experiments.MNIST.capacity.definitions import DATASET_SHARE
 from root.experiments.MNIST.capacity.calcmemcap import calc_memorization_capacities, get_memorization_capacity
 from root.experiments.MNIST.digits.subsets import get_first_fifty_images
 from root.experiments.MNIST.information.hamming import get_bottleneck_idxs, min_hamming_distance
+from root.utils import make_random_dataset
 
 zeros, ones, sixes, eights = get_first_fifty_images(inBinary = True)
 
