@@ -12,13 +12,6 @@ zeros, ones, sixes, eights = get_first_fifty_images(inBinary = True)
 bottleneck1 = get_bottleneck_idxs(zeros)[0]
 bottleneck8 = get_bottleneck_idxs(eights)[0]
 
-def make_random_dataset(num_memories, num_neurons, zeroOnes = False):
-    dataset = np.reshape(np.random.randint(0, 2, num_memories*num_neurons), (num_memories, num_neurons))
-    if zeroOnes:
-        return dataset
-    else:
-        return np.where(dataset == 0, -1, dataset)
-
 dist_random = min_hamming_distance(make_random_dataset(50, 784))
 dist_ones = min_hamming_distance(ones)
 dist_eights = min_hamming_distance(eights)

@@ -1,5 +1,9 @@
+
+
 bottleneck indexes 0 & 1 [70 95]
 bottleneck indexes 6 & 8 [54 95]
+
+Zero and ones... testing..
 current capacity:  36
 restore performance 1.0
 restore performance 1.0
