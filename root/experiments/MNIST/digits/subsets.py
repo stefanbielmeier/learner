@@ -64,18 +64,40 @@ def make_binary(data, zeroOnes = False):
     return np.vstack((binary.T, labels)).T
 
 #subroutine
+
+def find_class_start_end_indeces(training_data):
+    """
+    In dataset: find the last index of a class and return it
+    """
+
+    start_indeces = {0: 0}
+    curr = 0
+    for row_idx in range(training_data.shape[0]):
+        if training_data[row_idx,-1] != curr:
+            start_indeces[training_data[row_idx,-1]] = row_idx
+            curr = training_data[row_idx,-1]
+    
+    return start_indeces
+
 def get_subsets(all_digits):
     """
     @param: numpy 2D array of training data, last column is labels
     @return: object of Digit subsets of MNIST, as numpy arrays with 50 elements each 
     """
-    zeros_data = all_digits[zero_start_index:zero_end_index, :]
-    ones_data = all_digits[one_start_index:one_end_index, :]
+    start_indexes = find_class_start_end_indeces(all_digits)
 
-    sixes_data = all_digits[six_start_index:six_end_index, :]
-    eights_data = all_digits[eight_start_index:eight_end_index, :]
+    zeros_data = all_digits[start_indexes[0]:start_indexes[1], :]
+    ones_data = all_digits[start_indexes[1]:start_indexes[2], :]
+    twos_data = all_digits[start_indexes[2]:start_indexes[3], :]
+    threes_data = all_digits[start_indexes[3]:start_indexes[4], :]
+    fours_data = all_digits[start_indexes[4]:start_indexes[5], :]
+    fives_data = all_digits[start_indexes[5]:start_indexes[6], :]
+    sixes_data = all_digits[start_indexes[6]:start_indexes[7], :]
+    sevens_data = all_digits[start_indexes[7]:start_indexes[8], :]
+    eights_data = all_digits[start_indexes[8]:start_indexes[9], :]
+    nines_data = all_digits[start_indexes[9]:, :]
 
-    return zeros_data, ones_data, sixes_data, eights_data
+    return zeros_data, ones_data, twos_data, threes_data, fours_data, fives_data, sixes_data, sevens_data, eights_data, nines_data
 
 #highest order routine
 def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = False):
