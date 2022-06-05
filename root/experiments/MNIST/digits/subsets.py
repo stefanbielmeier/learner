@@ -105,12 +105,12 @@ def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = Fals
     training_data = get_training_data(DATASET_PATH)
     if inBinary:
         training_data = make_binary(training_data, zeroOnes)
-    zeros_data, ones_data, sixes_data, eights_data = get_subsets(training_data)
+    zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_subsets(training_data)
     
     if with_labels:
-        return zeros_data[:50, :], ones_data[:50, :], sixes_data[:50, :], eights_data[:50, :]
+        return zeros[:50, :], ones[:50, :], twos[:50, :], threes[:50, :], fours[:50, :], fives[:50, :], sixes[:50, :], sevens[:50, :], eights[:50, :], nines[:50, :]
     else:
-        return zeros_data[:50, :-1], ones_data[:50, :-1], sixes_data[:50, :-1], eights_data[:50, :-1]
+        return zeros[:50, :-1], ones[:50, :-1], twos[:50, :-1], threes[:50, :-1], fours[:50, :-1], fives[:50, :-1], sixes[:50, :-1], sevens[:50, :-1], eights[:50, :-1], nines[:50, :-1]
 
 #highest order routine
 def get_fifty_random_images(inBinary = True, with_labels = False):

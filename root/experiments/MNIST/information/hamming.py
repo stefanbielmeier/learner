@@ -5,17 +5,6 @@ from root.experiments.MNIST.digits.subsets import make_binary
 from root.utils import plot_img
 
 
-zeros, ones, sixes, eights = get_first_fifty_images(
-    inBinary=True, zeroOnes=True)
-zero_ones = np.vstack((zeros, ones))
-six_eights = np.vstack((sixes, eights))
-
-num_neurons = 784
-num_memories = 50
-
-uniform_random = np.reshape(np.random.randint(
-    0, 2, num_memories*num_neurons), (num_memories, num_neurons))
-
 #Hamming distance is inverse similarity. Smaller distance means more similar. Harder to learn!
 #So for hamming distance, we want to check how many bits need to be flipped to get from one
 #pattern to any other one.
@@ -110,7 +99,20 @@ print("XAND distance", xand_distance)
 """
 
 
-if __name__ == "__main__":
+
+def main():
+
+    zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_first_fifty_images(
+    inBinary=True, zeroOnes=True)
+    zero_ones = np.vstack((zeros, ones))
+    six_eights = np.vstack((sixes, eights))
+
+    num_neurons = 784
+    num_memories = 50
+
+    uniform_random = np.reshape(np.random.randint(
+        0, 2, num_memories*num_neurons), (num_memories, num_neurons))
+
     bottlenecks = get_bottleneck_idxs(eights)
     print(bottlenecks)
     print(hamming_distance(eights[bottlenecks[0][0], :], eights[bottlenecks[0][1], :]))
@@ -118,3 +120,6 @@ if __name__ == "__main__":
     plot_img(eights[bottlenecks[0][0],:].reshape(28,28), 5)
     plot_img(eights[bottlenecks[0][1],:].reshape(28,28), 5)
     get_bottleneck_pairs(eights)
+
+if __name__ == "__main__":
+    main()
