@@ -1,0 +1,10 @@
+hd zeros  123.3648
+hd ones  62.2904
+hd twos  131.0792
+hd threes  116.0744
+hd fours  104.6888
+hd fives  118.156
+hd sixes  118.6352
+hd sevens  101.812
+hd eights  122.2384
+hd nines  93.044

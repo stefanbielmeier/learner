@@ -36,7 +36,7 @@ hd10 = mean_hamming_distance(nines)
 hd_all = min_hamming_distance(all_data)
 
 #want: plot hamming distance on x axis, and memorization capacity on y axis
-
+"""
 mem_zeros = get_memorization_capacity(zeros, recall_quality = 1.0, startAt = 13, test_idxs = bottleneck0s) 
 mem_ones = get_memorization_capacity(ones, recall_quality = 1.0, startAt = 38, test_idxs = bottleneck1s) 
 mem_twos = get_memorization_capacity(twos, recall_quality = 1.0, startAt = 10, test_idxs = bottleneck2s)
@@ -47,6 +47,7 @@ mem_sixes = get_memorization_capacity(sixes, recall_quality = 1.0, startAt = 13,
 mem_sevens = get_memorization_capacity(sevens, recall_quality = 1.0, startAt = 17, test_idxs = bottleneck7s)
 mem_eights = get_memorization_capacity(eights, recall_quality = 1.0, startAt = 15, test_idxs = bottleneck8s)
 mem_nines = get_memorization_capacity(nines, recall_quality = 1.0, startAt = 13, test_idxs = bottleneck9s)
+"""
 
 file_path = "verify_results_average HD"
 with open(file_path, "w") as o:
@@ -61,7 +62,7 @@ with open(file_path, "w") as o:
         print("hd sevens ", hd8)
         print("hd eights ", hd9)
         print("hd nines ", hd10)
-        
+        """
         print("memcap zeros ", mem_zeros)
         print("memcap ones ", mem_ones)
         print("memcap twos ", mem_twos)
@@ -73,11 +74,12 @@ with open(file_path, "w") as o:
         print("memcap eights ", mem_eights)
         print("memcap nines ", mem_nines)
 
+        """
 
 x_axis = [hd1, hd2, hd3, hd4, hd5, hd6, hd7, hd8, hd9, hd10]
-y_axis = [mem_zeros, mem_ones, mem_twos, mem_threes, mem_fours, mem_fives, mem_sixes, mem_sevens, mem_eights, mem_nines]
+#y_axis = [mem_zeros, mem_ones, mem_twos, mem_threes, mem_fours, mem_fives, mem_sixes, mem_sevens, mem_eights, mem_nines]
 
-plt.scatter(x_axis, y_axis, label="Hamming Distance vs. Memorization Capacity", c='blue')
+#plt.scatter(x_axis, y_axis, label="Hamming Distance vs. Memorization Capacity", c='blue')
 plt.xlabel("HD")
 plt.ylabel("Capacity")
 
