@@ -97,18 +97,6 @@ def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = Fals
         training_data = make_binary(training_data, zeroOnes)
     zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_subsets(training_data)
     
-    print(zeros.shape)
-    print(ones.shape)
-    print(twos.shape)
-    print(threes.shape)
-    print(fours.shape)
-    print(fives.shape)
-    print(sixes.shape)
-    print(sevens.shape)
-    print(eights.shape)
-    print(nines.shape)
-
-
     if with_labels:
         return zeros[:50, :], ones[:50, :], twos[:50, :], threes[:50, :], fours[:50, :], fives[:50, :], sixes[:50, :], sevens[:50, :], eights[:50, :], nines[:50, :]
     else:
