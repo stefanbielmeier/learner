@@ -7,16 +7,6 @@ import torchvision
 
 from root.definitions import ROOT_DIR
 
-zero_start_index = 0
-zero_end_index = 5999
-one_start_index = 6000
-one_end_index = 11999
-
-six_start_index = 36017
-six_end_index = 41935
-eight_start_index = 48200
-eight_end_index = 54030
-
 DATASET_PATH = os.path.join(ROOT_DIR, "experiments", "MNIST", "dataset")
 
 #subroutine
@@ -107,6 +97,18 @@ def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = Fals
         training_data = make_binary(training_data, zeroOnes)
     zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_subsets(training_data)
     
+    print(zeros.shape)
+    print(ones.shape)
+    print(twos.shape)
+    print(threes.shape)
+    print(fours.shape)
+    print(fives.shape)
+    print(sixes.shape)
+    print(sevens.shape)
+    print(eights.shape)
+    print(nines.shape)
+
+
     if with_labels:
         return zeros[:50, :], ones[:50, :], twos[:50, :], threes[:50, :], fours[:50, :], fives[:50, :], sixes[:50, :], sevens[:50, :], eights[:50, :], nines[:50, :]
     else:
