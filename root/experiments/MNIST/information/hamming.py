@@ -113,13 +113,13 @@ def main():
     uniform_random = np.reshape(np.random.randint(
         0, 2, num_memories*num_neurons), (num_memories, num_neurons))
 
-    bottlenecks = get_bottleneck_idxs(eights)
+    bottlenecks = get_bottleneck_idxs(six_eights)
     print(bottlenecks)
-    print(hamming_distance(eights[bottlenecks[0][0], :], eights[bottlenecks[0][1], :]))
-    print(min_hamming_distance(eights))
-    plot_img(eights[bottlenecks[0][0],:].reshape(28,28), 5)
-    plot_img(eights[bottlenecks[0][1],:].reshape(28,28), 5)
-    get_bottleneck_pairs(eights)
+    print(hamming_distance(six_eights[bottlenecks[0][0], :], six_eights[bottlenecks[0][1], :]))
+    print(min_hamming_distance(six_eights))
+    plot_img(six_eights[bottlenecks[0][0],:].reshape(28,28), 5)
+    plot_img(six_eights[bottlenecks[0][1],:].reshape(28,28), 5)
+    get_bottleneck_pairs(six_eights)
 
 if __name__ == "__main__":
     main()
