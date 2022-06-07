@@ -69,7 +69,7 @@ def find_class_start_end_indeces(training_data):
     
     return start_indeces
 
-def get_subsets(all_digits):
+def get_subsets(all_digits, with_labels = False):
     """
     @param: numpy 2D array of training data, last column is labels
     @return: object of Digit subsets of MNIST, as numpy arrays with 50 elements each 
@@ -86,8 +86,10 @@ def get_subsets(all_digits):
     sevens_data = all_digits[start_indexes[7]:start_indexes[8], :]
     eights_data = all_digits[start_indexes[8]:start_indexes[9], :]
     nines_data = all_digits[start_indexes[9]:, :]
-
-    return zeros_data, ones_data, twos_data, threes_data, fours_data, fives_data, sixes_data, sevens_data, eights_data, nines_data
+    if with_labels:
+        return zeros_data, ones_data, twos_data, threes_data, fours_data, fives_data, sixes_data, sevens_data, eights_data, nines_data
+    else: 
+        return zeros_data[:, :-1], ones_data[:, :-1], twos_data[:, :-1], threes_data[:, :-1], fours_data[:, :-1], fives_data[:, :-1], sixes_data[:, :-1], sevens_data[:, :-1], eights_data[:, :-1], nines_data[:, :-1]
 
 #highest order routine
 def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = False):
@@ -95,7 +97,7 @@ def get_first_fifty_images(inBinary = True, with_labels = False, zeroOnes = Fals
     training_data = get_training_data(DATASET_PATH)
     if inBinary:
         training_data = make_binary(training_data, zeroOnes)
-    zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_subsets(training_data)
+    zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_subsets(training_data, with_labels = False)
     
     if with_labels:
         return zeros[:50, :], ones[:50, :], twos[:50, :], threes[:50, :], fours[:50, :], fives[:50, :], sixes[:50, :], sevens[:50, :], eights[:50, :], nines[:50, :]
