@@ -8,9 +8,9 @@ zeros, ones, twos, threes, fours, fives, sixes, sevens, eights, nines = get_firs
 
 bottleneck1s = get_bottleneck_idxs(ones)[0]
 print(min_hamming_distance(ones))
-#mem_ones = get_memorization_capacity(ones, recall_quality = 1.0, startAt = 38, test_idxs = bottleneck1s, verbose = True, corrupt=False, add_noise_bits=5)
+mem_ones = get_memorization_capacity(ones, recall_quality = 1.0, startAt = 38, test_idxs = bottleneck1s, verbose = True, corrupt=False, add_noise_bits=5)
 
-#print(mem_ones)
+print(mem_ones)
 """
 Results:
 restore performance 1.0
@@ -27,9 +27,9 @@ average restore performance 1.0
 53
 """
 
-mem_ones = get_memorization_capacity(ones, recall_quality = 1.0, startAt = 38, test_idxs = bottleneck1s, verbose = True, corrupt=True, add_noise_bits=0)
+mem_other = get_memorization_capacity(ones, recall_quality = 1.0, startAt = 38, test_idxs = bottleneck1s, verbose = True, corrupt=True, add_noise_bits=0)
 
-print(mem_ones)
+print(mem_other)
 
 """
 Results:
