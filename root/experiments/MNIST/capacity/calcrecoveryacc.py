@@ -3,6 +3,7 @@ from random import randint
 
 import numpy as np
 import matplotlib.pyplot as plt
+from root.experiments.MNIST.information.hamming import hamming_distance
 
 from root.utils import plot_img
 from root.hopfieldnet.densehopfield import HopfieldNetwork
@@ -29,7 +30,7 @@ def get_random_idxs(num_memories):
     idxs = np.concatenate((zero_idxs,one_idxs))
     return idxs
 
-def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False, test_idxs = []):
+def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = False, is_continous = False, plot_updated_images = False, num_updates = 1, verbose = False, test_idxs = [], corrupt = False, add_noise_bits = 0):
     """
     Takes a minimum of 2 patterns
     """
@@ -45,7 +46,7 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
     if len(test_idxs) == 0:
         idxs = get_random_idxs(memories.shape[0])
     else:
-        idxs = test_idxs
+        idxs = np.array(test_idxs)
 
     for idx in idxs:
         memory = memories[idx,:]
@@ -61,7 +62,23 @@ def get_recall_quality(memories, polydegree, num_neurons, network_at_maxcap = Fa
 
         for i in range(num_updates):
             if i == 0:
-                network.update(memory) #should also be correct as flattening works as expected
+                if corrupt:
+                    noisy_memory = memory.copy()
+                    noise_idxs = np.arange(num_neurons/2,num_neurons, dtype=np.int32)
+                    np.put(noisy_memory, noise_idxs, -1.0)
+                    network.update(noisy_memory)
+                if add_noise_bits != 0:
+                    noisy_memory = memory.copy() 
+                    
+                    #I randomly select bits I want to add noise to
+                    #Then at those indexes, I flip the bit (noise)
+
+                    np.random.seed(0) #ensure same noise and deterministic behavior
+                    noise_idxs = np.random.choice(num_neurons, add_noise_bits, replace=False)
+                    noisy_memory[noise_idxs] = np.where(noisy_memory[noise_idxs] == -1, 1, -1)                    
+                    network.update(noisy_memory)
+                else:
+                    network.update(memory) #should also be correct as flattening works as expected
             else: 
                 network.update(network.excitation)
 
