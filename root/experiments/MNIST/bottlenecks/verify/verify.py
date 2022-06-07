@@ -32,7 +32,6 @@ hd8 = mean_hamming_distance(sevens)
 hd9 = mean_hamming_distance(eights)
 hd10 = mean_hamming_distance(nines)
 
-
 hd_all = min_hamming_distance(all_data)
 
 #want: plot hamming distance on x axis, and memorization capacity on y axis
