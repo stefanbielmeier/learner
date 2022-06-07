@@ -6,29 +6,36 @@ mean_HD = np.array([123, 62, 131, 116, 104, 118, 118, 101, 122, 93])
 
 y_axis = [15, 53, 13, 17, 20, 13, 18, 21, 16, 19]
 
-min_set = np.vstack((min_HD, y_axis))
-min_set = min_set[:, min_set[0, :].argsort()]
+def make_sorted_set(hds, memcaps):
+    dataset = np.vstack((hds, memcaps))
+    dataset = dataset[:, dataset[0, :].argsort()]
+    return dataset
 
-mean_set = np.vstack((mean_HD, y_axis))
-mean_set = mean_set[:, mean_set[0, :].argsort()]
 
-print(min_set)
-print(mean_set)
+def fit_exp_line(x, y):
+    fitted_line = np.polyfit(x, np.log(y), 1)
+    new_y = np.exp(fitted_line[1]) * np.exp(fitted_line[0] * x)
+    return new_y
 
-fitted_min = np.polyfit(min_set[0,:], np.log(min_set[1,:]), 1)
-fitted_mean = np.polyfit(mean_set[0,:], np.log(mean_set[1,:]), 1)
+def plot_scatter_with_fitted_line(dataset, label, xlabel, ylabel, color):
+    plt.scatter(dataset[0,:], dataset[1,:], label=label, c=color)
+    ynew = fit_exp_line(dataset[0,:], dataset[1,:])
+    plt.plot(dataset[0,:], ynew, label="Fitted line", c=color)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.legend(loc='upper right')
+    plt.show()
 
-ynew_min = np.exp(fitted_min[1]) * np.exp(fitted_min[0] * min_set[0,:])
-ynew_mean = np.exp(fitted_mean[1]) * np.exp(fitted_mean[0] * mean_set[0,:])
+def main():
 
-#plt.scatter(mean_set[0,:], mean_set[1,:], label="MEAN Hamming Distance vs. Memorization Capacity", c='blue')
-plt.scatter(min_set[0,:], min_set[1,:], label="MIN Hamming Distance vs. Memorization Capacity", c='red')
+    min_set = make_sorted_set(min_HD, y_axis)
+    mean_set = make_sorted_set(mean_HD, y_axis)
 
-plt.plot(min_set[0,:], ynew_min, label="Fitted line", c='red')
-#plt.plot(mean_set[0,:], ynew_mean, label="Fitted line", c='blue')
+    print(min_set)
+    print(mean_set)
 
-plt.xlabel("HD")
-plt.ylabel("Capacity")
+    plot_scatter_with_fitted_line(min_set, "MIN Hamming Distance vs. Memorization Capacity", "Min HD", "Mem Cap", "red")
+    plot_scatter_with_fitted_line(mean_set, "MEAN Hamming Distance vs. Memorization Capacity", "Min HD", "Mem Cap", "blue")
 
-plt.legend(loc='upper right')
-plt.show()
+if __name__ == "__main__":
+    main()
