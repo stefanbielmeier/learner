@@ -1,3 +1,5 @@
+import contextlib
+from functools import wraps
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -18,3 +20,12 @@ def make_random_dataset(num_memories, num_neurons, zeroOnes = False):
         return dataset
     else:
         return np.where(dataset == 0, -1, dataset)
+
+def record_stdout(func, file_path):
+    @wraps(func)
+    def wrapped(*args, **kwargs):
+        with open(file_path, "w") as o:
+            with contextlib.redirect_stdout(o):
+                func(*args, **kwargs)
+    
+    return wrapped
