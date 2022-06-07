@@ -27,7 +27,7 @@ def create_subset(full_dataset, num_memories, goal_hamming_distance):
     subset = []
     added_idxs = []
 
-    while len(subset) < num_memories - 1:
+    while len(subset) < num_memories:
         idx1 = np.random.randint(0, full_dataset.shape[0])
         #no duplications
         if idx1 not in added_idxs:
