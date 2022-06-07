@@ -15,7 +15,7 @@ def load_subsets(filepath):
 def test_subsets(subsets, min_hd = True):
     mem_caps = []
     hds = []
-    for subset in subset:
+    for subset in subsets:
         if min_hd:
             hd = min_hamming_distance(subset)
         else:
@@ -23,7 +23,7 @@ def test_subsets(subsets, min_hd = True):
         hds.append(hd)
 
         bottleneck_idxs = get_bottleneck_idxs(subset)[0]
-        mem_cap = get_memorization_capacity(subset, recall_quality = 1.0, startAt = 12, test_idxs = bottleneck_idxs) 
+        mem_cap = get_memorization_capacity(subset, recall_quality = 1.0, startAt = 12, verbose=True, test_idxs = bottleneck_idxs) 
         mem_caps.append(mem_cap)
 
         break
@@ -37,3 +37,6 @@ def main():
     plot_scatter_with_fitted_line(dataset, "hd", "mem_cap", "Plot min_hd vs. mem_cap", color="blue")
     with "test_subsets.npy" as f:
         np.save(f, dataset)
+
+if __name__ == "__main__":
+    main()
