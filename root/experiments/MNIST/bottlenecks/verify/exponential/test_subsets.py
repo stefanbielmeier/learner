@@ -11,40 +11,33 @@ def get_min_hds(subsets):
         min_hds.append(min_hamming_distance(subset))
     return min_hds
 
+def get_mean_hds(subsets):
+    mean_hds = []
+    for subset in subsets:
+        mean_hds.append(mean_hamming_distance(subset))
+    return mean_hds
+
 def load_subsets(filepath):
     array = []
     with open(filepath, 'rb') as f:
         array = np.load(f)
     return array
 
-def test_subsets(subsets, min_hd = True):
+def test_subsets(subsets):
     mem_caps = []
-    hds = []
     for subset in subsets:
-        if min_hd:
-            hd = min_hamming_distance(subset)
-        else:
-            hd = mean_hamming_distance(subset)
-        hds.append(hd)
-
         bottleneck_idxs = get_bottleneck_idxs(subset)[0]
         mem_cap = get_memorization_capacity(subset, recall_quality = 1.0, startAt = 6, verbose=True, test_idxs = bottleneck_idxs) 
         mem_caps.append(mem_cap)
 
-    return hds, mem_caps
+    return mem_caps
     
 def main():
-    subsets = load_subsets("subsets2.npy")
-    #hds, mem_caps = test_subsets(subsets, min_hd = False)
-    #dataset = make_sorted_set(hds, mem_caps)    
-    dataset = load_subsets("test_subsets.npy")
-    dataset = np.flip(dataset, axis=0)
-    min_hds = sorted(get_min_hds(subsets), reverse=True)
-    #dataset[0,:] = min_hds
-    print(dataset)
-    plot_scatter_with_fitted_line(dataset, "Plot min_hd vs. mem_cap", "hd", "mem_cap", color="blue")
-    #with open('test_subsets.npy', 'wb') as f:
-    #   np.save(f, dataset)
+    subsets = load_subsets("subsets.npy")
+    mem_caps = test_subsets(subsets, min_hd = False)
+    with open('mem_caps_subsets.npy', 'wb') as f:
+       np.save(f, mem_caps)
+    #plot_scatter_with_fitted_line(dataset, "Plot min_hd vs. mem_cap", "hd", "mem_cap", color="blue")
 
 if __name__ == "__main__":
     main()

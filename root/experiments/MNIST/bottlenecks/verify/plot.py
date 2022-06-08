@@ -37,7 +37,7 @@ def main():
     print(mean_set)
 
     plot_scatter_with_fitted_line(min_set, "MIN Hamming Distance vs. Memorization Capacity", "Min HD", "Mem Cap", "red")
-    plot_scatter_with_fitted_line(mean_set, "MEAN Hamming Distance vs. Memorization Capacity", "Min HD", "Mem Cap", "blue")
+    #plot_scatter_with_fitted_line(mean_set, "MEAN Hamming Distance vs. Memorization Capacity", "Min HD", "Mem Cap", "blue")
 
 if __name__ == "__main__":
     main()
