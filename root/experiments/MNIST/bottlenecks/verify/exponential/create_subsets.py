@@ -6,7 +6,7 @@ from root.experiments.MNIST.information.hamming import get_bottleneck_idxs, hamm
 
 training_data = get_training_data(DATASET_PATH)
 training_data = make_binary(training_data, zeroOnes = False)
-zeros, ones, _, _, fours, _, _, _, _, _ = get_subsets(training_data)
+zeros, ones, twos, _, fours, _, _, _, _, _ = get_subsets(training_data)
 np.random.seed(0)
 
 #bottleneck0s = get_bottleneck_idxs(first_500)[0]
@@ -21,6 +21,10 @@ np.random.seed(0)
 
 def create_subset(full_dataset, num_memories, goal_hamming_distance, leeway = 10):
     """
+    #GOAL:
+    # 3 Subsets ranging at 10, 15, and 20 min hamming distance hamming 
+    # from 40 to a 140 min hamming distance in 10 increments 
+
     Return a subset.
     Pick pairs of memories from a dataset until num_memories is reached.
     No pair of memories in the subset can have a hamming distance
@@ -47,7 +51,7 @@ def create_subset(full_dataset, num_memories, goal_hamming_distance, leeway = 10
                 # if the hamming distance is too low, don't add the memory
                 while fitting_hd and subset_idx < len(subset):
                     hd = hamming_distance(new_memory, subset[subset_idx])
-                    if (hd > goal_hamming_distance + 10) or (hd < goal_hamming_distance - 10):
+                    if hd < goal_hamming_distance:
                         fitting_hd = False
                     subset_idx += 1
                     
@@ -55,7 +59,7 @@ def create_subset(full_dataset, num_memories, goal_hamming_distance, leeway = 10
                     subset.append(new_memory)
                     added_idxs.append(idx1)
 
-        print(len(subset))
+        #print(len(subset))
     """
     #ensure the last memory has exactly the right hamming distance to all
     while len(subset) < num_memories:
@@ -86,7 +90,7 @@ def create_subsets(full_dataset, num_memories, hd_range = [], leeway = 10):
 
 #I need subsets of fours ranging from min to max HD of 11 to 150
 
-dataset = np.vstack((ones, fours))
+dataset = ones
 np.random.shuffle(dataset)
 print(dataset.shape)
 
@@ -97,19 +101,8 @@ Create a subset of n strings where the average hamming distance is as close to t
 
 
 """
-
-
-#GOAL:
-
-# 10 Subsets ranging from 60 Mean Hamming Distance to 160 Mean Hamming Distance
-# 10 Subsets ranging from 10 min hamming distance to 150 min hamming distance
-
-#How can I create that from the data I have?
-#Sort the data by np.sum()
-#the ones with the biggest sum are added first
-
-subsets = create_subsets(dataset, 50, hd_range=range(10,150,5))
+subsets = create_subsets(dataset, 50, hd_range=range(4,22,3))
 print(get_min_hds(subsets))
 print(get_mean_hds(subsets))
-with open('subsets_ranges.npy', 'wb') as f:
+with open('subsets_8_19.npy', 'wb') as f:
    np.save(f, subsets)

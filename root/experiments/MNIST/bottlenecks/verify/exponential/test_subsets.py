@@ -33,11 +33,14 @@ def test_subsets(subsets):
     return mem_caps
     
 def main():
-    subsets = load_subsets("subsets.npy")
-    mem_caps = test_subsets(subsets, min_hd = False)
-    with open('mem_caps_subsets.npy', 'wb') as f:
-       np.save(f, mem_caps)
-    #plot_scatter_with_fitted_line(dataset, "Plot min_hd vs. mem_cap", "hd", "mem_cap", color="blue")
+    subsets_40_120 = load_subsets("subsets_40_120.npy")
+    subsets_10_22 = load_subsets("subsets_10_22.npy")
+    mem_caps1 = test_subsets(subsets_40_120)
+    mem_caps2 = test_subsets(subsets_10_22)
+    with open('mem_caps_subsets_40_120.npy', 'wb') as f:
+       np.save(f, mem_caps1)
+    with open('mem_caps_subsets_10_22.npy', 'wb') as f:
+       np.save(f, mem_caps2)
 
 if __name__ == "__main__":
     main()
