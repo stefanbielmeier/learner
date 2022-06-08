@@ -13,8 +13,8 @@ def make_sorted_set(hds, memcaps):
 
 
 def fit_exp_line(x, y):
-    fitted_line = np.polyfit(x, np.log(y), 1)
-    new_y = np.exp(fitted_line[1]) * np.exp(fitted_line[0] * x)
+    fitted_line = np.polyfit(x, y, 1)
+    new_y = fitted_line[1] + fitted_line[0] * x
     return new_y
 
 def plot_scatter_with_fitted_line(dataset, label, xlabel, ylabel, color):
@@ -23,8 +23,8 @@ def plot_scatter_with_fitted_line(dataset, label, xlabel, ylabel, color):
     #plt.plot(dataset[0,:], ynew, label="Fitted line", c=color)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-    plt.ylim((2,60))
-    plt.xlim((1, 150))
+    plt.ylim((0,60))
+    plt.xlim((0,390))
     plt.legend(loc='upper right')
     plt.show()
 
