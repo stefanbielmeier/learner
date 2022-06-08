@@ -32,7 +32,7 @@ def test_subsets(subsets):
 
     return mem_caps
     
-def main():
+def create_subsets():
     subset1 = load_subsets("subsets_5_38_ones.npy")
     subset2 = load_subsets("subsets_38_120_one_twos.npy")
     subset3 = load_subsets("subsets_120_380_twos_random.npy")
@@ -40,6 +40,13 @@ def main():
     print(subsets.shape) #(many, 50, 784)
     with open('all_subsets.npy', 'wb') as f:
        np.save(f, subsets)
+
+def main():
+    #create_subsets() #do when needed
+    subsets = load_subsets("all_subsets.npy")
+    memcaps = test_subsets(subsets)
+    with open("memcaps.npy", "wb") as f:
+        np.save(f, memcaps)
 
 if __name__ == "__main__":
     main()
