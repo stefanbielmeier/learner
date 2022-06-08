@@ -1,0 +1,3261 @@
+(56, 50, 784)
+current capacity:  2
+restore performance 0.9285714285714286
+restore performance 0.9107142857142857
+average restore performance 0.9196428571428572
+current capacity:  3
+restore performance 0.9311224489795918
+restore performance 0.9132653061224489
+average restore performance 0.9221938775510203
+current capacity:  4
+restore performance 0.9387755102040817
+restore performance 0.9209183673469388
+average restore performance 0.9298469387755102
+current capacity:  5
+restore performance 0.9464285714285714
+restore performance 0.9285714285714286
+average restore performance 0.9375
+current capacity:  6
+restore performance 0.9489795918367347
+restore performance 0.9260204081632653
+average restore performance 0.9375
+current capacity:  7
+restore performance 0.9540816326530612
+restore performance 0.9336734693877551
+average restore performance 0.9438775510204082
+current capacity:  8
+restore performance 0.9591836734693877
+restore performance 0.9438775510204082
+average restore performance 0.9515306122448979
+current capacity:  9
+restore performance 0.9693877551020408
+restore performance 0.951530612244898
+average restore performance 0.9604591836734694
+current capacity:  10
+restore performance 0.9693877551020408
+restore performance 0.9540816326530612
+average restore performance 0.9617346938775511
+current capacity:  11
+restore performance 0.9693877551020408
+restore performance 0.9566326530612245
+average restore performance 0.9630102040816326
+current capacity:  12
+restore performance 0.9719387755102041
+restore performance 0.9642857142857143
+average restore performance 0.9681122448979592
+current capacity:  13
+restore performance 0.9744897959183674
+restore performance 0.9642857142857143
+average restore performance 0.9693877551020409
+current capacity:  14
+restore performance 0.9744897959183674
+restore performance 0.9668367346938775
+average restore performance 0.9706632653061225
+current capacity:  15
+restore performance 0.9872448979591837
+restore performance 0.9693877551020408
+average restore performance 0.9783163265306123
+current capacity:  16
+restore performance 0.9846938775510204
+restore performance 0.9719387755102041
+average restore performance 0.9783163265306123
+current capacity:  17
+restore performance 0.9897959183673469
+restore performance 0.9719387755102041
+average restore performance 0.9808673469387755
+current capacity:  18
+restore performance 0.9897959183673469
+restore performance 0.9744897959183674
+average restore performance 0.9821428571428572
+current capacity:  19
+restore performance 0.9897959183673469
+restore performance 0.9744897959183674
+average restore performance 0.9821428571428572
+current capacity:  20
+restore performance 0.9897959183673469
+restore performance 0.9770408163265306
+average restore performance 0.9834183673469388
+current capacity:  21
+restore performance 0.9897959183673469
+restore performance 0.9795918367346939
+average restore performance 0.9846938775510203
+current capacity:  22
+restore performance 0.9897959183673469
+restore performance 0.9795918367346939
+average restore performance 0.9846938775510203
+current capacity:  23
+restore performance 0.9897959183673469
+restore performance 0.9795918367346939
+average restore performance 0.9846938775510203
+current capacity:  24
+restore performance 0.9923469387755102
+restore performance 0.9795918367346939
+average restore performance 0.985969387755102
+current capacity:  25
+restore performance 0.9923469387755102
+restore performance 0.9795918367346939
+average restore performance 0.985969387755102
+current capacity:  26
+restore performance 0.9948979591836735
+restore performance 0.9795918367346939
+average restore performance 0.9872448979591837
+current capacity:  27
+restore performance 0.9974489795918368
+restore performance 0.9821428571428571
+average restore performance 0.9897959183673469
+current capacity:  28
+restore performance 0.9974489795918368
+restore performance 0.9821428571428571
+average restore performance 0.9897959183673469
+current capacity:  29
+restore performance 0.9974489795918368
+restore performance 0.9821428571428571
+average restore performance 0.9897959183673469
+current capacity:  30
+restore performance 1.0
+restore performance 0.9821428571428571
+average restore performance 0.9910714285714286
+current capacity:  31
+restore performance 1.0
+restore performance 0.9846938775510204
+average restore performance 0.9923469387755102
+current capacity:  32
+restore performance 1.0
+restore performance 0.9846938775510204
+average restore performance 0.9923469387755102
+current capacity:  33
+restore performance 1.0
+restore performance 0.9846938775510204
+average restore performance 0.9923469387755102
+current capacity:  34
+restore performance 1.0
+restore performance 0.9846938775510204
+average restore performance 0.9923469387755102
+current capacity:  35
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  36
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  37
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  38
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  39
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  40
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  41
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  42
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  43
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  44
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  45
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  46
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  47
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  48
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  49
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  50
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  51
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  52
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  53
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9107142857142857
+restore performance 0.9107142857142857
+average restore performance 0.9107142857142857
+current capacity:  3
+restore performance 0.9132653061224489
+restore performance 0.9158163265306123
+average restore performance 0.9145408163265306
+current capacity:  4
+restore performance 0.9132653061224489
+restore performance 0.9158163265306123
+average restore performance 0.9145408163265306
+current capacity:  5
+restore performance 0.9158163265306123
+restore performance 0.9132653061224489
+average restore performance 0.9145408163265306
+current capacity:  6
+restore performance 0.9158163265306123
+restore performance 0.9132653061224489
+average restore performance 0.9145408163265306
+current capacity:  7
+restore performance 0.9158163265306123
+restore performance 0.9158163265306123
+average restore performance 0.9158163265306123
+current capacity:  8
+restore performance 0.9260204081632653
+restore performance 0.9183673469387755
+average restore performance 0.9221938775510203
+current capacity:  9
+restore performance 0.9336734693877551
+restore performance 0.9311224489795918
+average restore performance 0.9323979591836735
+current capacity:  10
+restore performance 0.9464285714285714
+restore performance 0.9311224489795918
+average restore performance 0.9387755102040816
+current capacity:  11
+restore performance 0.9438775510204082
+restore performance 0.9311224489795918
+average restore performance 0.9375
+current capacity:  12
+restore performance 0.9464285714285714
+restore performance 0.9362244897959183
+average restore performance 0.9413265306122449
+current capacity:  13
+restore performance 0.9464285714285714
+restore performance 0.9336734693877551
+average restore performance 0.9400510204081632
+current capacity:  14
+restore performance 0.9489795918367347
+restore performance 0.9362244897959183
+average restore performance 0.9426020408163265
+current capacity:  15
+restore performance 0.9591836734693877
+restore performance 0.9464285714285714
+average restore performance 0.9528061224489796
+current capacity:  16
+restore performance 0.9591836734693877
+restore performance 0.9464285714285714
+average restore performance 0.9528061224489796
+current capacity:  17
+restore performance 0.9540816326530612
+restore performance 0.9464285714285714
+average restore performance 0.9502551020408163
+current capacity:  18
+restore performance 0.9540816326530612
+restore performance 0.9464285714285714
+average restore performance 0.9502551020408163
+current capacity:  19
+restore performance 0.9540816326530612
+restore performance 0.9489795918367347
+average restore performance 0.951530612244898
+current capacity:  20
+restore performance 0.9566326530612245
+restore performance 0.9489795918367347
+average restore performance 0.9528061224489797
+current capacity:  21
+restore performance 0.9566326530612245
+restore performance 0.951530612244898
+average restore performance 0.9540816326530612
+current capacity:  22
+restore performance 0.9591836734693877
+restore performance 0.951530612244898
+average restore performance 0.9553571428571428
+current capacity:  23
+restore performance 0.9591836734693877
+restore performance 0.951530612244898
+average restore performance 0.9553571428571428
+current capacity:  24
+restore performance 0.9693877551020408
+restore performance 0.9642857142857143
+average restore performance 0.9668367346938775
+current capacity:  25
+restore performance 0.9719387755102041
+restore performance 0.9642857142857143
+average restore performance 0.9681122448979592
+current capacity:  26
+restore performance 0.9719387755102041
+restore performance 0.9642857142857143
+average restore performance 0.9681122448979592
+current capacity:  27
+restore performance 0.9795918367346939
+restore performance 0.9846938775510204
+average restore performance 0.9821428571428572
+current capacity:  28
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  29
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  30
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  31
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  32
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  33
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  34
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  35
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  36
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  37
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  38
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  39
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  40
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  41
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  42
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  43
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  44
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  45
+restore performance 1.0
+restore performance 0.9872448979591837
+average restore performance 0.9936224489795918
+current capacity:  46
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  47
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  48
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  49
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  50
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  51
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9183673469387755
+restore performance 0.9209183673469388
+average restore performance 0.9196428571428572
+current capacity:  3
+restore performance 0.9183673469387755
+restore performance 0.9209183673469388
+average restore performance 0.9196428571428572
+current capacity:  4
+restore performance 0.9183673469387755
+restore performance 0.9260204081632653
+average restore performance 0.9221938775510203
+current capacity:  5
+restore performance 0.9260204081632653
+restore performance 0.9311224489795918
+average restore performance 0.9285714285714286
+current capacity:  6
+restore performance 0.9285714285714286
+restore performance 0.9362244897959183
+average restore performance 0.9323979591836735
+current capacity:  7
+restore performance 0.9336734693877551
+restore performance 0.9387755102040817
+average restore performance 0.9362244897959184
+current capacity:  8
+restore performance 0.9413265306122449
+restore performance 0.9540816326530612
+average restore performance 0.9477040816326531
+current capacity:  9
+restore performance 0.9540816326530612
+restore performance 0.9591836734693877
+average restore performance 0.9566326530612245
+current capacity:  10
+restore performance 0.9566326530612245
+restore performance 0.9642857142857143
+average restore performance 0.9604591836734694
+current capacity:  11
+restore performance 0.9566326530612245
+restore performance 0.9668367346938775
+average restore performance 0.9617346938775511
+current capacity:  12
+restore performance 0.9617346938775511
+restore performance 0.9668367346938775
+average restore performance 0.9642857142857143
+current capacity:  13
+restore performance 0.9642857142857143
+restore performance 0.9668367346938775
+average restore performance 0.965561224489796
+current capacity:  14
+restore performance 0.9642857142857143
+restore performance 0.9668367346938775
+average restore performance 0.965561224489796
+current capacity:  15
+restore performance 0.9642857142857143
+restore performance 0.9668367346938775
+average restore performance 0.965561224489796
+current capacity:  16
+restore performance 0.9642857142857143
+restore performance 0.9693877551020408
+average restore performance 0.9668367346938775
+current capacity:  17
+restore performance 0.9642857142857143
+restore performance 0.9719387755102041
+average restore performance 0.9681122448979592
+current capacity:  18
+restore performance 0.9642857142857143
+restore performance 0.9744897959183674
+average restore performance 0.9693877551020409
+current capacity:  19
+restore performance 0.9642857142857143
+restore performance 0.9744897959183674
+average restore performance 0.9693877551020409
+current capacity:  20
+restore performance 0.9617346938775511
+restore performance 0.9744897959183674
+average restore performance 0.9681122448979592
+current capacity:  21
+restore performance 0.9668367346938775
+restore performance 0.9872448979591837
+average restore performance 0.9770408163265306
+current capacity:  22
+restore performance 0.9719387755102041
+restore performance 0.9872448979591837
+average restore performance 0.9795918367346939
+current capacity:  23
+restore performance 0.9719387755102041
+restore performance 0.9872448979591837
+average restore performance 0.9795918367346939
+current capacity:  24
+restore performance 0.9846938775510204
+restore performance 0.9872448979591837
+average restore performance 0.9859693877551021
+current capacity:  25
+restore performance 0.9846938775510204
+restore performance 0.9872448979591837
+average restore performance 0.9859693877551021
+current capacity:  26
+restore performance 0.9846938775510204
+restore performance 0.9872448979591837
+average restore performance 0.9859693877551021
+current capacity:  27
+restore performance 0.9846938775510204
+restore performance 0.9897959183673469
+average restore performance 0.9872448979591837
+current capacity:  28
+restore performance 0.9846938775510204
+restore performance 0.9897959183673469
+average restore performance 0.9872448979591837
+current capacity:  29
+restore performance 0.9846938775510204
+restore performance 0.9923469387755102
+average restore performance 0.9885204081632653
+current capacity:  30
+restore performance 0.9846938775510204
+restore performance 0.9923469387755102
+average restore performance 0.9885204081632653
+current capacity:  31
+restore performance 0.9846938775510204
+restore performance 0.9923469387755102
+average restore performance 0.9885204081632653
+current capacity:  32
+restore performance 0.9846938775510204
+restore performance 0.9923469387755102
+average restore performance 0.9885204081632653
+current capacity:  33
+restore performance 0.9872448979591837
+restore performance 0.9923469387755102
+average restore performance 0.9897959183673469
+current capacity:  34
+restore performance 0.9872448979591837
+restore performance 0.9923469387755102
+average restore performance 0.9897959183673469
+current capacity:  35
+restore performance 0.9872448979591837
+restore performance 0.9923469387755102
+average restore performance 0.9897959183673469
+current capacity:  36
+restore performance 0.9872448979591837
+restore performance 1.0
+average restore performance 0.9936224489795918
+current capacity:  37
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  38
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  39
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  40
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  41
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  42
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  43
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  44
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  45
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  46
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9413265306122449
+restore performance 0.951530612244898
+average restore performance 0.9464285714285714
+current capacity:  3
+restore performance 0.9489795918367347
+restore performance 0.9591836734693877
+average restore performance 0.9540816326530612
+current capacity:  4
+restore performance 0.9566326530612245
+restore performance 0.9642857142857143
+average restore performance 0.9604591836734694
+current capacity:  5
+restore performance 0.9617346938775511
+restore performance 0.9719387755102041
+average restore performance 0.9668367346938775
+current capacity:  6
+restore performance 0.9642857142857143
+restore performance 0.9744897959183674
+average restore performance 0.9693877551020409
+current capacity:  7
+restore performance 0.9668367346938775
+restore performance 0.9744897959183674
+average restore performance 0.9706632653061225
+current capacity:  8
+restore performance 0.9693877551020408
+restore performance 0.9846938775510204
+average restore performance 0.9770408163265306
+current capacity:  9
+restore performance 0.9770408163265306
+restore performance 0.9846938775510204
+average restore performance 0.9808673469387755
+current capacity:  10
+restore performance 0.9770408163265306
+restore performance 0.9846938775510204
+average restore performance 0.9808673469387755
+current capacity:  11
+restore performance 0.9770408163265306
+restore performance 0.9872448979591837
+average restore performance 0.9821428571428572
+current capacity:  12
+restore performance 0.9744897959183674
+restore performance 0.9872448979591837
+average restore performance 0.9808673469387755
+current capacity:  13
+restore performance 0.9744897959183674
+restore performance 0.9872448979591837
+average restore performance 0.9808673469387755
+current capacity:  14
+restore performance 0.9744897959183674
+restore performance 0.9872448979591837
+average restore performance 0.9808673469387755
+current capacity:  15
+restore performance 0.9770408163265306
+restore performance 0.9923469387755102
+average restore performance 0.9846938775510203
+current capacity:  16
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  17
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  18
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  19
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  20
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  21
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  22
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  23
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  24
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  25
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  26
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  27
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  28
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  29
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  30
+restore performance 0.9770408163265306
+restore performance 0.9948979591836735
+average restore performance 0.9859693877551021
+current capacity:  31
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  32
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  33
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  34
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  35
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  36
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  37
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  38
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  39
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  40
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  41
+restore performance 0.9795918367346939
+restore performance 0.9974489795918368
+average restore performance 0.9885204081632653
+current capacity:  42
+restore performance 0.9795918367346939
+restore performance 0.9974489795918368
+average restore performance 0.9885204081632653
+current capacity:  43
+restore performance 0.9795918367346939
+restore performance 0.9974489795918368
+average restore performance 0.9885204081632653
+current capacity:  44
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  45
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  46
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  47
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  48
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  49
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  50
+restore performance 0.9923469387755102
+restore performance 0.9974489795918368
+average restore performance 0.9948979591836735
+current capacity:  51
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  52
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9183673469387755
+restore performance 0.9081632653061225
+average restore performance 0.9132653061224489
+current capacity:  3
+restore performance 0.9209183673469388
+restore performance 0.9107142857142857
+average restore performance 0.9158163265306123
+current capacity:  4
+restore performance 0.923469387755102
+restore performance 0.9183673469387755
+average restore performance 0.9209183673469388
+current capacity:  5
+restore performance 0.9311224489795918
+restore performance 0.923469387755102
+average restore performance 0.9272959183673469
+current capacity:  6
+restore performance 0.9387755102040817
+restore performance 0.9285714285714286
+average restore performance 0.9336734693877551
+current capacity:  7
+restore performance 0.9413265306122449
+restore performance 0.9336734693877551
+average restore performance 0.9375
+current capacity:  8
+restore performance 0.951530612244898
+restore performance 0.9464285714285714
+average restore performance 0.9489795918367347
+current capacity:  9
+restore performance 0.951530612244898
+restore performance 0.9489795918367347
+average restore performance 0.9502551020408163
+current capacity:  10
+restore performance 0.951530612244898
+restore performance 0.9540816326530612
+average restore performance 0.9528061224489797
+current capacity:  11
+restore performance 0.951530612244898
+restore performance 0.9617346938775511
+average restore performance 0.9566326530612246
+current capacity:  12
+restore performance 0.951530612244898
+restore performance 0.9642857142857143
+average restore performance 0.9579081632653061
+current capacity:  13
+restore performance 0.9540816326530612
+restore performance 0.9693877551020408
+average restore performance 0.9617346938775511
+current capacity:  14
+restore performance 0.9566326530612245
+restore performance 0.9668367346938775
+average restore performance 0.9617346938775511
+current capacity:  15
+restore performance 0.9566326530612245
+restore performance 0.9693877551020408
+average restore performance 0.9630102040816326
+current capacity:  16
+restore performance 0.9566326530612245
+restore performance 0.9693877551020408
+average restore performance 0.9630102040816326
+current capacity:  17
+restore performance 0.9566326530612245
+restore performance 0.9693877551020408
+average restore performance 0.9630102040816326
+current capacity:  18
+restore performance 0.9566326530612245
+restore performance 0.9719387755102041
+average restore performance 0.9642857142857143
+current capacity:  19
+restore performance 0.9591836734693877
+restore performance 0.9719387755102041
+average restore performance 0.965561224489796
+current capacity:  20
+restore performance 0.9591836734693877
+restore performance 0.9719387755102041
+average restore performance 0.965561224489796
+current capacity:  21
+restore performance 0.9617346938775511
+restore performance 0.9795918367346939
+average restore performance 0.9706632653061225
+current capacity:  22
+restore performance 0.9617346938775511
+restore performance 0.9846938775510204
+average restore performance 0.9732142857142858
+current capacity:  23
+restore performance 0.9642857142857143
+restore performance 0.9846938775510204
+average restore performance 0.9744897959183674
+current capacity:  24
+restore performance 0.9668367346938775
+restore performance 0.9846938775510204
+average restore performance 0.9757653061224489
+current capacity:  25
+restore performance 0.9668367346938775
+restore performance 0.9846938775510204
+average restore performance 0.9757653061224489
+current capacity:  26
+restore performance 0.9668367346938775
+restore performance 0.9846938775510204
+average restore performance 0.9757653061224489
+current capacity:  27
+restore performance 0.9668367346938775
+restore performance 0.9846938775510204
+average restore performance 0.9757653061224489
+current capacity:  28
+restore performance 0.9668367346938775
+restore performance 0.9872448979591837
+average restore performance 0.9770408163265306
+current capacity:  29
+restore performance 0.9795918367346939
+restore performance 0.9872448979591837
+average restore performance 0.9834183673469388
+current capacity:  30
+restore performance 0.9795918367346939
+restore performance 0.9872448979591837
+average restore performance 0.9834183673469388
+current capacity:  31
+restore performance 0.9846938775510204
+restore performance 0.9872448979591837
+average restore performance 0.9859693877551021
+current capacity:  32
+restore performance 0.9872448979591837
+restore performance 0.9872448979591837
+average restore performance 0.9872448979591837
+current capacity:  33
+restore performance 0.9897959183673469
+restore performance 0.9897959183673469
+average restore performance 0.9897959183673469
+current capacity:  34
+restore performance 0.9923469387755102
+restore performance 0.9897959183673469
+average restore performance 0.9910714285714286
+current capacity:  35
+restore performance 0.9923469387755102
+restore performance 0.9897959183673469
+average restore performance 0.9910714285714286
+current capacity:  36
+restore performance 0.9923469387755102
+restore performance 0.9897959183673469
+average restore performance 0.9910714285714286
+current capacity:  37
+restore performance 0.9974489795918368
+restore performance 0.9948979591836735
+average restore performance 0.9961734693877551
+current capacity:  38
+restore performance 0.9974489795918368
+restore performance 0.9948979591836735
+average restore performance 0.9961734693877551
+current capacity:  39
+restore performance 1.0
+restore performance 0.9948979591836735
+average restore performance 0.9974489795918368
+current capacity:  40
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8954081632653061
+restore performance 0.8775510204081632
+average restore performance 0.8864795918367347
+current capacity:  3
+restore performance 0.9005102040816326
+restore performance 0.8775510204081632
+average restore performance 0.8890306122448979
+current capacity:  4
+restore performance 0.8954081632653061
+restore performance 0.8724489795918368
+average restore performance 0.8839285714285714
+current capacity:  5
+restore performance 0.8979591836734694
+restore performance 0.8724489795918368
+average restore performance 0.8852040816326531
+current capacity:  6
+restore performance 0.8979591836734694
+restore performance 0.8801020408163265
+average restore performance 0.8890306122448979
+current capacity:  7
+restore performance 0.9081632653061225
+restore performance 0.8877551020408163
+average restore performance 0.8979591836734694
+current capacity:  8
+restore performance 0.9183673469387755
+restore performance 0.8954081632653061
+average restore performance 0.9068877551020409
+current capacity:  9
+restore performance 0.9209183673469388
+restore performance 0.9056122448979592
+average restore performance 0.9132653061224489
+current capacity:  10
+restore performance 0.9362244897959183
+restore performance 0.9132653061224489
+average restore performance 0.9247448979591837
+current capacity:  11
+restore performance 0.9413265306122449
+restore performance 0.9158163265306123
+average restore performance 0.9285714285714286
+current capacity:  12
+restore performance 0.9413265306122449
+restore performance 0.9285714285714286
+average restore performance 0.9349489795918368
+current capacity:  13
+restore performance 0.9489795918367347
+restore performance 0.9362244897959183
+average restore performance 0.9426020408163265
+current capacity:  14
+restore performance 0.9642857142857143
+restore performance 0.9362244897959183
+average restore performance 0.9502551020408163
+current capacity:  15
+restore performance 0.9642857142857143
+restore performance 0.9438775510204082
+average restore performance 0.9540816326530612
+current capacity:  16
+restore performance 0.9642857142857143
+restore performance 0.9464285714285714
+average restore performance 0.9553571428571428
+current capacity:  17
+restore performance 0.9642857142857143
+restore performance 0.9464285714285714
+average restore performance 0.9553571428571428
+current capacity:  18
+restore performance 0.9642857142857143
+restore performance 0.9464285714285714
+average restore performance 0.9553571428571428
+current capacity:  19
+restore performance 0.9668367346938775
+restore performance 0.9464285714285714
+average restore performance 0.9566326530612245
+current capacity:  20
+restore performance 0.9693877551020408
+restore performance 0.9464285714285714
+average restore performance 0.9579081632653061
+current capacity:  21
+restore performance 0.9693877551020408
+restore performance 0.9540816326530612
+average restore performance 0.9617346938775511
+current capacity:  22
+restore performance 0.9668367346938775
+restore performance 0.9642857142857143
+average restore performance 0.965561224489796
+current capacity:  23
+restore performance 0.9693877551020408
+restore performance 0.9668367346938775
+average restore performance 0.9681122448979591
+current capacity:  24
+restore performance 0.9719387755102041
+restore performance 0.9719387755102041
+average restore performance 0.9719387755102041
+current capacity:  25
+restore performance 0.9719387755102041
+restore performance 0.9719387755102041
+average restore performance 0.9719387755102041
+current capacity:  26
+restore performance 0.9744897959183674
+restore performance 0.9719387755102041
+average restore performance 0.9732142857142858
+current capacity:  27
+restore performance 0.9923469387755102
+restore performance 0.9770408163265306
+average restore performance 0.9846938775510203
+current capacity:  28
+restore performance 0.9948979591836735
+restore performance 0.9770408163265306
+average restore performance 0.9859693877551021
+current capacity:  29
+restore performance 0.9948979591836735
+restore performance 0.9795918367346939
+average restore performance 0.9872448979591837
+current capacity:  30
+restore performance 0.9974489795918368
+restore performance 0.9795918367346939
+average restore performance 0.9885204081632653
+current capacity:  31
+restore performance 0.9974489795918368
+restore performance 0.9821428571428571
+average restore performance 0.9897959183673469
+current capacity:  32
+restore performance 0.9974489795918368
+restore performance 0.9846938775510204
+average restore performance 0.9910714285714286
+current capacity:  33
+restore performance 0.9974489795918368
+restore performance 0.9948979591836735
+average restore performance 0.9961734693877551
+current capacity:  34
+restore performance 1.0
+restore performance 0.9948979591836735
+average restore performance 0.9974489795918368
+current capacity:  35
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8903061224489796
+restore performance 0.9107142857142857
+average restore performance 0.9005102040816326
+current capacity:  3
+restore performance 0.8979591836734694
+restore performance 0.9183673469387755
+average restore performance 0.9081632653061225
+current capacity:  4
+restore performance 0.8979591836734694
+restore performance 0.9183673469387755
+average restore performance 0.9081632653061225
+current capacity:  5
+restore performance 0.9030612244897959
+restore performance 0.923469387755102
+average restore performance 0.9132653061224489
+current capacity:  6
+restore performance 0.9107142857142857
+restore performance 0.9260204081632653
+average restore performance 0.9183673469387754
+current capacity:  7
+restore performance 0.9209183673469388
+restore performance 0.9311224489795918
+average restore performance 0.9260204081632653
+current capacity:  8
+restore performance 0.9260204081632653
+restore performance 0.9413265306122449
+average restore performance 0.9336734693877551
+current capacity:  9
+restore performance 0.9311224489795918
+restore performance 0.9413265306122449
+average restore performance 0.9362244897959184
+current capacity:  10
+restore performance 0.9311224489795918
+restore performance 0.9438775510204082
+average restore performance 0.9375
+current capacity:  11
+restore performance 0.9362244897959183
+restore performance 0.951530612244898
+average restore performance 0.9438775510204082
+current capacity:  12
+restore performance 0.9413265306122449
+restore performance 0.951530612244898
+average restore performance 0.9464285714285714
+current capacity:  13
+restore performance 0.9464285714285714
+restore performance 0.951530612244898
+average restore performance 0.9489795918367347
+current capacity:  14
+restore performance 0.9464285714285714
+restore performance 0.9540816326530612
+average restore performance 0.9502551020408163
+current capacity:  15
+restore performance 0.9489795918367347
+restore performance 0.9591836734693877
+average restore performance 0.9540816326530612
+current capacity:  16
+restore performance 0.9489795918367347
+restore performance 0.9617346938775511
+average restore performance 0.9553571428571429
+current capacity:  17
+restore performance 0.9566326530612245
+restore performance 0.9617346938775511
+average restore performance 0.9591836734693877
+current capacity:  18
+restore performance 0.9566326530612245
+restore performance 0.9642857142857143
+average restore performance 0.9604591836734694
+current capacity:  19
+restore performance 0.9566326530612245
+restore performance 0.9642857142857143
+average restore performance 0.9604591836734694
+current capacity:  20
+restore performance 0.9617346938775511
+restore performance 0.9668367346938775
+average restore performance 0.9642857142857143
+current capacity:  21
+restore performance 0.9617346938775511
+restore performance 0.9693877551020408
+average restore performance 0.965561224489796
+current capacity:  22
+restore performance 0.9642857142857143
+restore performance 0.9795918367346939
+average restore performance 0.971938775510204
+current capacity:  23
+restore performance 0.9642857142857143
+restore performance 0.9795918367346939
+average restore performance 0.971938775510204
+current capacity:  24
+restore performance 0.9642857142857143
+restore performance 0.9795918367346939
+average restore performance 0.971938775510204
+current capacity:  25
+restore performance 0.9642857142857143
+restore performance 0.9795918367346939
+average restore performance 0.971938775510204
+current capacity:  26
+restore performance 0.9719387755102041
+restore performance 0.9795918367346939
+average restore performance 0.9757653061224489
+current capacity:  27
+restore performance 0.9719387755102041
+restore performance 0.9821428571428571
+average restore performance 0.9770408163265306
+current capacity:  28
+restore performance 0.9821428571428571
+restore performance 0.9872448979591837
+average restore performance 0.9846938775510203
+current capacity:  29
+restore performance 0.9923469387755102
+restore performance 0.9974489795918368
+average restore performance 0.9948979591836735
+current capacity:  30
+restore performance 0.9923469387755102
+restore performance 0.9974489795918368
+average restore performance 0.9948979591836735
+current capacity:  31
+restore performance 0.9923469387755102
+restore performance 0.9974489795918368
+average restore performance 0.9948979591836735
+current capacity:  32
+restore performance 0.9923469387755102
+restore performance 0.9974489795918368
+average restore performance 0.9948979591836735
+current capacity:  33
+restore performance 0.9948979591836735
+restore performance 0.9974489795918368
+average restore performance 0.9961734693877551
+current capacity:  34
+restore performance 0.9974489795918368
+restore performance 0.9974489795918368
+average restore performance 0.9974489795918368
+current capacity:  35
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  36
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9183673469387755
+restore performance 0.8673469387755102
+average restore performance 0.8928571428571428
+current capacity:  3
+restore performance 0.9209183673469388
+restore performance 0.875
+average restore performance 0.8979591836734694
+current capacity:  4
+restore performance 0.9209183673469388
+restore performance 0.8724489795918368
+average restore performance 0.8966836734693877
+current capacity:  5
+restore performance 0.923469387755102
+restore performance 0.8852040816326531
+average restore performance 0.9043367346938775
+current capacity:  6
+restore performance 0.923469387755102
+restore performance 0.8979591836734694
+average restore performance 0.9107142857142857
+current capacity:  7
+restore performance 0.9285714285714286
+restore performance 0.9030612244897959
+average restore performance 0.9158163265306123
+current capacity:  8
+restore performance 0.9464285714285714
+restore performance 0.9030612244897959
+average restore performance 0.9247448979591837
+current capacity:  9
+restore performance 0.9489795918367347
+restore performance 0.9158163265306123
+average restore performance 0.9323979591836735
+current capacity:  10
+restore performance 0.9464285714285714
+restore performance 0.9158163265306123
+average restore performance 0.9311224489795918
+current capacity:  11
+restore performance 0.951530612244898
+restore performance 0.9209183673469388
+average restore performance 0.9362244897959184
+current capacity:  12
+restore performance 0.9540816326530612
+restore performance 0.9285714285714286
+average restore performance 0.9413265306122449
+current capacity:  13
+restore performance 0.9540816326530612
+restore performance 0.9362244897959183
+average restore performance 0.9451530612244898
+current capacity:  14
+restore performance 0.9540816326530612
+restore performance 0.9387755102040817
+average restore performance 0.9464285714285714
+current capacity:  15
+restore performance 0.9540816326530612
+restore performance 0.9413265306122449
+average restore performance 0.9477040816326531
+current capacity:  16
+restore performance 0.9540816326530612
+restore performance 0.9591836734693877
+average restore performance 0.9566326530612245
+current capacity:  17
+restore performance 0.9591836734693877
+restore performance 0.9617346938775511
+average restore performance 0.9604591836734694
+current capacity:  18
+restore performance 0.9617346938775511
+restore performance 0.9642857142857143
+average restore performance 0.9630102040816326
+current capacity:  19
+restore performance 0.9642857142857143
+restore performance 0.9617346938775511
+average restore performance 0.9630102040816326
+current capacity:  20
+restore performance 0.9642857142857143
+restore performance 0.9617346938775511
+average restore performance 0.9630102040816326
+current capacity:  21
+restore performance 0.9642857142857143
+restore performance 0.9617346938775511
+average restore performance 0.9630102040816326
+current capacity:  22
+restore performance 0.9744897959183674
+restore performance 0.9617346938775511
+average restore performance 0.9681122448979592
+current capacity:  23
+restore performance 0.9770408163265306
+restore performance 0.9617346938775511
+average restore performance 0.9693877551020409
+current capacity:  24
+restore performance 0.9770408163265306
+restore performance 0.9719387755102041
+average restore performance 0.9744897959183674
+current capacity:  25
+restore performance 0.9770408163265306
+restore performance 0.9719387755102041
+average restore performance 0.9744897959183674
+current capacity:  26
+restore performance 0.9795918367346939
+restore performance 0.9795918367346939
+average restore performance 0.9795918367346939
+current capacity:  27
+restore performance 0.9846938775510204
+restore performance 0.9846938775510204
+average restore performance 0.9846938775510204
+current capacity:  28
+restore performance 0.9974489795918368
+restore performance 0.9846938775510204
+average restore performance 0.9910714285714286
+current capacity:  29
+restore performance 0.9974489795918368
+restore performance 0.9872448979591837
+average restore performance 0.9923469387755102
+current capacity:  30
+restore performance 0.9974489795918368
+restore performance 0.9872448979591837
+average restore performance 0.9923469387755102
+current capacity:  31
+restore performance 0.9974489795918368
+restore performance 0.9923469387755102
+average restore performance 0.9948979591836735
+current capacity:  32
+restore performance 1.0
+restore performance 0.9923469387755102
+average restore performance 0.9961734693877551
+current capacity:  33
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8316326530612245
+restore performance 0.8316326530612245
+average restore performance 0.8316326530612245
+current capacity:  3
+restore performance 0.8367346938775511
+restore performance 0.8367346938775511
+average restore performance 0.8367346938775511
+current capacity:  4
+restore performance 0.8469387755102041
+restore performance 0.8443877551020408
+average restore performance 0.8456632653061225
+current capacity:  5
+restore performance 0.8469387755102041
+restore performance 0.8443877551020408
+average restore performance 0.8456632653061225
+current capacity:  6
+restore performance 0.8494897959183674
+restore performance 0.8469387755102041
+average restore performance 0.8482142857142858
+current capacity:  7
+restore performance 0.8673469387755102
+restore performance 0.8520408163265306
+average restore performance 0.8596938775510203
+current capacity:  8
+restore performance 0.8724489795918368
+restore performance 0.8673469387755102
+average restore performance 0.8698979591836735
+current capacity:  9
+restore performance 0.8801020408163265
+restore performance 0.8724489795918368
+average restore performance 0.8762755102040816
+current capacity:  10
+restore performance 0.8826530612244898
+restore performance 0.8826530612244898
+average restore performance 0.8826530612244898
+current capacity:  11
+restore performance 0.8826530612244898
+restore performance 0.8954081632653061
+average restore performance 0.889030612244898
+current capacity:  12
+restore performance 0.8903061224489796
+restore performance 0.8954081632653061
+average restore performance 0.8928571428571428
+current capacity:  13
+restore performance 0.8954081632653061
+restore performance 0.8954081632653061
+average restore performance 0.8954081632653061
+current capacity:  14
+restore performance 0.9005102040816326
+restore performance 0.9030612244897959
+average restore performance 0.9017857142857142
+current capacity:  15
+restore performance 0.9311224489795918
+restore performance 0.9107142857142857
+average restore performance 0.9209183673469388
+current capacity:  16
+restore performance 0.9464285714285714
+restore performance 0.9311224489795918
+average restore performance 0.9387755102040816
+current capacity:  17
+restore performance 0.9464285714285714
+restore performance 0.9336734693877551
+average restore performance 0.9400510204081632
+current capacity:  18
+restore performance 0.9719387755102041
+restore performance 0.9489795918367347
+average restore performance 0.9604591836734695
+current capacity:  19
+restore performance 0.9719387755102041
+restore performance 0.9566326530612245
+average restore performance 0.9642857142857143
+current capacity:  20
+restore performance 0.9719387755102041
+restore performance 0.9744897959183674
+average restore performance 0.9732142857142858
+current capacity:  21
+restore performance 0.9770408163265306
+restore performance 0.9770408163265306
+average restore performance 0.9770408163265306
+current capacity:  22
+restore performance 0.9770408163265306
+restore performance 0.9770408163265306
+average restore performance 0.9770408163265306
+current capacity:  23
+restore performance 0.9872448979591837
+restore performance 0.9821428571428571
+average restore performance 0.9846938775510203
+current capacity:  24
+restore performance 0.9948979591836735
+restore performance 0.9974489795918368
+average restore performance 0.9961734693877551
+current capacity:  25
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  26
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8903061224489796
+restore performance 0.8979591836734694
+average restore performance 0.8941326530612245
+current capacity:  3
+restore performance 0.8903061224489796
+restore performance 0.8979591836734694
+average restore performance 0.8941326530612245
+current capacity:  4
+restore performance 0.8954081632653061
+restore performance 0.8979591836734694
+average restore performance 0.8966836734693877
+current capacity:  5
+restore performance 0.8954081632653061
+restore performance 0.8979591836734694
+average restore performance 0.8966836734693877
+current capacity:  6
+restore performance 0.8954081632653061
+restore performance 0.8979591836734694
+average restore performance 0.8966836734693877
+current capacity:  7
+restore performance 0.8979591836734694
+restore performance 0.8979591836734694
+average restore performance 0.8979591836734694
+current capacity:  8
+restore performance 0.9005102040816326
+restore performance 0.9005102040816326
+average restore performance 0.9005102040816326
+current capacity:  9
+restore performance 0.9030612244897959
+restore performance 0.9005102040816326
+average restore performance 0.9017857142857142
+current capacity:  10
+restore performance 0.9132653061224489
+restore performance 0.9005102040816326
+average restore performance 0.9068877551020408
+current capacity:  11
+restore performance 0.9158163265306123
+restore performance 0.9132653061224489
+average restore performance 0.9145408163265306
+current capacity:  12
+restore performance 0.9183673469387755
+restore performance 0.9132653061224489
+average restore performance 0.9158163265306123
+current capacity:  13
+restore performance 0.9413265306122449
+restore performance 0.9260204081632653
+average restore performance 0.9336734693877551
+current capacity:  14
+restore performance 0.9540816326530612
+restore performance 0.9387755102040817
+average restore performance 0.9464285714285714
+current capacity:  15
+restore performance 0.9566326530612245
+restore performance 0.9464285714285714
+average restore performance 0.9515306122448979
+current capacity:  16
+restore performance 0.9591836734693877
+restore performance 0.9464285714285714
+average restore performance 0.9528061224489796
+current capacity:  17
+restore performance 0.9642857142857143
+restore performance 0.951530612244898
+average restore performance 0.9579081632653061
+current capacity:  18
+restore performance 0.9668367346938775
+restore performance 0.9540816326530612
+average restore performance 0.9604591836734694
+current capacity:  19
+restore performance 0.9668367346938775
+restore performance 0.9540816326530612
+average restore performance 0.9604591836734694
+current capacity:  20
+restore performance 0.9846938775510204
+restore performance 0.9540816326530612
+average restore performance 0.9693877551020409
+current capacity:  21
+restore performance 0.9923469387755102
+restore performance 0.9540816326530612
+average restore performance 0.9732142857142857
+current capacity:  22
+restore performance 0.9948979591836735
+restore performance 0.9617346938775511
+average restore performance 0.9783163265306123
+current capacity:  23
+restore performance 0.9974489795918368
+restore performance 0.9668367346938775
+average restore performance 0.9821428571428572
+current capacity:  24
+restore performance 0.9974489795918368
+restore performance 0.9770408163265306
+average restore performance 0.9872448979591837
+current capacity:  25
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  26
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  27
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  28
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7933673469387755
+restore performance 0.8443877551020408
+average restore performance 0.8188775510204082
+current capacity:  3
+restore performance 0.7933673469387755
+restore performance 0.8443877551020408
+average restore performance 0.8188775510204082
+current capacity:  4
+restore performance 0.7959183673469388
+restore performance 0.8469387755102041
+average restore performance 0.8214285714285714
+current capacity:  5
+restore performance 0.8035714285714286
+restore performance 0.8469387755102041
+average restore performance 0.8252551020408163
+current capacity:  6
+restore performance 0.8035714285714286
+restore performance 0.8545918367346939
+average restore performance 0.8290816326530612
+current capacity:  7
+restore performance 0.8137755102040817
+restore performance 0.8520408163265306
+average restore performance 0.8329081632653061
+current capacity:  8
+restore performance 0.8188775510204082
+restore performance 0.8545918367346939
+average restore performance 0.8367346938775511
+current capacity:  9
+restore performance 0.826530612244898
+restore performance 0.8571428571428571
+average restore performance 0.8418367346938775
+current capacity:  10
+restore performance 0.8367346938775511
+restore performance 0.8622448979591837
+average restore performance 0.8494897959183674
+current capacity:  11
+restore performance 0.8622448979591837
+restore performance 0.8596938775510204
+average restore performance 0.8609693877551021
+current capacity:  12
+restore performance 0.875
+restore performance 0.875
+average restore performance 0.875
+current capacity:  13
+restore performance 0.8775510204081632
+restore performance 0.9081632653061225
+average restore performance 0.8928571428571428
+current capacity:  14
+restore performance 0.9438775510204082
+restore performance 0.9285714285714286
+average restore performance 0.9362244897959184
+current capacity:  15
+restore performance 0.9693877551020408
+restore performance 0.9311224489795918
+average restore performance 0.9502551020408163
+current capacity:  16
+restore performance 0.9795918367346939
+restore performance 0.9617346938775511
+average restore performance 0.9706632653061225
+current capacity:  17
+restore performance 0.9846938775510204
+restore performance 0.9719387755102041
+average restore performance 0.9783163265306123
+current capacity:  18
+restore performance 1.0
+restore performance 0.9923469387755102
+average restore performance 0.9961734693877551
+current capacity:  19
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9107142857142857
+restore performance 0.9081632653061225
+average restore performance 0.909438775510204
+current capacity:  3
+restore performance 0.9107142857142857
+restore performance 0.9158163265306123
+average restore performance 0.9132653061224489
+current capacity:  4
+restore performance 0.9209183673469388
+restore performance 0.9183673469387755
+average restore performance 0.9196428571428572
+current capacity:  5
+restore performance 0.923469387755102
+restore performance 0.9260204081632653
+average restore performance 0.9247448979591837
+current capacity:  6
+restore performance 0.923469387755102
+restore performance 0.9336734693877551
+average restore performance 0.9285714285714286
+current capacity:  7
+restore performance 0.9260204081632653
+restore performance 0.9387755102040817
+average restore performance 0.9323979591836735
+current capacity:  8
+restore performance 0.9285714285714286
+restore performance 0.9438775510204082
+average restore performance 0.9362244897959184
+current capacity:  9
+restore performance 0.9387755102040817
+restore performance 0.9566326530612245
+average restore performance 0.9477040816326531
+current capacity:  10
+restore performance 0.9387755102040817
+restore performance 0.9591836734693877
+average restore performance 0.9489795918367347
+current capacity:  11
+restore performance 0.9362244897959183
+restore performance 0.9617346938775511
+average restore performance 0.9489795918367347
+current capacity:  12
+restore performance 0.9387755102040817
+restore performance 0.9668367346938775
+average restore performance 0.9528061224489797
+current capacity:  13
+restore performance 0.9387755102040817
+restore performance 0.9719387755102041
+average restore performance 0.9553571428571429
+current capacity:  14
+restore performance 0.9438775510204082
+restore performance 0.9719387755102041
+average restore performance 0.9579081632653061
+current capacity:  15
+restore performance 0.9617346938775511
+restore performance 0.9744897959183674
+average restore performance 0.9681122448979592
+current capacity:  16
+restore performance 0.9642857142857143
+restore performance 0.9744897959183674
+average restore performance 0.9693877551020409
+current capacity:  17
+restore performance 0.9744897959183674
+restore performance 0.9795918367346939
+average restore performance 0.9770408163265306
+current capacity:  18
+restore performance 0.9770408163265306
+restore performance 0.9821428571428571
+average restore performance 0.9795918367346939
+current capacity:  19
+restore performance 0.9795918367346939
+restore performance 0.9948979591836735
+average restore performance 0.9872448979591837
+current capacity:  20
+restore performance 0.9846938775510204
+restore performance 0.9974489795918368
+average restore performance 0.9910714285714286
+current capacity:  21
+restore performance 0.9846938775510204
+restore performance 0.9974489795918368
+average restore performance 0.9910714285714286
+current capacity:  22
+restore performance 0.9872448979591837
+restore performance 0.9974489795918368
+average restore performance 0.9923469387755102
+current capacity:  23
+restore performance 0.9872448979591837
+restore performance 0.9974489795918368
+average restore performance 0.9923469387755102
+current capacity:  24
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  25
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9285714285714286
+restore performance 0.9209183673469388
+average restore performance 0.9247448979591837
+current capacity:  3
+restore performance 0.9285714285714286
+restore performance 0.9158163265306123
+average restore performance 0.9221938775510204
+current capacity:  4
+restore performance 0.9336734693877551
+restore performance 0.9209183673469388
+average restore performance 0.9272959183673469
+current capacity:  5
+restore performance 0.9387755102040817
+restore performance 0.923469387755102
+average restore performance 0.9311224489795918
+current capacity:  6
+restore performance 0.9540816326530612
+restore performance 0.9311224489795918
+average restore performance 0.9426020408163265
+current capacity:  7
+restore performance 0.9540816326530612
+restore performance 0.9311224489795918
+average restore performance 0.9426020408163265
+current capacity:  8
+restore performance 0.9566326530612245
+restore performance 0.9336734693877551
+average restore performance 0.9451530612244898
+current capacity:  9
+restore performance 0.9566326530612245
+restore performance 0.9336734693877551
+average restore performance 0.9451530612244898
+current capacity:  10
+restore performance 0.9566326530612245
+restore performance 0.9387755102040817
+average restore performance 0.9477040816326531
+current capacity:  11
+restore performance 0.9566326530612245
+restore performance 0.9413265306122449
+average restore performance 0.9489795918367347
+current capacity:  12
+restore performance 0.9642857142857143
+restore performance 0.9438775510204082
+average restore performance 0.9540816326530612
+current capacity:  13
+restore performance 0.9693877551020408
+restore performance 0.9489795918367347
+average restore performance 0.9591836734693877
+current capacity:  14
+restore performance 0.9719387755102041
+restore performance 0.9617346938775511
+average restore performance 0.9668367346938775
+current capacity:  15
+restore performance 0.9719387755102041
+restore performance 0.9617346938775511
+average restore performance 0.9668367346938775
+current capacity:  16
+restore performance 0.9719387755102041
+restore performance 0.9617346938775511
+average restore performance 0.9668367346938775
+current capacity:  17
+restore performance 0.9770408163265306
+restore performance 0.9642857142857143
+average restore performance 0.9706632653061225
+current capacity:  18
+restore performance 0.9821428571428571
+restore performance 0.9770408163265306
+average restore performance 0.9795918367346939
+current capacity:  19
+restore performance 0.9948979591836735
+restore performance 0.9923469387755102
+average restore performance 0.9936224489795918
+current capacity:  20
+restore performance 0.9948979591836735
+restore performance 0.9923469387755102
+average restore performance 0.9936224489795918
+current capacity:  21
+restore performance 0.9948979591836735
+restore performance 0.9923469387755102
+average restore performance 0.9936224489795918
+current capacity:  22
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  23
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8545918367346939
+restore performance 0.8596938775510204
+average restore performance 0.8571428571428572
+current capacity:  3
+restore performance 0.8724489795918368
+restore performance 0.8698979591836735
+average restore performance 0.8711734693877551
+current capacity:  4
+restore performance 0.8979591836734694
+restore performance 0.875
+average restore performance 0.8864795918367347
+current capacity:  5
+restore performance 0.9209183673469388
+restore performance 0.8928571428571429
+average restore performance 0.9068877551020409
+current capacity:  6
+restore performance 0.9311224489795918
+restore performance 0.8979591836734694
+average restore performance 0.9145408163265306
+current capacity:  7
+restore performance 0.9311224489795918
+restore performance 0.8979591836734694
+average restore performance 0.9145408163265306
+current capacity:  8
+restore performance 0.9438775510204082
+restore performance 0.9030612244897959
+average restore performance 0.923469387755102
+current capacity:  9
+restore performance 0.9540816326530612
+restore performance 0.9311224489795918
+average restore performance 0.9426020408163265
+current capacity:  10
+restore performance 0.9591836734693877
+restore performance 0.9311224489795918
+average restore performance 0.9451530612244898
+current capacity:  11
+restore performance 0.9591836734693877
+restore performance 0.9336734693877551
+average restore performance 0.9464285714285714
+current capacity:  12
+restore performance 0.9642857142857143
+restore performance 0.9489795918367347
+average restore performance 0.9566326530612246
+current capacity:  13
+restore performance 0.9693877551020408
+restore performance 0.9668367346938775
+average restore performance 0.9681122448979591
+current capacity:  14
+restore performance 0.9693877551020408
+restore performance 0.9770408163265306
+average restore performance 0.9732142857142857
+current capacity:  15
+restore performance 0.9719387755102041
+restore performance 0.9974489795918368
+average restore performance 0.9846938775510204
+current capacity:  16
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  17
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  18
+restore performance 0.9923469387755102
+restore performance 1.0
+average restore performance 0.9961734693877551
+current capacity:  19
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8647959183673469
+restore performance 0.8494897959183674
+average restore performance 0.8571428571428572
+current capacity:  3
+restore performance 0.8775510204081632
+restore performance 0.8596938775510204
+average restore performance 0.8686224489795918
+current capacity:  4
+restore performance 0.8826530612244898
+restore performance 0.8545918367346939
+average restore performance 0.8686224489795918
+current capacity:  5
+restore performance 0.8954081632653061
+restore performance 0.8596938775510204
+average restore performance 0.8775510204081634
+current capacity:  6
+restore performance 0.9056122448979592
+restore performance 0.8673469387755102
+average restore performance 0.8864795918367347
+current capacity:  7
+restore performance 0.9132653061224489
+restore performance 0.8698979591836735
+average restore performance 0.8915816326530612
+current capacity:  8
+restore performance 0.9183673469387755
+restore performance 0.8801020408163265
+average restore performance 0.8992346938775511
+current capacity:  9
+restore performance 0.9209183673469388
+restore performance 0.9030612244897959
+average restore performance 0.9119897959183674
+current capacity:  10
+restore performance 0.9464285714285714
+restore performance 0.9336734693877551
+average restore performance 0.9400510204081632
+current capacity:  11
+restore performance 0.9464285714285714
+restore performance 0.9336734693877551
+average restore performance 0.9400510204081632
+current capacity:  12
+restore performance 0.9719387755102041
+restore performance 0.9387755102040817
+average restore performance 0.9553571428571429
+current capacity:  13
+restore performance 0.9897959183673469
+restore performance 0.9617346938775511
+average restore performance 0.9757653061224489
+current capacity:  14
+restore performance 0.9974489795918368
+restore performance 0.9744897959183674
+average restore performance 0.9859693877551021
+current capacity:  15
+restore performance 0.9974489795918368
+restore performance 0.9974489795918368
+average restore performance 0.9974489795918368
+current capacity:  16
+restore performance 0.9974489795918368
+restore performance 1.0
+average restore performance 0.9987244897959184
+current capacity:  17
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8469387755102041
+restore performance 0.798469387755102
+average restore performance 0.8227040816326531
+current capacity:  3
+restore performance 0.8622448979591837
+restore performance 0.8086734693877551
+average restore performance 0.8354591836734694
+current capacity:  4
+restore performance 0.8698979591836735
+restore performance 0.8214285714285714
+average restore performance 0.8456632653061225
+current capacity:  5
+restore performance 0.8852040816326531
+restore performance 0.8316326530612245
+average restore performance 0.8584183673469388
+current capacity:  6
+restore performance 0.8979591836734694
+restore performance 0.8418367346938775
+average restore performance 0.8698979591836735
+current capacity:  7
+restore performance 0.9158163265306123
+restore performance 0.8647959183673469
+average restore performance 0.8903061224489797
+current capacity:  8
+restore performance 0.9362244897959183
+restore performance 0.8877551020408163
+average restore performance 0.9119897959183674
+current capacity:  9
+restore performance 0.9744897959183674
+restore performance 0.9183673469387755
+average restore performance 0.9464285714285714
+current capacity:  10
+restore performance 0.9821428571428571
+restore performance 0.9209183673469388
+average restore performance 0.9515306122448979
+current capacity:  11
+restore performance 0.9872448979591837
+restore performance 0.9260204081632653
+average restore performance 0.9566326530612245
+current capacity:  12
+restore performance 0.9872448979591837
+restore performance 0.9311224489795918
+average restore performance 0.9591836734693877
+current capacity:  13
+restore performance 0.9948979591836735
+restore performance 0.9693877551020408
+average restore performance 0.9821428571428572
+current capacity:  14
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  15
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  16
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  17
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7678571428571429
+restore performance 0.7729591836734694
+average restore performance 0.7704081632653061
+current capacity:  3
+restore performance 0.7755102040816326
+restore performance 0.7882653061224489
+average restore performance 0.7818877551020408
+current capacity:  4
+restore performance 0.7831632653061225
+restore performance 0.7908163265306123
+average restore performance 0.7869897959183674
+current capacity:  5
+restore performance 0.7882653061224489
+restore performance 0.8061224489795918
+average restore performance 0.7971938775510203
+current capacity:  6
+restore performance 0.8137755102040817
+restore performance 0.8392857142857143
+average restore performance 0.826530612244898
+current capacity:  7
+restore performance 0.8341836734693877
+restore performance 0.8545918367346939
+average restore performance 0.8443877551020408
+current capacity:  8
+restore performance 0.8545918367346939
+restore performance 0.8826530612244898
+average restore performance 0.8686224489795918
+current capacity:  9
+restore performance 0.8698979591836735
+restore performance 0.9030612244897959
+average restore performance 0.8864795918367347
+current capacity:  10
+restore performance 0.8954081632653061
+restore performance 0.9209183673469388
+average restore performance 0.9081632653061225
+current capacity:  11
+restore performance 0.923469387755102
+restore performance 0.9438775510204082
+average restore performance 0.9336734693877551
+current capacity:  12
+restore performance 0.9795918367346939
+restore performance 1.0
+average restore performance 0.9897959183673469
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.826530612244898
+restore performance 0.8622448979591837
+average restore performance 0.8443877551020409
+current capacity:  3
+restore performance 0.8341836734693877
+restore performance 0.8724489795918368
+average restore performance 0.8533163265306123
+current capacity:  4
+restore performance 0.8469387755102041
+restore performance 0.8903061224489796
+average restore performance 0.8686224489795918
+current capacity:  5
+restore performance 0.8545918367346939
+restore performance 0.9030612244897959
+average restore performance 0.8788265306122449
+current capacity:  6
+restore performance 0.8698979591836735
+restore performance 0.9285714285714286
+average restore performance 0.8992346938775511
+current capacity:  7
+restore performance 0.8928571428571429
+restore performance 0.9413265306122449
+average restore performance 0.9170918367346939
+current capacity:  8
+restore performance 0.9030612244897959
+restore performance 0.951530612244898
+average restore performance 0.9272959183673469
+current capacity:  9
+restore performance 0.9107142857142857
+restore performance 0.9617346938775511
+average restore performance 0.9362244897959184
+current capacity:  10
+restore performance 0.9311224489795918
+restore performance 0.9642857142857143
+average restore performance 0.9477040816326531
+current capacity:  11
+restore performance 0.9540816326530612
+restore performance 0.9719387755102041
+average restore performance 0.9630102040816326
+current capacity:  12
+restore performance 0.9719387755102041
+restore performance 0.9846938775510204
+average restore performance 0.9783163265306123
+current capacity:  13
+restore performance 0.9923469387755102
+restore performance 0.9872448979591837
+average restore performance 0.9897959183673469
+current capacity:  14
+restore performance 1.0
+restore performance 0.9897959183673469
+average restore performance 0.9948979591836735
+current capacity:  15
+restore performance 1.0
+restore performance 0.9974489795918368
+average restore performance 0.9987244897959184
+current capacity:  16
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7193877551020408
+restore performance 0.7270408163265306
+average restore performance 0.7232142857142857
+current capacity:  3
+restore performance 0.7295918367346939
+restore performance 0.7346938775510204
+average restore performance 0.7321428571428572
+current capacity:  4
+restore performance 0.7397959183673469
+restore performance 0.7474489795918368
+average restore performance 0.7436224489795918
+current capacity:  5
+restore performance 0.7576530612244898
+restore performance 0.7627551020408163
+average restore performance 0.7602040816326531
+current capacity:  6
+restore performance 0.7933673469387755
+restore performance 0.7780612244897959
+average restore performance 0.7857142857142857
+current capacity:  7
+restore performance 0.8290816326530612
+restore performance 0.8086734693877551
+average restore performance 0.8188775510204082
+current capacity:  8
+restore performance 0.8494897959183674
+restore performance 0.8290816326530612
+average restore performance 0.8392857142857143
+current capacity:  9
+restore performance 0.9489795918367347
+restore performance 0.9081632653061225
+average restore performance 0.9285714285714286
+current capacity:  10
+restore performance 0.9744897959183674
+restore performance 0.9719387755102041
+average restore performance 0.9732142857142858
+current capacity:  11
+restore performance 0.9948979591836735
+restore performance 0.9974489795918368
+average restore performance 0.9961734693877551
+current capacity:  12
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8112244897959183
+restore performance 0.7857142857142857
+average restore performance 0.798469387755102
+current capacity:  3
+restore performance 0.8239795918367347
+restore performance 0.7933673469387755
+average restore performance 0.8086734693877551
+current capacity:  4
+restore performance 0.8341836734693877
+restore performance 0.7857142857142857
+average restore performance 0.8099489795918366
+current capacity:  5
+restore performance 0.8418367346938775
+restore performance 0.8061224489795918
+average restore performance 0.8239795918367347
+current capacity:  6
+restore performance 0.8571428571428571
+restore performance 0.8239795918367347
+average restore performance 0.840561224489796
+current capacity:  7
+restore performance 0.8622448979591837
+restore performance 0.8571428571428571
+average restore performance 0.8596938775510203
+current capacity:  8
+restore performance 0.9056122448979592
+restore performance 0.8826530612244898
+average restore performance 0.8941326530612246
+current capacity:  9
+restore performance 0.9489795918367347
+restore performance 0.8979591836734694
+average restore performance 0.9234693877551021
+current capacity:  10
+restore performance 0.9668367346938775
+restore performance 0.9362244897959183
+average restore performance 0.9515306122448979
+current capacity:  11
+restore performance 0.9872448979591837
+restore performance 0.9693877551020408
+average restore performance 0.9783163265306123
+current capacity:  12
+restore performance 0.9974489795918368
+restore performance 1.0
+average restore performance 0.9987244897959184
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7602040816326531
+restore performance 0.7040816326530612
+average restore performance 0.7321428571428572
+current capacity:  3
+restore performance 0.7780612244897959
+restore performance 0.7295918367346939
+average restore performance 0.7538265306122449
+current capacity:  4
+restore performance 0.8163265306122449
+restore performance 0.7576530612244898
+average restore performance 0.7869897959183674
+current capacity:  5
+restore performance 0.826530612244898
+restore performance 0.7857142857142857
+average restore performance 0.8061224489795918
+current capacity:  6
+restore performance 0.8494897959183674
+restore performance 0.8010204081632653
+average restore performance 0.8252551020408163
+current capacity:  7
+restore performance 0.8596938775510204
+restore performance 0.8469387755102041
+average restore performance 0.8533163265306123
+current capacity:  8
+restore performance 0.8954081632653061
+restore performance 0.875
+average restore performance 0.8852040816326531
+current capacity:  9
+restore performance 0.9260204081632653
+restore performance 0.9183673469387755
+average restore performance 0.9221938775510203
+current capacity:  10
+restore performance 0.9489795918367347
+restore performance 0.951530612244898
+average restore performance 0.9502551020408163
+current capacity:  11
+restore performance 0.9770408163265306
+restore performance 0.9923469387755102
+average restore performance 0.9846938775510203
+current capacity:  12
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8137755102040817
+restore performance 0.8290816326530612
+average restore performance 0.8214285714285714
+current capacity:  3
+restore performance 0.826530612244898
+restore performance 0.8341836734693877
+average restore performance 0.8303571428571428
+current capacity:  4
+restore performance 0.8392857142857143
+restore performance 0.8596938775510204
+average restore performance 0.8494897959183674
+current capacity:  5
+restore performance 0.8392857142857143
+restore performance 0.8622448979591837
+average restore performance 0.8507653061224489
+current capacity:  6
+restore performance 0.8545918367346939
+restore performance 0.8775510204081632
+average restore performance 0.8660714285714286
+current capacity:  7
+restore performance 0.8647959183673469
+restore performance 0.8801020408163265
+average restore performance 0.8724489795918366
+current capacity:  8
+restore performance 0.8698979591836735
+restore performance 0.8928571428571429
+average restore performance 0.8813775510204083
+current capacity:  9
+restore performance 0.9005102040816326
+restore performance 0.9030612244897959
+average restore performance 0.9017857142857142
+current capacity:  10
+restore performance 0.9056122448979592
+restore performance 0.9260204081632653
+average restore performance 0.9158163265306123
+current capacity:  11
+restore performance 0.9209183673469388
+restore performance 0.9489795918367347
+average restore performance 0.9349489795918368
+current capacity:  12
+restore performance 0.9668367346938775
+restore performance 0.9897959183673469
+average restore performance 0.9783163265306123
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7831632653061225
+restore performance 0.8137755102040817
+average restore performance 0.7984693877551021
+current capacity:  3
+restore performance 0.7857142857142857
+restore performance 0.8137755102040817
+average restore performance 0.7997448979591837
+current capacity:  4
+restore performance 0.7882653061224489
+restore performance 0.8239795918367347
+average restore performance 0.8061224489795918
+current capacity:  5
+restore performance 0.7959183673469388
+restore performance 0.8214285714285714
+average restore performance 0.8086734693877551
+current capacity:  6
+restore performance 0.8086734693877551
+restore performance 0.8367346938775511
+average restore performance 0.8227040816326531
+current capacity:  7
+restore performance 0.8367346938775511
+restore performance 0.8469387755102041
+average restore performance 0.8418367346938775
+current capacity:  8
+restore performance 0.8418367346938775
+restore performance 0.8647959183673469
+average restore performance 0.8533163265306123
+current capacity:  9
+restore performance 0.8596938775510204
+restore performance 0.8775510204081632
+average restore performance 0.8686224489795918
+current capacity:  10
+restore performance 0.8801020408163265
+restore performance 0.923469387755102
+average restore performance 0.9017857142857142
+current capacity:  11
+restore performance 0.9107142857142857
+restore performance 0.9362244897959183
+average restore performance 0.923469387755102
+current capacity:  12
+restore performance 1.0
+restore performance 0.9948979591836735
+average restore performance 0.9974489795918368
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7831632653061225
+restore performance 0.7729591836734694
+average restore performance 0.778061224489796
+current capacity:  3
+restore performance 0.7882653061224489
+restore performance 0.7780612244897959
+average restore performance 0.7831632653061225
+current capacity:  4
+restore performance 0.8010204081632653
+restore performance 0.7908163265306123
+average restore performance 0.7959183673469388
+current capacity:  5
+restore performance 0.8086734693877551
+restore performance 0.7959183673469388
+average restore performance 0.8022959183673469
+current capacity:  6
+restore performance 0.8290816326530612
+restore performance 0.8290816326530612
+average restore performance 0.8290816326530612
+current capacity:  7
+restore performance 0.8801020408163265
+restore performance 0.8622448979591837
+average restore performance 0.8711734693877551
+current capacity:  8
+restore performance 0.9030612244897959
+restore performance 0.9081632653061225
+average restore performance 0.9056122448979591
+current capacity:  9
+restore performance 0.9387755102040817
+restore performance 0.9311224489795918
+average restore performance 0.9349489795918368
+current capacity:  10
+restore performance 0.951530612244898
+restore performance 0.9693877551020408
+average restore performance 0.9604591836734694
+current capacity:  11
+restore performance 0.9795918367346939
+restore performance 0.9846938775510204
+average restore performance 0.9821428571428572
+current capacity:  12
+restore performance 0.9948979591836735
+restore performance 0.9923469387755102
+average restore performance 0.9936224489795918
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8137755102040817
+restore performance 0.7933673469387755
+average restore performance 0.8035714285714286
+current capacity:  3
+restore performance 0.8163265306122449
+restore performance 0.8010204081632653
+average restore performance 0.8086734693877551
+current capacity:  4
+restore performance 0.8290816326530612
+restore performance 0.8086734693877551
+average restore performance 0.8188775510204082
+current capacity:  5
+restore performance 0.8494897959183674
+restore performance 0.826530612244898
+average restore performance 0.8380102040816326
+current capacity:  6
+restore performance 0.8622448979591837
+restore performance 0.8341836734693877
+average restore performance 0.8482142857142857
+current capacity:  7
+restore performance 0.875
+restore performance 0.8418367346938775
+average restore performance 0.8584183673469388
+current capacity:  8
+restore performance 0.8979591836734694
+restore performance 0.8596938775510204
+average restore performance 0.8788265306122449
+current capacity:  9
+restore performance 0.9081632653061225
+restore performance 0.8647959183673469
+average restore performance 0.8864795918367347
+current capacity:  10
+restore performance 0.9183673469387755
+restore performance 0.8801020408163265
+average restore performance 0.8992346938775511
+current capacity:  11
+restore performance 0.9438775510204082
+restore performance 0.9591836734693877
+average restore performance 0.9515306122448979
+current capacity:  12
+restore performance 0.9846938775510204
+restore performance 1.0
+average restore performance 0.9923469387755102
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8392857142857143
+restore performance 0.7678571428571429
+average restore performance 0.8035714285714286
+current capacity:  3
+restore performance 0.8443877551020408
+restore performance 0.7704081632653061
+average restore performance 0.8073979591836735
+current capacity:  4
+restore performance 0.8494897959183674
+restore performance 0.7806122448979592
+average restore performance 0.8150510204081634
+current capacity:  5
+restore performance 0.8596938775510204
+restore performance 0.7933673469387755
+average restore performance 0.826530612244898
+current capacity:  6
+restore performance 0.8698979591836735
+restore performance 0.8086734693877551
+average restore performance 0.8392857142857143
+current capacity:  7
+restore performance 0.8826530612244898
+restore performance 0.8188775510204082
+average restore performance 0.8507653061224489
+current capacity:  8
+restore performance 0.8903061224489796
+restore performance 0.8341836734693877
+average restore performance 0.8622448979591837
+current capacity:  9
+restore performance 0.9285714285714286
+restore performance 0.8571428571428571
+average restore performance 0.8928571428571428
+current capacity:  10
+restore performance 0.9464285714285714
+restore performance 0.8928571428571429
+average restore performance 0.9196428571428572
+current capacity:  11
+restore performance 0.9821428571428571
+restore performance 0.9923469387755102
+average restore performance 0.9872448979591837
+current capacity:  12
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8214285714285714
+restore performance 0.7933673469387755
+average restore performance 0.8073979591836735
+current capacity:  3
+restore performance 0.8239795918367347
+restore performance 0.7959183673469388
+average restore performance 0.8099489795918368
+current capacity:  4
+restore performance 0.8316326530612245
+restore performance 0.8112244897959183
+average restore performance 0.8214285714285714
+current capacity:  5
+restore performance 0.8494897959183674
+restore performance 0.8163265306122449
+average restore performance 0.8329081632653061
+current capacity:  6
+restore performance 0.8545918367346939
+restore performance 0.826530612244898
+average restore performance 0.840561224489796
+current capacity:  7
+restore performance 0.8596938775510204
+restore performance 0.8418367346938775
+average restore performance 0.8507653061224489
+current capacity:  8
+restore performance 0.8954081632653061
+restore performance 0.8698979591836735
+average restore performance 0.8826530612244898
+current capacity:  9
+restore performance 0.9260204081632653
+restore performance 0.8801020408163265
+average restore performance 0.9030612244897959
+current capacity:  10
+restore performance 0.9540816326530612
+restore performance 0.9387755102040817
+average restore performance 0.9464285714285714
+current capacity:  11
+restore performance 0.9668367346938775
+restore performance 0.9540816326530612
+average restore performance 0.9604591836734694
+current capacity:  12
+restore performance 0.9974489795918368
+restore performance 1.0
+average restore performance 0.9987244897959184
+current capacity:  13
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7168367346938775
+restore performance 0.7295918367346939
+average restore performance 0.7232142857142857
+current capacity:  3
+restore performance 0.7219387755102041
+restore performance 0.7448979591836735
+average restore performance 0.7334183673469388
+current capacity:  4
+restore performance 0.7397959183673469
+restore performance 0.7525510204081632
+average restore performance 0.7461734693877551
+current capacity:  5
+restore performance 0.75
+restore performance 0.7653061224489796
+average restore performance 0.7576530612244898
+current capacity:  6
+restore performance 0.7831632653061225
+restore performance 0.7806122448979592
+average restore performance 0.7818877551020409
+current capacity:  7
+restore performance 0.798469387755102
+restore performance 0.8086734693877551
+average restore performance 0.8035714285714286
+current capacity:  8
+restore performance 0.8647959183673469
+restore performance 0.8494897959183674
+average restore performance 0.8571428571428572
+current capacity:  9
+restore performance 0.9642857142857143
+restore performance 0.9107142857142857
+average restore performance 0.9375
+current capacity:  10
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.75
+restore performance 0.7908163265306123
+average restore performance 0.7704081632653061
+current capacity:  3
+restore performance 0.7551020408163265
+restore performance 0.8010204081632653
+average restore performance 0.7780612244897959
+current capacity:  4
+restore performance 0.7627551020408163
+restore performance 0.8137755102040817
+average restore performance 0.7882653061224489
+current capacity:  5
+restore performance 0.7857142857142857
+restore performance 0.8316326530612245
+average restore performance 0.8086734693877551
+current capacity:  6
+restore performance 0.8086734693877551
+restore performance 0.8494897959183674
+average restore performance 0.8290816326530612
+current capacity:  7
+restore performance 0.8316326530612245
+restore performance 0.8622448979591837
+average restore performance 0.846938775510204
+current capacity:  8
+restore performance 0.8647959183673469
+restore performance 0.8775510204081632
+average restore performance 0.8711734693877551
+current capacity:  9
+restore performance 0.9362244897959183
+restore performance 0.923469387755102
+average restore performance 0.9298469387755102
+current capacity:  10
+restore performance 0.9897959183673469
+restore performance 0.9642857142857143
+average restore performance 0.9770408163265306
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.6964285714285714
+restore performance 0.7219387755102041
+average restore performance 0.7091836734693877
+current capacity:  3
+restore performance 0.7091836734693877
+restore performance 0.7244897959183674
+average restore performance 0.7168367346938775
+current capacity:  4
+restore performance 0.7295918367346939
+restore performance 0.7448979591836735
+average restore performance 0.7372448979591837
+current capacity:  5
+restore performance 0.75
+restore performance 0.7576530612244898
+average restore performance 0.7538265306122449
+current capacity:  6
+restore performance 0.7780612244897959
+restore performance 0.7857142857142857
+average restore performance 0.7818877551020408
+current capacity:  7
+restore performance 0.8316326530612245
+restore performance 0.8239795918367347
+average restore performance 0.8278061224489797
+current capacity:  8
+restore performance 0.8928571428571429
+restore performance 0.8724489795918368
+average restore performance 0.8826530612244898
+current capacity:  9
+restore performance 0.9336734693877551
+restore performance 0.9642857142857143
+average restore performance 0.9489795918367347
+current capacity:  10
+restore performance 0.9795918367346939
+restore performance 1.0
+average restore performance 0.9897959183673469
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7678571428571429
+restore performance 0.7270408163265306
+average restore performance 0.7474489795918368
+current capacity:  3
+restore performance 0.7755102040816326
+restore performance 0.7346938775510204
+average restore performance 0.7551020408163265
+current capacity:  4
+restore performance 0.7806122448979592
+restore performance 0.7397959183673469
+average restore performance 0.7602040816326531
+current capacity:  5
+restore performance 0.7882653061224489
+restore performance 0.7729591836734694
+average restore performance 0.7806122448979591
+current capacity:  6
+restore performance 0.8061224489795918
+restore performance 0.8086734693877551
+average restore performance 0.8073979591836735
+current capacity:  7
+restore performance 0.8418367346938775
+restore performance 0.8801020408163265
+average restore performance 0.860969387755102
+current capacity:  8
+restore performance 0.8903061224489796
+restore performance 0.923469387755102
+average restore performance 0.9068877551020408
+current capacity:  9
+restore performance 0.9566326530612245
+restore performance 0.9719387755102041
+average restore performance 0.9642857142857143
+current capacity:  10
+restore performance 0.9719387755102041
+restore performance 0.9974489795918368
+average restore performance 0.9846938775510204
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7295918367346939
+restore performance 0.7397959183673469
+average restore performance 0.7346938775510203
+current capacity:  3
+restore performance 0.7397959183673469
+restore performance 0.7423469387755102
+average restore performance 0.7410714285714286
+current capacity:  4
+restore performance 0.7551020408163265
+restore performance 0.7653061224489796
+average restore performance 0.760204081632653
+current capacity:  5
+restore performance 0.7678571428571429
+restore performance 0.7857142857142857
+average restore performance 0.7767857142857143
+current capacity:  6
+restore performance 0.8010204081632653
+restore performance 0.8010204081632653
+average restore performance 0.8010204081632653
+current capacity:  7
+restore performance 0.8290816326530612
+restore performance 0.8367346938775511
+average restore performance 0.8329081632653061
+current capacity:  8
+restore performance 0.875
+restore performance 0.8903061224489796
+average restore performance 0.8826530612244898
+current capacity:  9
+restore performance 0.9030612244897959
+restore performance 0.9311224489795918
+average restore performance 0.9170918367346939
+current capacity:  10
+restore performance 0.9795918367346939
+restore performance 0.9923469387755102
+average restore performance 0.985969387755102
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7423469387755102
+restore performance 0.7729591836734694
+average restore performance 0.7576530612244898
+current capacity:  3
+restore performance 0.7448979591836735
+restore performance 0.7755102040816326
+average restore performance 0.7602040816326531
+current capacity:  4
+restore performance 0.7551020408163265
+restore performance 0.7831632653061225
+average restore performance 0.7691326530612245
+current capacity:  5
+restore performance 0.7602040816326531
+restore performance 0.7857142857142857
+average restore performance 0.7729591836734694
+current capacity:  6
+restore performance 0.7755102040816326
+restore performance 0.7908163265306123
+average restore performance 0.7831632653061225
+current capacity:  7
+restore performance 0.8112244897959183
+restore performance 0.8137755102040817
+average restore performance 0.8125
+current capacity:  8
+restore performance 0.8979591836734694
+restore performance 0.8494897959183674
+average restore performance 0.8737244897959184
+current capacity:  9
+restore performance 0.9566326530612245
+restore performance 0.9132653061224489
+average restore performance 0.9349489795918366
+current capacity:  10
+restore performance 0.9897959183673469
+restore performance 0.9719387755102041
+average restore performance 0.9808673469387755
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7678571428571429
+restore performance 0.7448979591836735
+average restore performance 0.7563775510204083
+current capacity:  3
+restore performance 0.7831632653061225
+restore performance 0.7627551020408163
+average restore performance 0.7729591836734694
+current capacity:  4
+restore performance 0.8163265306122449
+restore performance 0.7933673469387755
+average restore performance 0.8048469387755102
+current capacity:  5
+restore performance 0.8367346938775511
+restore performance 0.8035714285714286
+average restore performance 0.8201530612244898
+current capacity:  6
+restore performance 0.8469387755102041
+restore performance 0.8163265306122449
+average restore performance 0.8316326530612246
+current capacity:  7
+restore performance 0.8622448979591837
+restore performance 0.8367346938775511
+average restore performance 0.8494897959183674
+current capacity:  8
+restore performance 0.8877551020408163
+restore performance 0.8826530612244898
+average restore performance 0.8852040816326531
+current capacity:  9
+restore performance 0.9413265306122449
+restore performance 0.9540816326530612
+average restore performance 0.9477040816326531
+current capacity:  10
+restore performance 0.9846938775510204
+restore performance 1.0
+average restore performance 0.9923469387755102
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7346938775510204
+restore performance 0.7066326530612245
+average restore performance 0.7206632653061225
+current capacity:  3
+restore performance 0.7576530612244898
+restore performance 0.7142857142857143
+average restore performance 0.7359693877551021
+current capacity:  4
+restore performance 0.7729591836734694
+restore performance 0.7372448979591837
+average restore performance 0.7551020408163265
+current capacity:  5
+restore performance 0.7857142857142857
+restore performance 0.7576530612244898
+average restore performance 0.7716836734693877
+current capacity:  6
+restore performance 0.7959183673469388
+restore performance 0.7602040816326531
+average restore performance 0.778061224489796
+current capacity:  7
+restore performance 0.8392857142857143
+restore performance 0.8392857142857143
+average restore performance 0.8392857142857143
+current capacity:  8
+restore performance 0.8596938775510204
+restore performance 0.9489795918367347
+average restore performance 0.9043367346938775
+current capacity:  9
+restore performance 0.9693877551020408
+restore performance 0.9897959183673469
+average restore performance 0.9795918367346939
+current capacity:  10
+restore performance 0.9821428571428571
+restore performance 1.0
+average restore performance 0.9910714285714286
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7780612244897959
+restore performance 0.7678571428571429
+average restore performance 0.7729591836734694
+current capacity:  3
+restore performance 0.7959183673469388
+restore performance 0.7780612244897959
+average restore performance 0.7869897959183674
+current capacity:  4
+restore performance 0.8112244897959183
+restore performance 0.7933673469387755
+average restore performance 0.8022959183673469
+current capacity:  5
+restore performance 0.8214285714285714
+restore performance 0.8061224489795918
+average restore performance 0.8137755102040816
+current capacity:  6
+restore performance 0.8418367346938775
+restore performance 0.8367346938775511
+average restore performance 0.8392857142857143
+current capacity:  7
+restore performance 0.9132653061224489
+restore performance 0.8673469387755102
+average restore performance 0.8903061224489796
+current capacity:  8
+restore performance 0.9464285714285714
+restore performance 0.9081632653061225
+average restore performance 0.9272959183673469
+current capacity:  9
+restore performance 0.9770408163265306
+restore performance 0.951530612244898
+average restore performance 0.9642857142857143
+current capacity:  10
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7346938775510204
+restore performance 0.7295918367346939
+average restore performance 0.7321428571428572
+current capacity:  3
+restore performance 0.75
+restore performance 0.7448979591836735
+average restore performance 0.7474489795918368
+current capacity:  4
+restore performance 0.7704081632653061
+restore performance 0.7678571428571429
+average restore performance 0.7691326530612246
+current capacity:  5
+restore performance 0.7908163265306123
+restore performance 0.7857142857142857
+average restore performance 0.7882653061224489
+current capacity:  6
+restore performance 0.8010204081632653
+restore performance 0.8010204081632653
+average restore performance 0.8010204081632653
+current capacity:  7
+restore performance 0.8673469387755102
+restore performance 0.8290816326530612
+average restore performance 0.8482142857142857
+current capacity:  8
+restore performance 0.9183673469387755
+restore performance 0.8852040816326531
+average restore performance 0.9017857142857143
+current capacity:  9
+restore performance 0.9897959183673469
+restore performance 0.9336734693877551
+average restore performance 0.9617346938775511
+current capacity:  10
+restore performance 0.9948979591836735
+restore performance 1.0
+average restore performance 0.9974489795918368
+current capacity:  11
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.75
+restore performance 0.7627551020408163
+average restore performance 0.7563775510204082
+current capacity:  3
+restore performance 0.7755102040816326
+restore performance 0.7678571428571429
+average restore performance 0.7716836734693877
+current capacity:  4
+restore performance 0.8086734693877551
+restore performance 0.7755102040816326
+average restore performance 0.7920918367346939
+current capacity:  5
+restore performance 0.8367346938775511
+restore performance 0.8137755102040817
+average restore performance 0.8252551020408163
+current capacity:  6
+restore performance 0.8596938775510204
+restore performance 0.8469387755102041
+average restore performance 0.8533163265306123
+current capacity:  7
+restore performance 0.8724489795918368
+restore performance 0.8954081632653061
+average restore performance 0.8839285714285714
+current capacity:  8
+restore performance 0.9260204081632653
+restore performance 0.9770408163265306
+average restore performance 0.9515306122448979
+current capacity:  9
+restore performance 0.9821428571428571
+restore performance 0.9948979591836735
+average restore performance 0.9885204081632653
+current capacity:  10
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7168367346938775
+restore performance 0.6683673469387755
+average restore performance 0.6926020408163265
+current capacity:  3
+restore performance 0.7321428571428571
+restore performance 0.6862244897959183
+average restore performance 0.7091836734693877
+current capacity:  4
+restore performance 0.7474489795918368
+restore performance 0.7040816326530612
+average restore performance 0.7257653061224489
+current capacity:  5
+restore performance 0.7602040816326531
+restore performance 0.7397959183673469
+average restore performance 0.75
+current capacity:  6
+restore performance 0.7831632653061225
+restore performance 0.7933673469387755
+average restore performance 0.7882653061224489
+current capacity:  7
+restore performance 0.8290816326530612
+restore performance 0.8852040816326531
+average restore performance 0.8571428571428572
+current capacity:  8
+restore performance 0.9209183673469388
+restore performance 0.9770408163265306
+average restore performance 0.9489795918367347
+current capacity:  9
+restore performance 0.9872448979591837
+restore performance 1.0
+average restore performance 0.9936224489795918
+current capacity:  10
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.673469387755102
+restore performance 0.6811224489795918
+average restore performance 0.6772959183673469
+current capacity:  3
+restore performance 0.6913265306122449
+restore performance 0.7040816326530612
+average restore performance 0.6977040816326531
+current capacity:  4
+restore performance 0.7040816326530612
+restore performance 0.7270408163265306
+average restore performance 0.715561224489796
+current capacity:  5
+restore performance 0.7397959183673469
+restore performance 0.7551020408163265
+average restore performance 0.7474489795918366
+current capacity:  6
+restore performance 0.8061224489795918
+restore performance 0.7780612244897959
+average restore performance 0.7920918367346939
+current capacity:  7
+restore performance 0.9005102040816326
+restore performance 0.8367346938775511
+average restore performance 0.8686224489795918
+current capacity:  8
+restore performance 0.9846938775510204
+restore performance 0.9668367346938775
+average restore performance 0.9757653061224489
+current capacity:  9
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.6862244897959183
+restore performance 0.7219387755102041
+average restore performance 0.7040816326530612
+current capacity:  3
+restore performance 0.6938775510204082
+restore performance 0.7295918367346939
+average restore performance 0.7117346938775511
+current capacity:  4
+restore performance 0.701530612244898
+restore performance 0.7372448979591837
+average restore performance 0.7193877551020409
+current capacity:  5
+restore performance 0.7423469387755102
+restore performance 0.7602040816326531
+average restore performance 0.7512755102040816
+current capacity:  6
+restore performance 0.8163265306122449
+restore performance 0.798469387755102
+average restore performance 0.8073979591836735
+current capacity:  7
+restore performance 0.9158163265306123
+restore performance 0.8775510204081632
+average restore performance 0.8966836734693877
+current capacity:  8
+restore performance 0.9770408163265306
+restore performance 0.9770408163265306
+average restore performance 0.9770408163265306
+current capacity:  9
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7474489795918368
+restore performance 0.7295918367346939
+average restore performance 0.7385204081632653
+current capacity:  3
+restore performance 0.7627551020408163
+restore performance 0.7525510204081632
+average restore performance 0.7576530612244898
+current capacity:  4
+restore performance 0.7857142857142857
+restore performance 0.7729591836734694
+average restore performance 0.7793367346938775
+current capacity:  5
+restore performance 0.798469387755102
+restore performance 0.7959183673469388
+average restore performance 0.7971938775510203
+current capacity:  6
+restore performance 0.8392857142857143
+restore performance 0.8571428571428571
+average restore performance 0.8482142857142857
+current capacity:  7
+restore performance 0.8979591836734694
+restore performance 0.9438775510204082
+average restore performance 0.9209183673469388
+current capacity:  8
+restore performance 0.9566326530612245
+restore performance 0.9948979591836735
+average restore performance 0.9757653061224489
+current capacity:  9
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7321428571428571
+restore performance 0.7551020408163265
+average restore performance 0.7436224489795917
+current capacity:  3
+restore performance 0.7448979591836735
+restore performance 0.7576530612244898
+average restore performance 0.7512755102040817
+current capacity:  4
+restore performance 0.7653061224489796
+restore performance 0.7831632653061225
+average restore performance 0.7742346938775511
+current capacity:  5
+restore performance 0.8469387755102041
+restore performance 0.8647959183673469
+average restore performance 0.8558673469387755
+current capacity:  6
+restore performance 0.923469387755102
+restore performance 0.9566326530612245
+average restore performance 0.9400510204081632
+current capacity:  7
+restore performance 0.9897959183673469
+restore performance 0.9974489795918368
+average restore performance 0.9936224489795918
+current capacity:  8
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.6836734693877551
+restore performance 0.7423469387755102
+average restore performance 0.7130102040816326
+current capacity:  3
+restore performance 0.7321428571428571
+restore performance 0.7627551020408163
+average restore performance 0.7474489795918366
+current capacity:  4
+restore performance 0.7882653061224489
+restore performance 0.8086734693877551
+average restore performance 0.798469387755102
+current capacity:  5
+restore performance 0.9311224489795918
+restore performance 0.8877551020408163
+average restore performance 0.909438775510204
+current capacity:  6
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7576530612244898
+restore performance 0.6964285714285714
+average restore performance 0.7270408163265306
+current capacity:  3
+restore performance 0.7882653061224489
+restore performance 0.7321428571428571
+average restore performance 0.760204081632653
+current capacity:  4
+restore performance 0.8520408163265306
+restore performance 0.8239795918367347
+average restore performance 0.8380102040816326
+current capacity:  5
+restore performance 0.9795918367346939
+restore performance 0.9821428571428571
+average restore performance 0.9808673469387754
+current capacity:  6
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7142857142857143
+restore performance 0.673469387755102
+average restore performance 0.6938775510204082
+current capacity:  3
+restore performance 0.8341836734693877
+restore performance 0.8010204081632653
+average restore performance 0.8176020408163265
+current capacity:  4
+restore performance 0.9158163265306123
+restore performance 0.9464285714285714
+average restore performance 0.9311224489795918
+current capacity:  5
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.7244897959183674
+restore performance 0.7423469387755102
+average restore performance 0.7334183673469388
+current capacity:  3
+restore performance 0.9285714285714286
+restore performance 0.9336734693877551
+average restore performance 0.9311224489795918
+current capacity:  4
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8137755102040817
+restore performance 0.8188775510204082
+average restore performance 0.8163265306122449
+current capacity:  3
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.8061224489795918
+restore performance 0.8086734693877551
+average restore performance 0.8073979591836735
+current capacity:  3
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9821428571428571
+restore performance 0.9974489795918368
+average restore performance 0.9897959183673469
+current capacity:  3
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 0.9846938775510204
+restore performance 0.9719387755102041
+average restore performance 0.9783163265306123
+current capacity:  3
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
+current capacity:  2
+restore performance 1.0
+restore performance 1.0
+average restore performance 1.0
