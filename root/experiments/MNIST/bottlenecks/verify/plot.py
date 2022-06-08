@@ -19,10 +19,12 @@ def fit_exp_line(x, y):
 
 def plot_scatter_with_fitted_line(dataset, label, xlabel, ylabel, color):
     plt.scatter(dataset[0,:], dataset[1,:], label=label, c=color)
-    ynew = fit_exp_line(dataset[0,:], dataset[1,:])
-    plt.plot(dataset[0,:], ynew, label="Fitted line", c=color)
+    #ynew = fit_exp_line(dataset[0,:], dataset[1,:])
+    #plt.plot(dataset[0,:], ynew, label="Fitted line", c=color)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    plt.ylim((2,60))
+    plt.xlim((1, 150))
     plt.legend(loc='upper right')
     plt.show()
 

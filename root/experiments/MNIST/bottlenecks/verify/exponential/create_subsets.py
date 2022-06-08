@@ -72,6 +72,6 @@ def create_subsets(full_dataset, num_memories, hd_range = []):
         print("new subset appended: ", hd)
     return subsets
 
-subsets = create_subsets(fours, 50, hd_range=range(1,100,2))
-with open('subsets.npy', 'wb') as f:
+subsets = create_subsets(fours, 50, hd_range=range(1,100,10))
+with open('subsets2.npy', 'wb') as f:
     np.save(f, subsets)
