@@ -15,6 +15,7 @@ def plot_img(img, dim):
 
 
 def make_random_dataset(num_memories, num_neurons, zeroOnes = False):
+    np.random.seed(0)
     dataset = np.reshape(np.random.randint(0, 2, num_memories*num_neurons), (num_memories, num_neurons))
     if zeroOnes:
         return dataset

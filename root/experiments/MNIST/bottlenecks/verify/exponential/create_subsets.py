@@ -2,6 +2,7 @@ import numpy as np
 from root.experiments.MNIST.bottlenecks.verify.exponential.test_subsets import get_mean_hds, get_min_hds
 from root.experiments.MNIST.digits.subsets import DATASET_PATH, get_first_fifty_images, get_subsets, get_training_data, make_binary
 from root.experiments.MNIST.information.hamming import get_bottleneck_idxs, hamming_distance, mean_hamming_distance, min_hamming_distance
+from root.utils import make_random_dataset
 
 
 training_data = get_training_data(DATASET_PATH)
@@ -90,7 +91,9 @@ def create_subsets(full_dataset, num_memories, hd_range = [], leeway = 10):
 
 #I need subsets of fours ranging from min to max HD of 11 to 150
 
-dataset = ones
+
+random = make_random_dataset(50, 784, zeroOnes = False)
+dataset = np.vstack((twos, random))
 np.random.shuffle(dataset)
 print(dataset.shape)
 
@@ -101,8 +104,17 @@ Create a subset of n strings where the average hamming distance is as close to t
 
 
 """
-subsets = create_subsets(dataset, 50, hd_range=range(4,22,3))
+subsets = create_subsets(dataset, 50, hd_range=range(120,380,10))
 print(get_min_hds(subsets))
 print(get_mean_hds(subsets))
-with open('subsets_8_19.npy', 'wb') as f:
+with open('subsets_120_380.npy', 'wb') as f:
    np.save(f, subsets)
+
+
+#create another subset with 5, 38, 3, using only ones (smallest HD)
+#create one subset with 38, 120, 4 , using ones and twos
+#create another subset with 120,360, 10 using twos and random binary data
+
+#Create subsets with min HD ranging from 5 to 355
+#Create subsets with mean HD ranging from about 30 to 385
+#They all have 50 memories.

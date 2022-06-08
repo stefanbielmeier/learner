@@ -39,7 +39,7 @@ def main():
     mem_caps2 = test_subsets(subsets_10_22)
     with open('mem_caps_subsets_40_120.npy', 'wb') as f:
        np.save(f, mem_caps1)
-    with open('mem_caps_subsets_10_22.npy', 'wb') as f:
+    with open('mem_caps_subsets_8_19.npy', 'wb') as f:
        np.save(f, mem_caps2)
 
 if __name__ == "__main__":
