@@ -33,14 +33,13 @@ def test_subsets(subsets):
     return mem_caps
     
 def main():
-    subsets_40_120 = load_subsets("subsets_40_120.npy")
-    subsets_10_22 = load_subsets("subsets_10_22.npy")
-    mem_caps1 = test_subsets(subsets_40_120)
-    mem_caps2 = test_subsets(subsets_10_22)
-    with open('mem_caps_subsets_40_120.npy', 'wb') as f:
-       np.save(f, mem_caps1)
-    with open('mem_caps_subsets_8_19.npy', 'wb') as f:
-       np.save(f, mem_caps2)
+    subset1 = load_subsets("subsets_5_38_ones.npy")
+    subset2 = load_subsets("subsets_38_120_one_twos.npy")
+    subset3 = load_subsets("subsets_120_380_twos_random.npy")
+    subsets = np.vstack((subset1, subset2, subset3))[0:-9]
+    print(subsets.shape) #(many, 50, 784)
+    with open('all_subsets.npy', 'wb') as f:
+       np.save(f, subsets)
 
 if __name__ == "__main__":
     main()
